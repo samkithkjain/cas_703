@@ -30,3 +30,7 @@ This metamodelling structure forms the framework for a comprehensive representat
 - Nivetha Raj Pappuraj (pappuran@mcmaster.ca)
 - Samkith K Jain (kishors@mcmaster.ca)
 - Sana Ishtiaq (ishtis3@mcmaster.ca)
+
+## Software and Dependencies 
+- Java SE Development Kit 17.0.10
+- Eclipse Modeling Tools (Version: 2023-12 (4.30.0) and Build id: 20231201-2043)
