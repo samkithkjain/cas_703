@@ -25,12 +25,6 @@ To model the dynamic aspects of the Carnival, Emfatic has been employed to gener
 
 This metamodelling structure forms the framework for a comprehensive representation of the Carnival, offering flexibility and customization based on the unique characteristics of your specific carnival celebration. Additional details, associations, and constraints can be incorporated to tailor the model to your project's requirements.
 
-## Contributors
-- Amin Toloekashefpakdel (toloekaa@mcmaster.ca)
-- Nivetha Raj Pappuraj (pappuran@mcmaster.ca)
-- Samkith K Jain (kishors@mcmaster.ca)
-- Sana Ishtiaq (ishtis3@mcmaster.ca)
-
 ## Software and Dependencies 
 - Java SE Development Kit 17.0.10
 - Eclipse Modeling Tools (Version: 2023-12 (4.30.0) and Build id: 20231201-2043)
@@ -38,3 +32,9 @@ This metamodelling structure forms the framework for a comprehensive representat
 ## References 
 1. [MDE Tools - 3. Eclipse Modeling Framework (EMF) - Modeling](https://www.youtube.com/watch?v=0q1A6semBIE)
 2. [Model Validation (EVL) - Epsilon Eclipse](https://www.eclipse.org/epsilon/doc/evl/)
+
+## Contributors
+- Amin Toloekashefpakdel (toloekaa@mcmaster.ca)
+- Nivetha Raj Pappuraj (pappuran@mcmaster.ca)
+- Samkith K Jain (kishors@mcmaster.ca)
+- Sana Ishtiaq (ishtis3@mcmaster.ca)
