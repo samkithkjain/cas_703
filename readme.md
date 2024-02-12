@@ -4,7 +4,7 @@
 Welcome to the world of the Carnivals, a vibrant celebration that captivates hearts and sparks joy. Carnivals are festive gatherings that draw people from far and wide, offering a range of entertainment and excitement. In the spirit of embracing this joyful atmosphere, a domain-specific language using Epsilon has been designed to capture the essence of Carnivals through metamodelling.
 
 ## Metamodelling
-To model the dynamic aspects of the Carnival, Emfatic has been employed to generate an Ecore model. The design encompasses fundamental elements that define the carnival experience, ranging from diverse activities to enthusiastic participants. The metamodelling approach is structured as follows:
+To model the dynamic aspects of the Carnival, the diagram-based editor has been used to create the Ecore model. The design encompasses fundamental elements that define the carnival experience, ranging from diverse activities to enthusiastic participants. The metamodelling approach is structured as follows:
 
 ### Class Diagram
 1. **NamedElement:** An abstract class serving as the foundation for naming various elements within the carnival.
