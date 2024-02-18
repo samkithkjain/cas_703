@@ -1,18 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
-    modelDirectory="/cas703.impl.carnival/src-gen" creationIcons="false"
-    editDirectory="/cas703.impl.carnival.edit/src-gen" editorDirectory="/cas703.impl.carnival.editor/src-gen"
-    modelPluginID="cas703.impl.carnival" modelName="Carnival" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0"
-    copyrightFields="false" operationReflection="true" importOrganizing="true">
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/cas703.impl.carnival/src" modelPluginID="cas703.impl.carnival"
+    modelName="Carnival" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>carnival.ecore</foreignModel>
-  <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="Carnival" basePackage="cas703.impl" disposableProviderFactory="true"
+  <genPackages prefix="Carnival" basePackage="cas703.impl.carnival.model" disposableProviderFactory="true"
       ecorePackage="carnival.ecore#/">
+    <genClasses image="false" ecoreClass="carnival.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute carnival.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="carnival.ecore#//Carnival">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference carnival.ecore#//Carnival/carnivalDays"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference carnival.ecore#//Carnival/visitors"/>
+    </genClasses>
+    <genClasses ecoreClass="carnival.ecore#//CarnivalDay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute carnival.ecore#//CarnivalDay/n"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference carnival.ecore#//CarnivalDay/activities"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="carnival.ecore#//Activity">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference carnival.ecore#//Activity/volunteer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference carnival.ecore#//Activity/visitors"/>
+    </genClasses>
+    <genClasses ecoreClass="carnival.ecore#//Booth">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute carnival.ecore#//Booth/availableSpace"/>
+    </genClasses>
     <genClasses ecoreClass="carnival.ecore#//Event">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute carnival.ecore#//Event/time"/>
     </genClasses>
-    <genClasses ecoreClass="carnival.ecore#//NewEClass2"/>
+    <genClasses image="false" ecoreClass="carnival.ecore#//Participant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute carnival.ecore#//Participant/age"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute carnival.ecore#//Participant/email"/>
+    </genClasses>
+    <genClasses ecoreClass="carnival.ecore#//Visitor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference carnival.ecore#//Visitor/visit"/>
+    </genClasses>
+    <genClasses ecoreClass="carnival.ecore#//Volunteer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute carnival.ecore#//Volunteer/uid"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference carnival.ecore#//Volunteer/work"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
