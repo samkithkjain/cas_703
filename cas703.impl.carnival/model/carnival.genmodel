@@ -12,7 +12,7 @@
     </genClasses>
     <genClasses ecoreClass="carnival.ecore#//Carnival">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference carnival.ecore#//Carnival/carnivalDays"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference carnival.ecore#//Carnival/visitors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference carnival.ecore#//Carnival/attendees"/>
     </genClasses>
     <genClasses ecoreClass="carnival.ecore#//CarnivalDay">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute carnival.ecore#//CarnivalDay/n"/>

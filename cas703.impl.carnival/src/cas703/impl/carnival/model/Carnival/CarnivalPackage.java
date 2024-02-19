@@ -122,13 +122,13 @@ public interface CarnivalPackage extends EPackage {
 	int CARNIVAL__CARNIVAL_DAYS = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Visitors</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attendees</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CARNIVAL__VISITORS = NAMED_ELEMENT_FEATURE_COUNT + 1;
+	int CARNIVAL__ATTENDEES = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Carnival</em>' class.
@@ -622,15 +622,15 @@ public interface CarnivalPackage extends EPackage {
 	EReference getCarnival_CarnivalDays();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link cas703.impl.carnival.model.Carnival.Carnival#getVisitors <em>Visitors</em>}'.
+	 * Returns the meta object for the containment reference list '{@link cas703.impl.carnival.model.Carnival.Carnival#getAttendees <em>Attendees</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Visitors</em>'.
-	 * @see cas703.impl.carnival.model.Carnival.Carnival#getVisitors()
+	 * @return the meta object for the containment reference list '<em>Attendees</em>'.
+	 * @see cas703.impl.carnival.model.Carnival.Carnival#getAttendees()
 	 * @see #getCarnival()
 	 * @generated
 	 */
-	EReference getCarnival_Visitors();
+	EReference getCarnival_Attendees();
 
 	/**
 	 * Returns the meta object for class '{@link cas703.impl.carnival.model.Carnival.CarnivalDay <em>Day</em>}'.
@@ -883,12 +883,12 @@ public interface CarnivalPackage extends EPackage {
 		EReference CARNIVAL__CARNIVAL_DAYS = eINSTANCE.getCarnival_CarnivalDays();
 
 		/**
-		 * The meta object literal for the '<em><b>Visitors</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Attendees</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CARNIVAL__VISITORS = eINSTANCE.getCarnival_Visitors();
+		EReference CARNIVAL__ATTENDEES = eINSTANCE.getCarnival_Attendees();
 
 		/**
 		 * The meta object literal for the '{@link cas703.impl.carnival.model.Carnival.impl.CarnivalDayImpl <em>Day</em>}' class.

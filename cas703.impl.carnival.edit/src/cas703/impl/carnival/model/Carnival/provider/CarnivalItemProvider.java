@@ -63,7 +63,7 @@ public class CarnivalItemProvider extends NamedElementItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CarnivalPackage.Literals.CARNIVAL__CARNIVAL_DAYS);
-			childrenFeatures.add(CarnivalPackage.Literals.CARNIVAL__VISITORS);
+			childrenFeatures.add(CarnivalPackage.Literals.CARNIVAL__ATTENDEES);
 		}
 		return childrenFeatures;
 	}
@@ -120,7 +120,7 @@ public class CarnivalItemProvider extends NamedElementItemProvider {
 
 		switch (notification.getFeatureID(Carnival.class)) {
 			case CarnivalPackage.CARNIVAL__CARNIVAL_DAYS:
-			case CarnivalPackage.CARNIVAL__VISITORS:
+			case CarnivalPackage.CARNIVAL__ATTENDEES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -145,12 +145,12 @@ public class CarnivalItemProvider extends NamedElementItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CarnivalPackage.Literals.CARNIVAL__VISITORS,
+				(CarnivalPackage.Literals.CARNIVAL__ATTENDEES,
 				 CarnivalFactory.eINSTANCE.createVisitor()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(CarnivalPackage.Literals.CARNIVAL__VISITORS,
+				(CarnivalPackage.Literals.CARNIVAL__ATTENDEES,
 				 CarnivalFactory.eINSTANCE.createVolunteer()));
 	}
 

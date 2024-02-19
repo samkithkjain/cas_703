@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link cas703.impl.carnival.model.Carnival.impl.CarnivalImpl#getCarnivalDays <em>Carnival Days</em>}</li>
- *   <li>{@link cas703.impl.carnival.model.Carnival.impl.CarnivalImpl#getVisitors <em>Visitors</em>}</li>
+ *   <li>{@link cas703.impl.carnival.model.Carnival.impl.CarnivalImpl#getAttendees <em>Attendees</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,14 +45,14 @@ public class CarnivalImpl extends NamedElementImpl implements Carnival {
 	protected EList<CarnivalDay> carnivalDays;
 
 	/**
-	 * The cached value of the '{@link #getVisitors() <em>Visitors</em>}' containment reference list.
+	 * The cached value of the '{@link #getAttendees() <em>Attendees</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVisitors()
+	 * @see #getAttendees()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Participant> visitors;
+	protected EList<Participant> attendees;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -92,11 +92,11 @@ public class CarnivalImpl extends NamedElementImpl implements Carnival {
 	 * @generated
 	 */
 	@Override
-	public EList<Participant> getVisitors() {
-		if (visitors == null) {
-			visitors = new EObjectContainmentEList<Participant>(Participant.class, this, CarnivalPackage.CARNIVAL__VISITORS);
+	public EList<Participant> getAttendees() {
+		if (attendees == null) {
+			attendees = new EObjectContainmentEList<Participant>(Participant.class, this, CarnivalPackage.CARNIVAL__ATTENDEES);
 		}
-		return visitors;
+		return attendees;
 	}
 
 	/**
@@ -109,8 +109,8 @@ public class CarnivalImpl extends NamedElementImpl implements Carnival {
 		switch (featureID) {
 			case CarnivalPackage.CARNIVAL__CARNIVAL_DAYS:
 				return ((InternalEList<?>)getCarnivalDays()).basicRemove(otherEnd, msgs);
-			case CarnivalPackage.CARNIVAL__VISITORS:
-				return ((InternalEList<?>)getVisitors()).basicRemove(otherEnd, msgs);
+			case CarnivalPackage.CARNIVAL__ATTENDEES:
+				return ((InternalEList<?>)getAttendees()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -125,8 +125,8 @@ public class CarnivalImpl extends NamedElementImpl implements Carnival {
 		switch (featureID) {
 			case CarnivalPackage.CARNIVAL__CARNIVAL_DAYS:
 				return getCarnivalDays();
-			case CarnivalPackage.CARNIVAL__VISITORS:
-				return getVisitors();
+			case CarnivalPackage.CARNIVAL__ATTENDEES:
+				return getAttendees();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -144,9 +144,9 @@ public class CarnivalImpl extends NamedElementImpl implements Carnival {
 				getCarnivalDays().clear();
 				getCarnivalDays().addAll((Collection<? extends CarnivalDay>)newValue);
 				return;
-			case CarnivalPackage.CARNIVAL__VISITORS:
-				getVisitors().clear();
-				getVisitors().addAll((Collection<? extends Participant>)newValue);
+			case CarnivalPackage.CARNIVAL__ATTENDEES:
+				getAttendees().clear();
+				getAttendees().addAll((Collection<? extends Participant>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -163,8 +163,8 @@ public class CarnivalImpl extends NamedElementImpl implements Carnival {
 			case CarnivalPackage.CARNIVAL__CARNIVAL_DAYS:
 				getCarnivalDays().clear();
 				return;
-			case CarnivalPackage.CARNIVAL__VISITORS:
-				getVisitors().clear();
+			case CarnivalPackage.CARNIVAL__ATTENDEES:
+				getAttendees().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -180,8 +180,8 @@ public class CarnivalImpl extends NamedElementImpl implements Carnival {
 		switch (featureID) {
 			case CarnivalPackage.CARNIVAL__CARNIVAL_DAYS:
 				return carnivalDays != null && !carnivalDays.isEmpty();
-			case CarnivalPackage.CARNIVAL__VISITORS:
-				return visitors != null && !visitors.isEmpty();
+			case CarnivalPackage.CARNIVAL__ATTENDEES:
+				return attendees != null && !attendees.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

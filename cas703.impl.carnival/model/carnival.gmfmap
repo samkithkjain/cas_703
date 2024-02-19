@@ -8,7 +8,7 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
-        href="carnival.ecore#//Carnival/visitors"/>
+        href="carnival.ecore#//Carnival/attendees"/>
     <ownedChild>
       <domainMetaElement
           href="carnival.ecore#//Visitor"/>
@@ -31,7 +31,7 @@
   </nodes>
   <nodes>
     <containmentFeature
-        href="carnival.ecore#//Carnival/visitors"/>
+        href="carnival.ecore#//Carnival/attendees"/>
     <ownedChild>
       <domainMetaElement
           href="carnival.ecore#//Volunteer"/>

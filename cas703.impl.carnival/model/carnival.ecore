@@ -10,7 +10,7 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="carnivalDays" upperBound="-1"
         eType="#//CarnivalDay" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="visitors" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attendees" upperBound="-1"
         eType="#//Participant" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CarnivalDay" eSuperTypes="#//NamedElement">

@@ -197,7 +197,7 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getCarnival_Visitors() {
+	public EReference getCarnival_Attendees() {
 		return (EReference)carnivalEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -415,7 +415,7 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 
 		carnivalEClass = createEClass(CARNIVAL);
 		createEReference(carnivalEClass, CARNIVAL__CARNIVAL_DAYS);
-		createEReference(carnivalEClass, CARNIVAL__VISITORS);
+		createEReference(carnivalEClass, CARNIVAL__ATTENDEES);
 
 		carnivalDayEClass = createEClass(CARNIVAL_DAY);
 		createEAttribute(carnivalDayEClass, CARNIVAL_DAY__N);
@@ -486,7 +486,7 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 
 		initEClass(carnivalEClass, Carnival.class, "Carnival", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCarnival_CarnivalDays(), this.getCarnivalDay(), null, "carnivalDays", null, 0, -1, Carnival.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCarnival_Visitors(), this.getParticipant(), null, "visitors", null, 0, -1, Carnival.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCarnival_Attendees(), this.getParticipant(), null, "attendees", null, 0, -1, Carnival.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(carnivalDayEClass, CarnivalDay.class, "CarnivalDay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCarnivalDay_N(), ecorePackage.getEString(), "n", null, 0, 1, CarnivalDay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
