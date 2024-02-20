@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfmap:Mapping
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:gmfmap="http://www.eclipse.org/gmf/2008/mappings"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <nodes>
+    <containmentFeature
+        href="carnival.ecore#//Carnival/attendees"/>
+    <ownedChild>
+      <domainMetaElement
+          href="carnival.ecore#//Visitor"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="Guest {0}"
+          editorPattern="Guest {0}"
+          editPattern="Guest {0}">
+        <diagramLabel
+            href="carnival.gmfgraph#VisitorLabel"/>
+        <features
+            href="carnival.ecore#//NamedElement/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="carnival.gmftool#//@palette/@tools.0/@tools.3"/>
+      <diagramNode
+          href="carnival.gmfgraph#Visitor"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="carnival.ecore#//Carnival/attendees"/>
+    <ownedChild>
+      <domainMetaElement
+          href="carnival.ecore#//Volunteer"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="Volunteer {0}"
+          editorPattern="Volunteer {0}"
+          editPattern="Volunteer {0}">
+        <diagramLabel
+            href="carnival.gmfgraph#VolunteerLabel"/>
+        <features
+            href="carnival.ecore#//NamedElement/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="carnival.gmftool#//@palette/@tools.0/@tools.4"/>
+      <diagramNode
+          href="carnival.gmfgraph#Volunteer"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="carnival.ecore#//Carnival/carnivalDays"/>
+    <ownedChild
+        relatedDiagrams="//@diagram">
+      <domainMetaElement
+          href="carnival.ecore#//CarnivalDay"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="Day {1}: {0}"
+          editorPattern="Day {1}: {0}"
+          editPattern="Day {1}: {0}">
+        <diagramLabel
+            href="carnival.gmfgraph#CarnivalDayLabel"/>
+        <features
+            href="carnival.ecore#//NamedElement/name"/>
+        <features
+            href="carnival.ecore#//CarnivalDay/n"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="carnival.gmftool#//@palette/@tools.0/@tools.1"/>
+      <diagramNode
+          href="carnival.gmfgraph#CarnivalDay"/>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="carnival.ecore#//CarnivalDay/activities"/>
+        <ownedChild>
+          <domainMetaElement
+              href="carnival.ecore#//Booth"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="carnival.gmfgraph#BoothLabel"/>
+            <features
+                href="carnival.ecore#//NamedElement/name"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="carnival.gmftool#//@palette/@tools.0/@tools.0"/>
+          <diagramNode
+              href="carnival.gmfgraph#Booth"/>
+        </ownedChild>
+      </children>
+      <children
+          compartment="//@nodes.2/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="carnival.ecore#//CarnivalDay/activities"/>
+        <ownedChild>
+          <domainMetaElement
+              href="carnival.ecore#//Event"/>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping"
+              viewPattern="{0}: {1}"
+              editorPattern="{0}: {1}"
+              editPattern="{0}: {1}">
+            <diagramLabel
+                href="carnival.gmfgraph#EventLabel"/>
+            <features
+                href="carnival.ecore#//NamedElement/name"/>
+            <features
+                href="carnival.ecore#//Event/time"/>
+          </labelMappings>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="carnival.gmftool#//@palette/@tools.0/@tools.2"/>
+          <diagramNode
+              href="carnival.gmfgraph#Event"/>
+        </ownedChild>
+      </children>
+      <compartments
+          children="//@nodes.2/@ownedChild/@children.0 //@nodes.2/@ownedChild/@children.1">
+        <compartment
+            href="carnival.gmfgraph#CarnivalDayActivitiesCompartment"/>
+      </compartments>
+    </ownedChild>
+  </nodes>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="carnival.gmfgraph#VisitorVisitExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="carnival.gmftool#//@palette/@tools.1/@tools.0"/>
+    <diagramLink
+        href="carnival.gmfgraph#VisitorVisit"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="carnival.ecore#//Visitor/visit"/>
+  </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="carnival.gmfgraph#VolunteerWorkExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="carnival.gmftool#//@palette/@tools.1/@tools.1"/>
+    <diagramLink
+        href="carnival.gmfgraph#VolunteerWork"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="carnival.ecore#//Volunteer/work"/>
+  </links>
+  <diagram>
+    <diagramCanvas
+        href="carnival.gmfgraph#carnival"/>
+    <domainModel
+        href="carnival.ecore#/"/>
+    <domainMetaElement
+        href="carnival.ecore#//Carnival"/>
+    <palette
+        href="carnival.gmftool#//@palette"/>
+  </diagram>
+</gmfmap:Mapping>

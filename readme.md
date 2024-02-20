@@ -28,6 +28,7 @@ This metamodelling structure forms the framework for a comprehensive representat
 ## Software and Dependencies 
 - Java SE Development Kit 17.0.10
 - Eclipse Modeling Tools (Version: 2023-12 (4.30.0) and Build id: 20231201-2043)
+- Graphical Modeling Framework (GMF) - Tooling 3.0.1
 
 ## References 
 1. [MDE Tools - 3. Eclipse Modeling Framework (EMF) - Modeling](https://www.youtube.com/watch?v=0q1A6semBIE)
