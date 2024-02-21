@@ -8,3 +8,12 @@ repositories/file\:_Users_samkithkjain_cs_CAS%20703_Project_workspace_.metadata_
 repositories/file\:_Users_samkithkjain_cs_CAS%20703_Project_workspace_.metadata_.plugins_org.eclipse.pde.core_p2_org.eclipse.equinox.p2.core_cache/type=org.eclipse.equinox.p2.artifact.repository.simpleRepository
 repositories/file\:_Users_samkithkjain_cs_CAS%20703_Project_workspace_.metadata_.plugins_org.eclipse.pde.core_p2_org.eclipse.equinox.p2.core_cache/uri=file\:/Users/samkithkjain/cs/CAS%20703/Project/workspace/.metadata/.plugins/org.eclipse.pde.core/p2/org.eclipse.equinox.p2.core/cache/
 repositories/file\:_Users_samkithkjain_cs_CAS%20703_Project_workspace_.metadata_.plugins_org.eclipse.pde.core_p2_org.eclipse.equinox.p2.core_cache/version=1.0.0
+repositories/file\:_Users_samkithkjain_cs_CAS%20703_cas_703_workspace_.metadata_.plugins_org.eclipse.pde.core_p2_org.eclipse.equinox.p2.core_cache/description=
+repositories/file\:_Users_samkithkjain_cs_CAS%20703_cas_703_workspace_.metadata_.plugins_org.eclipse.pde.core_p2_org.eclipse.equinox.p2.core_cache/enabled=true
+repositories/file\:_Users_samkithkjain_cs_CAS%20703_cas_703_workspace_.metadata_.plugins_org.eclipse.pde.core_p2_org.eclipse.equinox.p2.core_cache/isSystem=true
+repositories/file\:_Users_samkithkjain_cs_CAS%20703_cas_703_workspace_.metadata_.plugins_org.eclipse.pde.core_p2_org.eclipse.equinox.p2.core_cache/name=download cache
+repositories/file\:_Users_samkithkjain_cs_CAS%20703_cas_703_workspace_.metadata_.plugins_org.eclipse.pde.core_p2_org.eclipse.equinox.p2.core_cache/provider=
+repositories/file\:_Users_samkithkjain_cs_CAS%20703_cas_703_workspace_.metadata_.plugins_org.eclipse.pde.core_p2_org.eclipse.equinox.p2.core_cache/suffix=artifacts.xml
+repositories/file\:_Users_samkithkjain_cs_CAS%20703_cas_703_workspace_.metadata_.plugins_org.eclipse.pde.core_p2_org.eclipse.equinox.p2.core_cache/type=org.eclipse.equinox.p2.artifact.repository.simpleRepository
+repositories/file\:_Users_samkithkjain_cs_CAS%20703_cas_703_workspace_.metadata_.plugins_org.eclipse.pde.core_p2_org.eclipse.equinox.p2.core_cache/uri=file\:/Users/samkithkjain/cs/CAS%20703/cas_703/workspace/.metadata/.plugins/org.eclipse.pde.core/p2/org.eclipse.equinox.p2.core/cache/
+repositories/file\:_Users_samkithkjain_cs_CAS%20703_cas_703_workspace_.metadata_.plugins_org.eclipse.pde.core_p2_org.eclipse.equinox.p2.core_cache/version=1.0.0

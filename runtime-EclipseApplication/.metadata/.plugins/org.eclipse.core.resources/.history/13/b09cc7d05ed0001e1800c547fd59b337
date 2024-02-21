@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carnival:Carnival xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:carnival="vr/carnival">
+  <carnivalDays name="McMaster Carnival Inaugral" n="1">
+    <activities xsi:type="carnival:Event" name="Kick-off" volunteer="//@attendees.1" visitors="//@attendees.0" time="8:00 - 13:00"/>
+    <activities xsi:type="carnival:Booth" name="Ice-Cream Booth" volunteer="//@attendees.2" visitors="//@attendees.10" availableSpace="5"/>
+    <activities xsi:type="carnival:Booth" name="Pizza Pizza Booth" volunteer="//@attendees.3" visitors="//@attendees.9" availableSpace="10"/>
+  </carnivalDays>
+  <carnivalDays name="Dance and Games" n="2">
+    <activities xsi:type="carnival:Event" name="Counter Strike 1.6 Gaming" volunteer="//@attendees.2" visitors="//@attendees.10" time="10:00 - 13:00"/>
+    <activities xsi:type="carnival:Event" name="Ballet Performance" volunteer="//@attendees.4" visitors="//@attendees.9" time="14:00 - 16:00"/>
+    <activities xsi:type="carnival:Booth" name="Knock the Coconut" volunteer="//@attendees.5" visitors="//@attendees.11" availableSpace="3"/>
+  </carnivalDays>
+  <carnivalDays name="Final Day" n="3">
+    <activities xsi:type="carnival:Event" name="Rain Dance" visitors="//@attendees.11" time="10:30 - 13:00"/>
+    <activities xsi:type="carnival:Booth" name="Chilli Barbecue" volunteer="//@attendees.6" visitors="//@attendees.8" availableSpace="20"/>
+  </carnivalDays>
+  <attendees xsi:type="carnival:Visitor" name="Sana Ishtiaq" age="20" email="sana@mcmaster.ca" visit="//@carnivalDays.0/@activities.0"/>
+  <attendees xsi:type="carnival:Volunteer" name="Samkith K Jain" age="25" email="samkith@mcmaster.ca" uid="100" work="//@carnivalDays.0/@activities.0"/>
+  <attendees xsi:type="carnival:Volunteer" name="Amin T" age="42" email="amin@mcmaster.ca" uid="200" work="//@carnivalDays.0/@activities.1 //@carnivalDays.1/@activities.0"/>
+  <attendees xsi:type="carnival:Volunteer" name="Dr. Deza " age="30" email="deza@mcmaster.ca" uid="300" work="//@carnivalDays.0/@activities.2"/>
+  <attendees xsi:type="carnival:Volunteer" name="Jason Peterson" age="31" email="jason@mcmaster.ca" uid="400" work="//@carnivalDays.1/@activities.1"/>
+  <attendees xsi:type="carnival:Volunteer" name="Stefanie B" age="35" email="Stefanie@mcmaster.ca" uid="500" work="//@carnivalDays.1/@activities.2"/>
+  <attendees xsi:type="carnival:Volunteer" name="Connie C" age="40" email="connie@mcmaster.ca" uid="700" work="//@carnivalDays.2/@activities.1"/>
+  <attendees xsi:type="carnival:Volunteer" name="John Red" age="50" email="john@mcmaster.cs" uid="800"/>
+  <attendees xsi:type="carnival:Visitor" name="Dr. Richard Paige" age="50" email="paige@mcmaster.ca" visit="//@carnivalDays.2/@activities.1"/>
+  <attendees xsi:type="carnival:Visitor" name="Dr. Neerja Mhaskar" age="40" email="neerja@mcmaster.ca" visit="//@carnivalDays.1/@activities.1 //@carnivalDays.0/@activities.2"/>
+  <attendees xsi:type="carnival:Visitor" name="Alan Shi" age="25" email="Alan@mcmaster.ca" visit="//@carnivalDays.0/@activities.1 //@carnivalDays.1/@activities.0"/>
+  <attendees xsi:type="carnival:Visitor" name="Simon Baker" age="28" email="Simon@mcmaster.ca" visit="//@carnivalDays.2/@activities.0 //@carnivalDays.1/@activities.2"/>
+</carnival:Carnival>

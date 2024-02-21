@@ -6,11 +6,11 @@ bcprov,1.77.0,file:/Applications/Eclipse.app/Contents/Eclipse/plugins/bcprov_1.7
 bcutil,1.77.0,file:/Applications/Eclipse.app/Contents/Eclipse/plugins/bcutil_1.77.0.jar,4,false
 biz.aQute.bnd.util,7.0.0.202310060912,file:/Applications/Eclipse.app/Contents/Eclipse/plugins/biz.aQute.bnd.util_7.0.0.202310060912.jar,4,false
 biz.aQute.bndlib,7.0.0.202310060912,file:/Applications/Eclipse.app/Contents/Eclipse/plugins/biz.aQute.bndlib_7.0.0.202310060912.jar,4,false
-carnival,0.1.0.qualifier,file:/Users/samkithkjain/cs/CAS%20703/Project/workspace/carnival/,4,false
-carnival.diagram,1.0.0.qualifier,file:/Users/samkithkjain/cs/CAS%20703/Project/workspace/carnival.diagram/,4,false
-carnival.edit,1.0.0.qualifier,file:/Users/samkithkjain/cs/CAS%20703/Project/workspace/carnival.edit/,4,false
-carnival.editor,1.0.0.qualifier,file:/Users/samkithkjain/cs/CAS%20703/Project/workspace/carnival.editor/,4,false
-carnival.tests,1.0.0.qualifier,file:/Users/samkithkjain/cs/CAS%20703/Project/workspace/carnival.tests/,4,false
+carnival,0.1.0.qualifier,file:/Users/samkithkjain/cs/CAS%20703/cas_703/workspace/carnival/,4,false
+carnival.diagram,1.0.0.qualifier,file:/Users/samkithkjain/cs/CAS%20703/cas_703/workspace/carnival.diagram/,4,false
+carnival.edit,1.0.0.qualifier,file:/Users/samkithkjain/cs/CAS%20703/cas_703/workspace/carnival.edit/,4,false
+carnival.editor,1.0.0.qualifier,file:/Users/samkithkjain/cs/CAS%20703/cas_703/workspace/carnival.editor/,4,false
+carnival.tests,1.0.0.qualifier,file:/Users/samkithkjain/cs/CAS%20703/cas_703/workspace/carnival.tests/,4,false
 com.google.errorprone.annotations,2.23.0,file:/Applications/Eclipse.app/Contents/Eclipse/plugins/com.google.errorprone.annotations_2.23.0.jar,4,false
 com.google.gson,2.10.1.v20230109-0753,file:/Applications/Eclipse.app/Contents/Eclipse/plugins/com.google.gson_2.10.1.v20230109-0753.jar,4,false
 com.google.guava,32.1.3.jre,file:/Applications/Eclipse.app/Contents/Eclipse/plugins/com.google.guava_32.1.3.jre.jar,4,false
