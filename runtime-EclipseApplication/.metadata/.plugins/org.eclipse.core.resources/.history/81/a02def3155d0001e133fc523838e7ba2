@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carnival:Carnival xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:carnival="vr/carnival">
+  <carnivalDays name="McMaster Carnival Inaugral" n="1">
+    <activities xsi:type="carnival:Event" name="Kick-off" volunteer="//@attendees.1" visitors="//@attendees.0" time="8:00 - 13:00"/>
+    <activities xsi:type="carnival:Booth" name="Ice-Cream Booth" volunteer="//@attendees.2" availableSpace="5"/>
+    <activities xsi:type="carnival:Booth" name="Pizza Pizza Booth" availableSpace="10"/>
+  </carnivalDays>
+  <carnivalDays name="Dance and Games" n="2">
+    <activities xsi:type="carnival:Event" name="Counter Strike 1.6 Gaming" time="10:00 - 13:00"/>
+    <activities xsi:type="carnival:Event" name="Ballet Performance" time="14:00 - 16:00"/>
+    <activities xsi:type="carnival:Booth" name="Knock the Coconut" availableSpace="3"/>
+  </carnivalDays>
+  <carnivalDays name="Final Day" n="3">
+    <activities xsi:type="carnival:Event" name="Rain Dance" time="10:30 - 13:00"/>
+    <activities xsi:type="carnival:Booth" name="Chilli Barbecue" availableSpace="20"/>
+  </carnivalDays>
+  <attendees xsi:type="carnival:Visitor" name="Sana Ishtiaq" age="30" email="sana@mcmaster.ca" visit="//@carnivalDays.0/@activities.0"/>
+  <attendees xsi:type="carnival:Volunteer" name="Samkith K Jain" age="25" email="samkith@mcmaster.ca" uid="100" work="//@carnivalDays.0/@activities.0"/>
+  <attendees xsi:type="carnival:Volunteer" name="Amin T" age="25" email="amin@mcmaster.ca" uid="200" work="//@carnivalDays.0/@activities.1"/>
+</carnival:Carnival>

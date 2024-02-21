@@ -1,0 +1,55 @@
+@namespace(uri="vr/carnival", prefix="carnival")
+package carnival;
+
+abstract class NamedElement {
+	attr String name;
+}
+
+@gmf.diagram(model.extension="Carnival")
+class Carnival extends NamedElement {
+	val CarnivalDay[*] carnivalDays;
+	val Participant[*] attendees;
+}
+
+@gmf.node(label="name", label.pattern="Day {1}: {0}")
+class CarnivalDay extends NamedElement {
+	attr String n;
+
+	@gmf.compartment
+	val Activity[*] activities;
+}
+
+abstract class Activity extends NamedElement {
+	ref Volunteer#work volunteer;
+	ref Visitor[*]#visit visitors;
+}
+
+@gmf.node(figure="rectangle", label="name")
+class Booth extends Activity {
+	attr int availableSpace;
+}
+
+@gmf.node(figure="rectangle", label="name,time", label.pattern="{0}: {1}")
+class Event extends Activity {
+	attr String time;
+}
+
+abstract class Participant extends NamedElement {
+	attr int age;
+	attr String email;
+}
+
+@gmf.node(figure="svg", svg.uri="platform:/plugin/carnival/icons/Visitor.svg", label="name", label.pattern="Guest {0}")
+class Visitor extends Participant {
+
+	@gmf.link(target.decoration="arrow", source.decoration="none", style="dot", width="2", color="0,255,0")
+	ref Activity#visitors visit;
+}
+
+@gmf.node(figure="svg", svg.uri="platform:/plugin/carnival/icons/Volunteer.svg", label="name", label.pattern="Volunteer {0}")
+class Volunteer extends Participant {
+	attr int uid;
+
+	@gmf.link(target.decoration="arrow", source.decoration="none", style="solid", width="2", color="241,194,50")
+	ref Activity#volunteer work;
+}

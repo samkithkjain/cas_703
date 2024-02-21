@@ -1,0 +1,28 @@
+/*
+ * 
+ */
+package carnival.diagram.providers;
+
+/**
+ * @generated
+ */
+public class ElementInitializers {
+
+	protected ElementInitializers() {
+		// use #getInstance to access cached instance
+	} 
+
+			
+	
+	
+	/**
+ * @generated
+ */
+	public static ElementInitializers getInstance() {
+		ElementInitializers cached = carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().getElementInitializers();
+		if (cached == null) {
+			carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().setElementInitializers(cached = new ElementInitializers());
+		}
+		return cached;
+	}
+}

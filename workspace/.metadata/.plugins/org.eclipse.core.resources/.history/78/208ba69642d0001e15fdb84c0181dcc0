@@ -1,0 +1,21 @@
+/*
+ * 
+ */
+package carnival.diagram.providers;
+
+/**
+ * @generated
+ */
+public class CarnivalEditPartProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultEditPartProvider {
+
+	
+	/**
+ * @generated
+ */
+	public CarnivalEditPartProvider() {
+		super(new carnival.diagram.edit.parts.CarnivalEditPartFactory(), 			carnival.diagram.part.CarnivalVisualIDRegistry.TYPED_INSTANCE, 			carnival.diagram.edit.parts.CarnivalEditPart.MODEL_ID			
+		);
+	}
+
+
+	}

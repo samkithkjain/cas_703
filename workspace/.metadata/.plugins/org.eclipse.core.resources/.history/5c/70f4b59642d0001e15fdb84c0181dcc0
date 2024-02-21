@@ -1,0 +1,119 @@
+
+/*
+ * 
+ */
+package carnival.diagram.part;
+
+/**
+ * @generated
+ */
+public class CarnivalPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+paletteRoot.add(createConnections2Group());
+	}
+
+	/**
+ * Creates "Objects" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createObjects1Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(carnival.diagram.part.Messages.Objects1Group_title);
+				 paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+								paletteContainer.add(createBooth1CreationTool());
+paletteContainer.add(createCarnivalDay2CreationTool());
+paletteContainer.add(createEvent3CreationTool());
+paletteContainer.add(createVisitor4CreationTool());
+paletteContainer.add(createVolunteer5CreationTool());
+		return paletteContainer;
+	}
+	/**
+ * Creates "Connections" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createConnections2Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(carnival.diagram.part.Messages.Connections2Group_title);
+				 paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
+								paletteContainer.add(createVisit1CreationTool());
+paletteContainer.add(createWork2CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createBooth1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(carnival.diagram.part.Messages.Booth1CreationTool_title, carnival.diagram.part.Messages.Booth1CreationTool_desc, java.util.Collections.singletonList(carnival.diagram.providers.CarnivalElementTypes.Booth_3001));
+				 entry.setId("createBooth1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(carnival.diagram.providers.CarnivalElementTypes.getImageDescriptor(carnival.diagram.providers.CarnivalElementTypes.Booth_3001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createCarnivalDay2CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(carnival.diagram.part.Messages.CarnivalDay2CreationTool_title, carnival.diagram.part.Messages.CarnivalDay2CreationTool_desc, java.util.Collections.singletonList(carnival.diagram.providers.CarnivalElementTypes.CarnivalDay_2003));
+				 entry.setId("createCarnivalDay2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(carnival.diagram.providers.CarnivalElementTypes.getImageDescriptor(carnival.diagram.providers.CarnivalElementTypes.CarnivalDay_2003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createEvent3CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(carnival.diagram.part.Messages.Event3CreationTool_title, carnival.diagram.part.Messages.Event3CreationTool_desc, java.util.Collections.singletonList(carnival.diagram.providers.CarnivalElementTypes.Event_3002));
+				 entry.setId("createEvent3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(carnival.diagram.providers.CarnivalElementTypes.getImageDescriptor(carnival.diagram.providers.CarnivalElementTypes.Event_3002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createVisitor4CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(carnival.diagram.part.Messages.Visitor4CreationTool_title, carnival.diagram.part.Messages.Visitor4CreationTool_desc, java.util.Collections.singletonList(carnival.diagram.providers.CarnivalElementTypes.Visitor_2001));
+				 entry.setId("createVisitor4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(carnival.diagram.providers.CarnivalElementTypes.getImageDescriptor(carnival.diagram.providers.CarnivalElementTypes.Visitor_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createVolunteer5CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(carnival.diagram.part.Messages.Volunteer5CreationTool_title, carnival.diagram.part.Messages.Volunteer5CreationTool_desc, java.util.Collections.singletonList(carnival.diagram.providers.CarnivalElementTypes.Volunteer_2002));
+				 entry.setId("createVolunteer5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(carnival.diagram.providers.CarnivalElementTypes.getImageDescriptor(carnival.diagram.providers.CarnivalElementTypes.Volunteer_2002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createVisit1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(carnival.diagram.part.Messages.Visit1CreationTool_title, carnival.diagram.part.Messages.Visit1CreationTool_desc, java.util.Collections.singletonList(carnival.diagram.providers.CarnivalElementTypes.VisitorVisit_4001));
+				 entry.setId("createVisit1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(carnival.diagram.providers.CarnivalElementTypes.getImageDescriptor(carnival.diagram.providers.CarnivalElementTypes.VisitorVisit_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createWork2CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(carnival.diagram.part.Messages.Work2CreationTool_title, carnival.diagram.part.Messages.Work2CreationTool_desc, java.util.Collections.singletonList(carnival.diagram.providers.CarnivalElementTypes.VolunteerWork_4002));
+				 entry.setId("createWork2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(carnival.diagram.providers.CarnivalElementTypes.getImageDescriptor(carnival.diagram.providers.CarnivalElementTypes.VolunteerWork_4002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+		
+}

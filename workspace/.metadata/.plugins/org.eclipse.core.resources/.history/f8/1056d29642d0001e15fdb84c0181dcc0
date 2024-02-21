@@ -1,0 +1,113 @@
+/*
+ * 
+ */
+package carnival.diagram.part;
+
+/**
+ * @generated
+ */
+public class CarnivalElementChooserDialog extends org.eclipse.gmf.tooling.runtime.part.DefaultElementChooserDialog {
+
+		/**
+ * @generated
+ */
+	public CarnivalElementChooserDialog(org.eclipse.swt.widgets.Shell parentShell, org.eclipse.gmf.runtime.notation.View view) {
+		this(parentShell, view, false);
+	}
+	
+	/**
+ * @generated
+ */
+	public CarnivalElementChooserDialog(org.eclipse.swt.widgets.Shell parentShell, org.eclipse.gmf.runtime.notation.View view, boolean allowMultiSelection) {
+		super(parentShell, view, new CarnivalElementChooserDialogContextImpl(allowMultiSelection));
+	}
+	
+	
+	/**
+ * @generated
+ */
+	private static class CarnivalElementChooserDialogContextImpl implements org.eclipse.gmf.tooling.runtime.part.DefaultElementChooserDialog.Context {
+			
+			/**
+ * @generated
+ */
+	private static final String[] FILE_EXTENSIONS = new String[]{"Carnival"};
+
+	/**
+ * @generated
+ */
+	private final boolean myAllowMultiSelection;
+
+			
+			/**
+ * @generated
+ */
+	private CarnivalElementChooserDialogContextImpl(boolean allowMultiSelection) {
+		myAllowMultiSelection = allowMultiSelection;
+	}
+
+			
+		
+	/**
+ * @generated
+ */
+	@Override
+
+	public org.eclipse.emf.common.notify.AdapterFactory getAdapterFactory() {
+		return carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().getItemProvidersAdapterFactory();
+	}
+
+			
+		
+	/**
+ * @generated
+ */
+	@Override
+
+	public org.eclipse.gmf.runtime.diagram.core.preferences.PreferencesHint getPreferenceHint() {
+		return carnival.diagram.part.CarnivalDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
+	}
+
+			
+		
+	/**
+ * @generated
+ */
+	@Override
+
+	public String[] getFileExtesions() {
+		return FILE_EXTENSIONS.clone();
+	}
+
+			
+		
+	/**
+ * @generated
+ */
+	@Override
+
+	public String getDialogTitle() {
+		return carnival.diagram.part.Messages.CarnivalElementChooserDialog_SelectModelElementTitle;
+	}
+
+			
+			/**
+ * @generated
+ */	@Override
+	public org.eclipse.jface.viewers.ITreeContentProvider getTreeContentProvider() {
+		return new 		 org.eclipse.ui.model.BaseWorkbenchContentProvider();
+	}
+
+			
+			/**
+ * @generated
+ */	public boolean allowMultiSelection() {
+		return myAllowMultiSelection;
+	}
+
+		
+		
+			
+	}
+	
+	}

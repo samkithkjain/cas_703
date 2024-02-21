@@ -1,0 +1,7 @@
+rule Carnival2HTML
+	transform carnival : Carnival {
+	
+		template: "carnival.egl"
+	
+		target: "Carnival.html"
+	}

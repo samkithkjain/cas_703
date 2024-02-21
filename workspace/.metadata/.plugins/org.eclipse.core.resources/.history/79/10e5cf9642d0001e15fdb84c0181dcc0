@@ -1,0 +1,157 @@
+/*
+ * 
+ */
+package carnival.diagram.part;
+
+/**
+ * @generated
+ */
+public class CarnivalNewDiagramFileWizard extends org.eclipse.jface.wizard.Wizard {
+
+	/**
+ * @generated
+ */
+	private 
+org.eclipse.ui.dialogs.WizardNewFileCreationPage myFileCreationPage;
+
+	/**
+ * @generated
+ */
+	private carnival.diagram.part.ModelElementSelectionPage diagramRootElementSelectionPage;
+
+	/**
+ * @generated
+ */
+	private org.eclipse.emf.transaction.TransactionalEditingDomain myEditingDomain;
+
+	/**
+ * @generated
+ */
+	public CarnivalNewDiagramFileWizard(org.eclipse.emf.common.util.URI domainModelURI,
+			org.eclipse.emf.ecore.EObject diagramRoot,
+			org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain) {
+		assert domainModelURI != null : "Domain model uri must be specified"; //$NON-NLS-1$
+	    assert diagramRoot != null : "Doagram root element must be specified"; //$NON-NLS-1$
+	    assert editingDomain != null : "Editing domain must be specified"; //$NON-NLS-1$
+
+		myFileCreationPage = new 
+org.eclipse.ui.dialogs.WizardNewFileCreationPage(carnival.diagram.part.Messages.CarnivalNewDiagramFileWizard_CreationPageName, org.eclipse.jface.viewers.StructuredSelection.EMPTY);
+		myFileCreationPage.setTitle(carnival.diagram.part.Messages.CarnivalNewDiagramFileWizard_CreationPageTitle);
+		myFileCreationPage.setDescription(org.eclipse.osgi.util.NLS.bind(
+				carnival.diagram.part.Messages.CarnivalNewDiagramFileWizard_CreationPageDescription, 
+				carnival.diagram.edit.parts.CarnivalEditPart.MODEL_ID));
+		org.eclipse.core.runtime.IPath filePath;
+		String fileName = org.eclipse.emf.common.util.URI.decode(domainModelURI.trimFileExtension().lastSegment());
+		if (domainModelURI.isPlatformResource()) {
+			filePath = new org.eclipse.core.runtime.Path(domainModelURI.trimSegments(1).toPlatformString(true));
+		} else if (domainModelURI.isFile()) {
+			filePath = new org.eclipse.core.runtime.Path(domainModelURI.trimSegments(1).toFileString());
+		} else {
+			// TODO : use some default path
+			throw new IllegalArgumentException("Unsupported URI: " + domainModelURI);  //$NON-NLS-1$
+		}
+		myFileCreationPage.setContainerFullPath(filePath);
+		myFileCreationPage.setFileName(carnival.diagram.part.CarnivalDiagramEditorUtil.getUniqueFileName(
+				filePath, fileName, "Carnival_diagram"));  //$NON-NLS-1$
+
+		diagramRootElementSelectionPage = new DiagramRootElementSelectionPage(carnival.diagram.part.Messages.CarnivalNewDiagramFileWizard_RootSelectionPageName);
+		diagramRootElementSelectionPage.setTitle(carnival.diagram.part.Messages.CarnivalNewDiagramFileWizard_RootSelectionPageTitle);
+		diagramRootElementSelectionPage.setDescription(carnival.diagram.part.Messages.CarnivalNewDiagramFileWizard_RootSelectionPageDescription);
+		diagramRootElementSelectionPage.setModelElement(diagramRoot);
+
+	   	myEditingDomain = editingDomain;
+	}
+
+	/**
+ * @generated
+ */
+	public void addPages() {
+		addPage(myFileCreationPage);
+		addPage(diagramRootElementSelectionPage);
+	}
+
+	/**
+ * @generated
+ */
+	public boolean performFinish() {
+		java.util.LinkedList<org.eclipse.core.resources.IFile> affectedFiles = new java.util.LinkedList<org.eclipse.core.resources.IFile>();
+				org.eclipse.core.resources.IFile diagramFile = myFileCreationPage.createNewFile();
+		carnival.diagram.part.CarnivalDiagramEditorUtil.setCharset(diagramFile);
+		affectedFiles.add(diagramFile);
+		org.eclipse.emf.common.util.URI diagramModelURI = org.eclipse.emf.common.util.URI.createPlatformResourceURI(diagramFile.getFullPath().toString(), true);
+				org.eclipse.emf.ecore.resource.ResourceSet resourceSet = myEditingDomain.getResourceSet();
+		final org.eclipse.emf.ecore.resource.Resource diagramResource = resourceSet.createResource(diagramModelURI);
+		org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand command =
+			new org.eclipse.gmf.runtime.emf.commands.core.command.AbstractTransactionalCommand(
+				myEditingDomain, carnival.diagram.part.Messages.CarnivalNewDiagramFileWizard_InitDiagramCommand, affectedFiles) {
+
+			protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(
+					org.eclipse.core.runtime.IProgressMonitor monitor, org.eclipse.core.runtime.IAdaptable info)
+						throws org.eclipse.core.commands.ExecutionException {
+				int diagramVID = carnival.diagram.part.CarnivalVisualIDRegistry.getDiagramVisualID(diagramRootElementSelectionPage.getModelElement());
+				if (diagramVID != carnival.diagram.edit.parts.CarnivalEditPart.VISUAL_ID) {
+					return org.eclipse.gmf.runtime.common.core.command.CommandResult.newErrorCommandResult(
+						carnival.diagram.part.Messages.CarnivalNewDiagramFileWizard_IncorrectRootError);
+				}
+				org.eclipse.gmf.runtime.notation.Diagram diagram =
+					org.eclipse.gmf.runtime.diagram.core.services.ViewService.createDiagram(
+						diagramRootElementSelectionPage.getModelElement(), carnival.diagram.edit.parts.CarnivalEditPart.MODEL_ID,
+						carnival.diagram.part.CarnivalDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT);
+				diagramResource.getContents().add(diagram);
+												return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult();
+			}
+		};
+		try {
+			org.eclipse.core.commands.operations.OperationHistoryFactory.getOperationHistory().execute(
+				command, new org.eclipse.core.runtime.NullProgressMonitor(), null);
+			diagramResource.save(carnival.diagram.part.CarnivalDiagramEditorUtil.getSaveOptions());
+			carnival.diagram.part.CarnivalDiagramEditorUtil.openDiagram(diagramResource);
+		} catch (org.eclipse.core.commands.ExecutionException e) {
+			carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().logError(
+				"Unable to create model and diagram", e);  //$NON-NLS-1$
+		} catch (java.io.IOException ex) {
+			carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().logError(
+				"Save operation failed for: " + diagramModelURI, ex);  //$NON-NLS-1$
+		} catch (org.eclipse.ui.PartInitException ex) {
+			carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().logError(
+				"Unable to open editor", ex);  //$NON-NLS-1$
+		}			
+		return true;
+	}
+
+	/**
+ * @generated
+ */
+	private static class DiagramRootElementSelectionPage extends carnival.diagram.part.ModelElementSelectionPage {
+
+		/**
+ * @generated
+ */
+		protected DiagramRootElementSelectionPage(String pageName) {
+			super(pageName);
+		}
+
+		/**
+ * @generated
+ */
+		protected String getSelectionTitle() {
+			return carnival.diagram.part.Messages.CarnivalNewDiagramFileWizard_RootSelectionPageSelectionTitle;
+		}
+
+		/**
+ * @generated
+ */
+		protected boolean validatePage() {
+			if (getModelElement() == null) {
+				setErrorMessage(carnival.diagram.part.Messages.CarnivalNewDiagramFileWizard_RootSelectionPageNoSelectionMessage);
+				return false;
+			}
+			boolean result = org.eclipse.gmf.runtime.diagram.core.services.ViewService.getInstance().provides(
+				new org.eclipse.gmf.runtime.diagram.core.services.view.CreateDiagramViewOperation(
+					new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(getModelElement()),
+					carnival.diagram.edit.parts.CarnivalEditPart.MODEL_ID, carnival.diagram.part.CarnivalDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT));
+			setErrorMessage(result ? null : carnival.diagram.part.Messages.CarnivalNewDiagramFileWizard_RootSelectionPageInvalidSelectionMessage);
+			return result;
+		}
+	}
+}

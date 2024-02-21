@@ -1,0 +1,301 @@
+	/*
+ * 
+ */
+package carnival.diagram.navigator;
+
+/**
+ * @generated
+ */
+public class CarnivalNavigatorLabelProvider extends org.eclipse.jface.viewers.LabelProvider implements org.eclipse.ui.navigator.ICommonLabelProvider, org.eclipse.jface.viewers.ITreePathLabelProvider {
+
+		/**
+ * @generated
+ */
+static {
+	carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?UnknownElement", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+	carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().getImageRegistry().put("Navigator?ImageNotFound", org.eclipse.jface.resource.ImageDescriptor.getMissingImageDescriptor());  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+public void updateLabel(org.eclipse.jface.viewers.ViewerLabel label, org.eclipse.jface.viewers.TreePath elementPath) {
+	Object element = elementPath.getLastSegment();
+	if (element instanceof carnival.diagram.navigator.CarnivalNavigatorItem && !isOwnView(((carnival.diagram.navigator.CarnivalNavigatorItem) element).getView())) {
+		return;
+	}
+	label.setText(getText(element));
+	label.setImage(getImage(element));
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(Object element) {
+	if (element instanceof carnival.diagram.navigator.CarnivalNavigatorGroup) {
+	carnival.diagram.navigator.CarnivalNavigatorGroup group = (carnival.diagram.navigator.CarnivalNavigatorGroup) element;
+	return carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().getBundledImage(group.getIcon());
+}
+
+	if (element instanceof carnival.diagram.navigator.CarnivalNavigatorItem) {
+	carnival.diagram.navigator.CarnivalNavigatorItem navigatorItem = (carnival.diagram.navigator.CarnivalNavigatorItem) element;
+	if (!isOwnView(navigatorItem.getView())) {
+		return super.getImage(element);
+	}
+	return getImage(navigatorItem.getView());
+}
+
+	// Due to plugin.xml content will be called only for "own" views
+if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null && isOwnView(view)) {
+		return getImage(view);
+	}
+}
+
+		return super.getImage(element);
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.swt.graphics.Image getImage(org.eclipse.gmf.runtime.notation.View view) {
+		switch (carnival.diagram.part.CarnivalVisualIDRegistry.getVisualID(view)) {
+		case carnival.diagram.edit.parts.CarnivalEditPart.VISUAL_ID:
+	return getImage("Navigator?Diagram?vr/carnival?Carnival", carnival.diagram.providers.CarnivalElementTypes.Carnival_1000); //$NON-NLS-1$
+case carnival.diagram.edit.parts.VisitorEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?vr/carnival?Visitor", carnival.diagram.providers.CarnivalElementTypes.Visitor_2001); //$NON-NLS-1$
+case carnival.diagram.edit.parts.VolunteerEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?vr/carnival?Volunteer", carnival.diagram.providers.CarnivalElementTypes.Volunteer_2002); //$NON-NLS-1$
+case carnival.diagram.edit.parts.CarnivalDayEditPart.VISUAL_ID:
+	return getImage("Navigator?TopLevelNode?vr/carnival?CarnivalDay", carnival.diagram.providers.CarnivalElementTypes.CarnivalDay_2003); //$NON-NLS-1$
+case carnival.diagram.edit.parts.BoothEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?vr/carnival?Booth", carnival.diagram.providers.CarnivalElementTypes.Booth_3001); //$NON-NLS-1$
+case carnival.diagram.edit.parts.EventEditPart.VISUAL_ID:
+	return getImage("Navigator?Node?vr/carnival?Event", carnival.diagram.providers.CarnivalElementTypes.Event_3002); //$NON-NLS-1$
+case carnival.diagram.edit.parts.VisitorVisitEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?vr/carnival?Visitor?visit", carnival.diagram.providers.CarnivalElementTypes.VisitorVisit_4001); //$NON-NLS-1$
+case carnival.diagram.edit.parts.VolunteerWorkEditPart.VISUAL_ID:
+	return getImage("Navigator?Link?vr/carnival?Volunteer?work", carnival.diagram.providers.CarnivalElementTypes.VolunteerWork_4002); //$NON-NLS-1$
+	}
+		return getImage("Navigator?UnknownElement", null);  //$NON-NLS-1$
+}
+	
+		/**
+ * @generated
+ */
+private org.eclipse.swt.graphics.Image getImage(String key, org.eclipse.gmf.runtime.emf.type.core.IElementType elementType) {
+	org.eclipse.jface.resource.ImageRegistry imageRegistry = carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().getImageRegistry();
+	org.eclipse.swt.graphics.Image image = imageRegistry.get(key);
+	if (image == null && elementType != null && carnival.diagram.providers.CarnivalElementTypes.isKnownElementType(elementType)) {
+		image = carnival.diagram.providers.CarnivalElementTypes.getImage(elementType);
+		imageRegistry.put(key, image);
+	}
+			
+	if (image == null) {
+		image = imageRegistry.get("Navigator?ImageNotFound");  //$NON-NLS-1$
+		imageRegistry.put(key, image);
+	}
+	return image;
+}
+	
+		/**
+ * @generated
+ */
+public String getText(Object element) {
+	if (element instanceof carnival.diagram.navigator.CarnivalNavigatorGroup) {
+	carnival.diagram.navigator.CarnivalNavigatorGroup group = (carnival.diagram.navigator.CarnivalNavigatorGroup) element;
+	return group.getGroupName();
+}
+
+	if (element instanceof carnival.diagram.navigator.CarnivalNavigatorItem) {
+	carnival.diagram.navigator.CarnivalNavigatorItem navigatorItem = (carnival.diagram.navigator.CarnivalNavigatorItem) element;
+   		if (!isOwnView(navigatorItem.getView())) {
+   			return null;
+   		}
+   		return getText(navigatorItem.getView());
+	}
+
+	// Due to plugin.xml content will be called only for "own" views
+if (element instanceof org.eclipse.core.runtime.IAdaptable) {
+	org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) ((org.eclipse.core.runtime.IAdaptable) element).getAdapter(org.eclipse.gmf.runtime.notation.View.class);
+	if (view != null && isOwnView(view)) {
+		return getText(view);
+	}
+}
+
+		return super.getText(element);
+}
+	
+		/**
+ * @generated
+ */
+public String getText(org.eclipse.gmf.runtime.notation.View view) {
+	if (view.getElement() != null && view.getElement().eIsProxy()) {
+		return getUnresolvedDomainElementProxyText(view);
+	}
+		switch (carnival.diagram.part.CarnivalVisualIDRegistry.getVisualID(view)) {
+		case carnival.diagram.edit.parts.CarnivalEditPart.VISUAL_ID:
+	return getCarnival_1000Text(view);
+case carnival.diagram.edit.parts.VisitorEditPart.VISUAL_ID:
+	return getVisitor_2001Text(view);
+case carnival.diagram.edit.parts.VolunteerEditPart.VISUAL_ID:
+	return getVolunteer_2002Text(view);
+case carnival.diagram.edit.parts.CarnivalDayEditPart.VISUAL_ID:
+	return getCarnivalDay_2003Text(view);
+case carnival.diagram.edit.parts.BoothEditPart.VISUAL_ID:
+	return getBooth_3001Text(view);
+case carnival.diagram.edit.parts.EventEditPart.VISUAL_ID:
+	return getEvent_3002Text(view);
+case carnival.diagram.edit.parts.VisitorVisitEditPart.VISUAL_ID:
+	return getVisitorVisit_4001Text(view);
+case carnival.diagram.edit.parts.VolunteerWorkEditPart.VISUAL_ID:
+	return getVolunteerWork_4002Text(view);
+	}
+		return getUnknownElementText(view);
+}
+	
+		/**
+ * @generated
+ */
+private String getCarnival_1000Text(org.eclipse.gmf.runtime.notation.View view) {
+			carnival.Carnival domainModelElement = (carnival.Carnival) view.getElement();
+if (domainModelElement != null) {
+	return domainModelElement.getName();
+} else {
+	carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().logError("No domain element for view with visualID = " + 1000);  //$NON-NLS-1$
+		return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getVisitor_2001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = carnival.diagram.providers.CarnivalParserProvider.getParser(carnival.diagram.providers.CarnivalElementTypes.Visitor_2001, view.getElement() != null ? view.getElement() : view, carnival.diagram.part.CarnivalVisualIDRegistry.getType(carnival.diagram.edit.parts.VisitorNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5001); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getVolunteer_2002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = carnival.diagram.providers.CarnivalParserProvider.getParser(carnival.diagram.providers.CarnivalElementTypes.Volunteer_2002, view.getElement() != null ? view.getElement() : view, carnival.diagram.part.CarnivalVisualIDRegistry.getType(carnival.diagram.edit.parts.VolunteerNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5002); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getCarnivalDay_2003Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = carnival.diagram.providers.CarnivalParserProvider.getParser(carnival.diagram.providers.CarnivalElementTypes.CarnivalDay_2003, view.getElement() != null ? view.getElement() : view, carnival.diagram.part.CarnivalVisualIDRegistry.getType(carnival.diagram.edit.parts.CarnivalDayNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5005); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getBooth_3001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = carnival.diagram.providers.CarnivalParserProvider.getParser(carnival.diagram.providers.CarnivalElementTypes.Booth_3001, view.getElement() != null ? view.getElement() : view, carnival.diagram.part.CarnivalVisualIDRegistry.getType(carnival.diagram.edit.parts.BoothNameEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5003); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getEvent_3002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = carnival.diagram.providers.CarnivalParserProvider.getParser(carnival.diagram.providers.CarnivalElementTypes.Event_3002, view.getElement() != null ? view.getElement() : view, carnival.diagram.part.CarnivalVisualIDRegistry.getType(carnival.diagram.edit.parts.EventNameTimeEditPart.VISUAL_ID));
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 5004); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getVisitorVisit_4001Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = carnival.diagram.providers.CarnivalParserProvider.getParser(carnival.diagram.providers.CarnivalElementTypes.VisitorVisit_4001, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6001); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	/**
+ * @generated
+ */
+private String getVolunteerWork_4002Text(org.eclipse.gmf.runtime.notation.View view) {
+					org.eclipse.gmf.runtime.common.ui.services.parser.IParser parser = carnival.diagram.providers.CarnivalParserProvider.getParser(carnival.diagram.providers.CarnivalElementTypes.VolunteerWork_4002, view.getElement() != null ? view.getElement() : view, org.eclipse.gmf.runtime.common.ui.services.parser.CommonParserHint.DESCRIPTION);
+if (parser != null) {
+	return parser.getPrintString(new org.eclipse.gmf.runtime.emf.core.util.EObjectAdapter(view.getElement() != null ? view.getElement() : view), org.eclipse.gmf.runtime.common.ui.services.parser.ParserOptions.NONE.intValue());
+} else {
+	carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().logError("Parser was not found for label " + 6002); //$NON-NLS-1$
+	return "";  //$NON-NLS-1$
+}
+	}
+	
+		/**
+ * @generated
+ */
+private String getUnknownElementText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<UnknownElement Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+private String getUnresolvedDomainElementProxyText(org.eclipse.gmf.runtime.notation.View view) {
+	return "<Unresolved domain element Visual_ID = " + view.getType() + ">";  //$NON-NLS-1$  //$NON-NLS-2$
+}
+	
+		/**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+
+		/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+		/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+	
+		/**
+ * @generated
+ */
+public String getDescription(Object anElement) {
+	return null;
+}
+	
+		/**
+ * @generated
+ */
+private boolean isOwnView(org.eclipse.gmf.runtime.notation.View view) {
+	return carnival.diagram.edit.parts.CarnivalEditPart.MODEL_ID.equals(carnival.diagram.part.CarnivalVisualIDRegistry.getModelID(view));
+}
+
+	}

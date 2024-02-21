@@ -1,0 +1,17 @@
+	/*
+ * 
+ */
+package carnival.diagram.part;
+
+	/**
+ * @generated
+ */
+public class CarnivalNodeDescriptor extends org.eclipse.gmf.tooling.runtime.update.UpdaterNodeDescriptor {
+		/**
+ * @generated
+ */
+public CarnivalNodeDescriptor(org.eclipse.emf.ecore.EObject modelElement, int visualID) {
+	super(modelElement, visualID);
+}
+
+	}

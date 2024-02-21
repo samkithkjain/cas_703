@@ -1,0 +1,7 @@
+# Tracing options for the carnival.diagram plug-in
+
+# Common issues
+carnival.diagram/debug=false
+
+# Visual IDs
+carnival.diagram/debug/visualID=false

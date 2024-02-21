@@ -1,0 +1,379 @@
+	/*
+ * 
+ */
+package carnival.diagram.part;
+
+	/**
+ * @generated
+ */
+public class CarnivalDiagramUpdater {
+		
+	/**
+ * @generated
+ */
+public static boolean isShortcutOrphaned(org.eclipse.gmf.runtime.notation.View view) {
+	return !view.isSetElement() || view.getElement() == null || view.getElement().eIsProxy();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (carnival.diagram.part.CarnivalVisualIDRegistry.getVisualID(view)) {
+		case carnival.diagram.edit.parts.CarnivalEditPart.VISUAL_ID:
+	return getCarnival_1000SemanticChildren(view);
+case carnival.diagram.edit.parts.CarnivalDayCarnivalDayActivitiesCompartmentEditPart.VISUAL_ID:
+	return getCarnivalDayCarnivalDayActivitiesCompartment_7001SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalNodeDescriptor> getCarnival_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+carnival.Carnival modelElement = (carnival.Carnival) view.getElement();
+	java.util.LinkedList<carnival.diagram.part.CarnivalNodeDescriptor> result = new java.util.LinkedList<carnival.diagram.part.CarnivalNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getAttendees().iterator(); it.hasNext();) {
+		carnival.Participant childElement = (carnival.Participant) it.next();
+					int visualID = carnival.diagram.part.CarnivalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == carnival.diagram.edit.parts.VisitorEditPart.VISUAL_ID) {
+	result.add(new carnival.diagram.part.CarnivalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == carnival.diagram.edit.parts.VolunteerEditPart.VISUAL_ID) {
+	result.add(new carnival.diagram.part.CarnivalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+						for (java.util.Iterator<?> it = modelElement.getCarnivalDays().iterator(); it.hasNext();) {
+		carnival.CarnivalDay childElement = (carnival.CarnivalDay) it.next();
+					int visualID = carnival.diagram.part.CarnivalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == carnival.diagram.edit.parts.CarnivalDayEditPart.VISUAL_ID) {
+	result.add(new carnival.diagram.part.CarnivalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalNodeDescriptor> getCarnivalDayCarnivalDayActivitiesCompartment_7001SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+carnival.CarnivalDay modelElement = (carnival.CarnivalDay) containerView.getElement();
+	java.util.LinkedList<carnival.diagram.part.CarnivalNodeDescriptor> result = new java.util.LinkedList<carnival.diagram.part.CarnivalNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getActivities().iterator(); it.hasNext();) {
+		carnival.Activity childElement = (carnival.Activity) it.next();
+					int visualID = carnival.diagram.part.CarnivalVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == carnival.diagram.edit.parts.BoothEditPart.VISUAL_ID) {
+	result.add(new carnival.diagram.part.CarnivalNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == carnival.diagram.edit.parts.EventEditPart.VISUAL_ID) {
+	result.add(new carnival.diagram.part.CarnivalNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (carnival.diagram.part.CarnivalVisualIDRegistry.getVisualID(view)) {
+		case carnival.diagram.edit.parts.CarnivalEditPart.VISUAL_ID:
+	return getCarnival_1000ContainedLinks(view);
+case carnival.diagram.edit.parts.VisitorEditPart.VISUAL_ID:
+	return getVisitor_2001ContainedLinks(view);
+case carnival.diagram.edit.parts.VolunteerEditPart.VISUAL_ID:
+	return getVolunteer_2002ContainedLinks(view);
+case carnival.diagram.edit.parts.CarnivalDayEditPart.VISUAL_ID:
+	return getCarnivalDay_2003ContainedLinks(view);
+case carnival.diagram.edit.parts.BoothEditPart.VISUAL_ID:
+	return getBooth_3001ContainedLinks(view);
+case carnival.diagram.edit.parts.EventEditPart.VISUAL_ID:
+	return getEvent_3002ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (carnival.diagram.part.CarnivalVisualIDRegistry.getVisualID(view)) {
+		case carnival.diagram.edit.parts.VisitorEditPart.VISUAL_ID:
+	return getVisitor_2001IncomingLinks(view);
+case carnival.diagram.edit.parts.VolunteerEditPart.VISUAL_ID:
+	return getVolunteer_2002IncomingLinks(view);
+case carnival.diagram.edit.parts.CarnivalDayEditPart.VISUAL_ID:
+	return getCarnivalDay_2003IncomingLinks(view);
+case carnival.diagram.edit.parts.BoothEditPart.VISUAL_ID:
+	return getBooth_3001IncomingLinks(view);
+case carnival.diagram.edit.parts.EventEditPart.VISUAL_ID:
+	return getEvent_3002IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (carnival.diagram.part.CarnivalVisualIDRegistry.getVisualID(view)) {
+		case carnival.diagram.edit.parts.VisitorEditPart.VISUAL_ID:
+	return getVisitor_2001OutgoingLinks(view);
+case carnival.diagram.edit.parts.VolunteerEditPart.VISUAL_ID:
+	return getVolunteer_2002OutgoingLinks(view);
+case carnival.diagram.edit.parts.CarnivalDayEditPart.VISUAL_ID:
+	return getCarnivalDay_2003OutgoingLinks(view);
+case carnival.diagram.edit.parts.BoothEditPart.VISUAL_ID:
+	return getBooth_3001OutgoingLinks(view);
+case carnival.diagram.edit.parts.EventEditPart.VISUAL_ID:
+	return getEvent_3002OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getCarnival_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getVisitor_2001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	carnival.Visitor modelElement = (carnival.Visitor) view.getElement();
+		java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor> result = new java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Visitor_Visit_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getVolunteer_2002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	carnival.Volunteer modelElement = (carnival.Volunteer) view.getElement();
+		java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor> result = new java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Volunteer_Work_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getCarnivalDay_2003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getBooth_3001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getEvent_3002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getVisitor_2001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getVolunteer_2002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getCarnivalDay_2003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getBooth_3001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	carnival.Booth modelElement = (carnival.Booth) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor> result = new java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Visitor_Visit_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Volunteer_Work_4002(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getEvent_3002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	carnival.Event modelElement = (carnival.Event) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor> result = new java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor>();
+		result.addAll(getIncomingFeatureModelFacetLinks_Visitor_Visit_4001(modelElement, crossReferences));	
+	result.addAll(getIncomingFeatureModelFacetLinks_Volunteer_Work_4002(modelElement, crossReferences));	
+	return result;
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getVisitor_2001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	carnival.Visitor modelElement = (carnival.Visitor) view.getElement();
+		java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor> result = new java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Visitor_Visit_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getVolunteer_2002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	carnival.Volunteer modelElement = (carnival.Volunteer) view.getElement();
+		java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor> result = new java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Volunteer_Work_4002(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getCarnivalDay_2003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getBooth_3001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getEvent_3002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+private static java.util.Collection<carnival.diagram.part.CarnivalLinkDescriptor> getIncomingFeatureModelFacetLinks_Visitor_Visit_4001(carnival.Activity target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor> result = new java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == carnival.CarnivalPackage.eINSTANCE.getVisitor_Visit()) {
+	result.add(new carnival.diagram.part.CarnivalLinkDescriptor(setting.getEObject(), target, carnival.diagram.providers.CarnivalElementTypes.VisitorVisit_4001, carnival.diagram.edit.parts.VisitorVisitEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+
+/**
+ * @generated
+ */
+private static java.util.Collection<carnival.diagram.part.CarnivalLinkDescriptor> getIncomingFeatureModelFacetLinks_Volunteer_Work_4002(carnival.Activity target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor> result = new java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() == carnival.CarnivalPackage.eINSTANCE.getVolunteer_Work()) {
+	result.add(new carnival.diagram.part.CarnivalLinkDescriptor(setting.getEObject(), target, carnival.diagram.providers.CarnivalElementTypes.VolunteerWork_4002, carnival.diagram.edit.parts.VolunteerWorkEditPart.VISUAL_ID));
+}
+	}
+	return result;	
+}
+		
+	/**
+ * @generated
+ */
+private static java.util.Collection<carnival.diagram.part.CarnivalLinkDescriptor> getOutgoingFeatureModelFacetLinks_Visitor_Visit_4001(carnival.Visitor source) {
+	java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor> result = new java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor>();
+		carnival.Activity destination = source.getVisit();
+	if (destination == null) {
+		return result;
+	}
+		result.add(new carnival.diagram.part.CarnivalLinkDescriptor(source, destination, carnival.diagram.providers.CarnivalElementTypes.VisitorVisit_4001, carnival.diagram.edit.parts.VisitorVisitEditPart.VISUAL_ID));
+		return result;
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<carnival.diagram.part.CarnivalLinkDescriptor> getOutgoingFeatureModelFacetLinks_Volunteer_Work_4002(carnival.Volunteer source) {
+	java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor> result = new java.util.LinkedList<carnival.diagram.part.CarnivalLinkDescriptor>();
+		carnival.Activity destination = source.getWork();
+	if (destination == null) {
+		return result;
+	}
+		result.add(new carnival.diagram.part.CarnivalLinkDescriptor(source, destination, carnival.diagram.providers.CarnivalElementTypes.VolunteerWork_4002, carnival.diagram.edit.parts.VolunteerWorkEditPart.VISUAL_ID));
+		return result;
+}
+	
+					/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.update.DiagramUpdater TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.update.DiagramUpdater() {
+				/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<carnival.diagram.part.CarnivalNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+			return CarnivalDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return CarnivalDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return CarnivalDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<carnival.diagram.part.CarnivalLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return CarnivalDiagramUpdater.getOutgoingLinks(view);
+		}
+	}; 
+			
+	}

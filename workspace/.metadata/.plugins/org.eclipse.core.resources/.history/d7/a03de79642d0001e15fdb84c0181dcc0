@@ -1,0 +1,81 @@
+	/*
+ * 
+ */
+package carnival.diagram.navigator;
+
+	/**
+ * @generated
+ */
+public class CarnivalNavigatorItem extends carnival.diagram.navigator.CarnivalAbstractNavigatorItem {
+
+		/**
+ * @generated
+ */
+static {
+	final Class[] supportedTypes = new Class[] { org.eclipse.gmf.runtime.notation.View.class, org.eclipse.emf.ecore.EObject.class };
+	org.eclipse.core.runtime.Platform.getAdapterManager().registerAdapters(new org.eclipse.core.runtime.IAdapterFactory() {
+		
+		public Object getAdapter(Object adaptableObject, Class adapterType) {
+			if (adaptableObject instanceof carnival.diagram.navigator.CarnivalNavigatorItem && (adapterType == org.eclipse.gmf.runtime.notation.View.class || adapterType == org.eclipse.emf.ecore.EObject.class)) {
+				return ((carnival.diagram.navigator.CarnivalNavigatorItem) adaptableObject).getView();
+			}
+			return null;
+		}
+
+		public Class[] getAdapterList() {
+			return supportedTypes;
+		}
+	}, carnival.diagram.navigator.CarnivalNavigatorItem.class);
+}
+	
+		/**
+ * @generated
+ */
+private org.eclipse.gmf.runtime.notation.View myView;
+	
+	/**
+ * @generated
+ */
+private boolean myLeaf = false;	
+	
+		/**
+ * @generated
+ */
+public CarnivalNavigatorItem(org.eclipse.gmf.runtime.notation.View view, Object parent, boolean isLeaf) {
+	super(parent);
+	myView = view;
+	myLeaf = isLeaf;
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.gmf.runtime.notation.View getView() {
+	return myView;
+}
+	
+		/**
+ * @generated
+ */
+public boolean isLeaf() {
+	return myLeaf;
+}
+
+		/**
+ * @generated
+ */
+public boolean equals(Object obj) {
+	if (obj instanceof carnival.diagram.navigator.CarnivalNavigatorItem) {
+		return org.eclipse.emf.ecore.util.EcoreUtil.getURI(getView()).equals(org.eclipse.emf.ecore.util.EcoreUtil.getURI(((carnival.diagram.navigator.CarnivalNavigatorItem) obj).getView()));
+	}
+	return super.equals(obj);
+}
+	
+		/**
+ * @generated
+ */
+public int hashCode() {
+	return org.eclipse.emf.ecore.util.EcoreUtil.getURI(getView()).hashCode();
+}
+
+	}

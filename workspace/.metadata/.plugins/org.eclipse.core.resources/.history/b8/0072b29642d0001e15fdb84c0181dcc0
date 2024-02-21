@@ -1,0 +1,30 @@
+/*
+ * 
+ */
+package carnival.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPreferenceInitializer extends org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer {
+
+	/**
+ * @generated
+ */
+	public void initializeDefaultPreferences() {
+		org.eclipse.jface.preference.IPreferenceStore store = getPreferenceStore();
+		carnival.diagram.preferences.DiagramGeneralPreferencePage.initDefaults(store);
+carnival.diagram.preferences.DiagramAppearancePreferencePage.initDefaults(store);
+carnival.diagram.preferences.DiagramConnectionsPreferencePage.initDefaults(store);
+carnival.diagram.preferences.DiagramPrintingPreferencePage.initDefaults(store);
+carnival.diagram.preferences.DiagramRulersAndGridPreferencePage.initDefaults(store);
+
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.jface.preference.IPreferenceStore getPreferenceStore() {
+		return carnival.diagram.part.CarnivalDiagramEditorPlugin.getInstance().getPreferenceStore();
+	}
+} 

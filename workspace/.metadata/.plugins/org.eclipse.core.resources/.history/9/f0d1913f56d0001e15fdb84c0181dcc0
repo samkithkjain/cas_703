@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="carnival" nsURI="vr/carnival" nsPrefix="carnival">
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Carnival" eSuperTypes="#//NamedElement">
+    <eAnnotations source="gmf.diagram">
+      <details key="model.extension" value="Carnival"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="carnivalDays" upperBound="-1"
+        eType="#//CarnivalDay" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attendees" upperBound="-1"
+        eType="#//Participant" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CarnivalDay" eSuperTypes="#//NamedElement">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name,n"/>
+      <details key="label.pattern" value="Day {1}:{0}"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="n" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activities" upperBound="-1"
+        eType="#//Activity" containment="true">
+      <eAnnotations source="gmf.compartment"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Activity" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="volunteer" eType="#//Volunteer"
+        eOpposite="#//Volunteer/work"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visitors" upperBound="-1"
+        eType="#//Visitor" eOpposite="#//Visitor/visit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Booth" eSuperTypes="#//Activity">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="rectangle"/>
+      <details key="label" value="name"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="availableSpace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//Activity">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="rectangle"/>
+      <details key="label" value="name,time"/>
+      <details key="label.pattern" value="{0}:{1}"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Participant" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Visitor" eSuperTypes="#//Participant">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="label.pattern" value="Guest {0}"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visit" eType="#//Activity"
+        eOpposite="#//Activity/visitors">
+      <eAnnotations source="gmf.link">
+        <details key="target.decoration" value="arrow"/>
+        <details key="source.decoration" value="none"/>
+        <details key="style" value="dot"/>
+        <details key="width" value="2"/>
+        <details key="color" value="128,200,255"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Volunteer" eSuperTypes="#//Participant">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="label.pattern" value="Volunteer {0}"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="work" eType="#//Activity"
+        eOpposite="#//Activity/volunteer">
+      <eAnnotations source="gmf.link">
+        <details key="target.decoration" value="arrow"/>
+        <details key="source.decoration" value="none"/>
+        <details key="style" value="solid"/>
+        <details key="width" value="2"/>
+        <details key="color" value="255,0,0"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

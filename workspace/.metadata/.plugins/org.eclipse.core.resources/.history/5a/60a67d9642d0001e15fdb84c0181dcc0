@@ -1,0 +1,32 @@
+	/*
+ * 
+ */
+package carnival.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class CarnivalDayCarnivalDayActivitiesCompartmentItemSemanticEditPolicy extends carnival.diagram.edit.policies.CarnivalBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public CarnivalDayCarnivalDayActivitiesCompartmentItemSemanticEditPolicy() {
+				super(carnival.diagram.providers.CarnivalElementTypes.CarnivalDay_2003);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (carnival.diagram.providers.CarnivalElementTypes.Booth_3001 == req.getElementType()) {
+	return getGEFWrapper(new carnival.diagram.edit.commands.BoothCreateCommand(req));
+}
+		if (carnival.diagram.providers.CarnivalElementTypes.Event_3002 == req.getElementType()) {
+	return getGEFWrapper(new carnival.diagram.edit.commands.EventCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+	}

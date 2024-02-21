@@ -1,0 +1,14 @@
+/*
+ * 
+ */
+package carnival.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class CarnivalModelingAssistantProviderOfCarnivalDayEditPart extends carnival.diagram.providers.CarnivalModelingAssistantProvider {
+
+					
+	
+
+	}

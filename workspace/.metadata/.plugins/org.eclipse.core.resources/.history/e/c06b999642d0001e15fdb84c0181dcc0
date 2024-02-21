@@ -1,0 +1,89 @@
+/*
+ * 
+ */
+package carnival.diagram.edit.parts;
+
+/**
+ * @generated
+ */
+public class CarnivalEditPartFactory implements org.eclipse.gef.EditPartFactory {
+
+		/**
+ * @generated
+ */
+	public org.eclipse.gef.EditPart createEditPart(org.eclipse.gef.EditPart context, Object model) {
+		if (model instanceof org.eclipse.gmf.runtime.notation.View) {
+			org.eclipse.gmf.runtime.notation.View view = (org.eclipse.gmf.runtime.notation.View) model;
+			switch (carnival.diagram.part.CarnivalVisualIDRegistry.getVisualID(view)) {
+				
+	case carnival.diagram.edit.parts.CarnivalEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.CarnivalEditPart(view);
+									
+	case carnival.diagram.edit.parts.VisitorEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.VisitorEditPart(view);
+					
+	case carnival.diagram.edit.parts.VisitorNameEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.VisitorNameEditPart(view);
+									
+	case carnival.diagram.edit.parts.VolunteerEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.VolunteerEditPart(view);
+					
+	case carnival.diagram.edit.parts.VolunteerNameEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.VolunteerNameEditPart(view);
+									
+	case carnival.diagram.edit.parts.CarnivalDayEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.CarnivalDayEditPart(view);
+					
+	case carnival.diagram.edit.parts.CarnivalDayNameEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.CarnivalDayNameEditPart(view);
+									
+	case carnival.diagram.edit.parts.BoothEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.BoothEditPart(view);
+					
+	case carnival.diagram.edit.parts.BoothNameEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.BoothNameEditPart(view);
+									
+	case carnival.diagram.edit.parts.EventEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.EventEditPart(view);
+					
+	case carnival.diagram.edit.parts.EventNameTimeEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.EventNameTimeEditPart(view);
+								
+	case carnival.diagram.edit.parts.CarnivalDayCarnivalDayActivitiesCompartmentEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.CarnivalDayCarnivalDayActivitiesCompartmentEditPart(view);
+									
+	case carnival.diagram.edit.parts.VisitorVisitEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.VisitorVisitEditPart(view);
+					
+	case carnival.diagram.edit.parts.WrappingLabelEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.WrappingLabelEditPart(view);
+
+									
+	case carnival.diagram.edit.parts.VolunteerWorkEditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.VolunteerWorkEditPart(view);
+					
+	case carnival.diagram.edit.parts.WrappingLabel2EditPart.VISUAL_ID:
+		return new carnival.diagram.edit.parts.WrappingLabel2EditPart(view);
+
+							}
+		}
+		return createUnrecognizedEditPart(context, model);
+	}
+	
+		/**
+ * @generated
+ */
+	 private org.eclipse.gef.EditPart createUnrecognizedEditPart(org.eclipse.gef.EditPart context, Object model) {
+	 	// Handle creation of unrecognized child node EditParts here
+	 	return null;
+	 }
+	
+		/**
+ * @generated
+ */
+	public static org.eclipse.gef.tools.CellEditorLocator getTextCellEditorLocator(
+			org.eclipse.gmf.runtime.diagram.ui.editparts.ITextAwareEditPart source) {
+		return org.eclipse.gmf.tooling.runtime.directedit.locator.CellEditorLocatorAccess.INSTANCE.getTextCellEditorLocator(source);
+	}
+	
+	}

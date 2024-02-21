@@ -1,0 +1,25 @@
+	/*
+ * 
+ */
+package carnival.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class VisitorVisitItemSemanticEditPolicy extends carnival.diagram.edit.policies.CarnivalBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public VisitorVisitItemSemanticEditPolicy() {
+				super(carnival.diagram.providers.CarnivalElementTypes.VisitorVisit_4001);
+	}
+
+			/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getDestroyReferenceCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest req) {
+		return getGEFWrapper(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand(req));
+	}
+		
+	}

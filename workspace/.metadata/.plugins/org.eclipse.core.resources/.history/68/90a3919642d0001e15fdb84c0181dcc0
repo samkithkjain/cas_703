@@ -1,0 +1,57 @@
+	/*
+ * 
+ */
+package carnival.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class CarnivalItemSemanticEditPolicy extends carnival.diagram.edit.policies.CarnivalBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public CarnivalItemSemanticEditPolicy() {
+				super(carnival.diagram.providers.CarnivalElementTypes.Carnival_1000);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (carnival.diagram.providers.CarnivalElementTypes.Visitor_2001 == req.getElementType()) {
+	return getGEFWrapper(new carnival.diagram.edit.commands.VisitorCreateCommand(req));
+}
+		if (carnival.diagram.providers.CarnivalElementTypes.Volunteer_2002 == req.getElementType()) {
+	return getGEFWrapper(new carnival.diagram.edit.commands.VolunteerCreateCommand(req));
+}
+		if (carnival.diagram.providers.CarnivalElementTypes.CarnivalDay_2003 == req.getElementType()) {
+	return getGEFWrapper(new carnival.diagram.edit.commands.CarnivalDayCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDuplicateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = ((org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) getHost()).getEditingDomain();
+	return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
+}
+	
+		/**
+ * @generated
+ */
+private static class DuplicateAnythingCommand extends org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand {
+
+		/**
+ * @generated
+ */
+public DuplicateAnythingCommand(org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain, org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
+}
+
+	}
+	
+	}

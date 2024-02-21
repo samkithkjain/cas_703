@@ -1,0 +1,18 @@
+/*
+ * 
+ */
+package carnival.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class CarnivalBaseEditHelper extends org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase {
+
+		
+		
+	
+	
+	
+	
+	
+	}

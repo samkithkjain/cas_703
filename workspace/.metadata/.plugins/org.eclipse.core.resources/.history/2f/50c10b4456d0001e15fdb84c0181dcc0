@@ -1,0 +1,637 @@
+/**
+ */
+package carnival.impl;
+
+import carnival.Activity;
+import carnival.Booth;
+import carnival.Carnival;
+import carnival.CarnivalDay;
+import carnival.CarnivalFactory;
+import carnival.CarnivalPackage;
+import carnival.Event;
+import carnival.NamedElement;
+import carnival.Participant;
+import carnival.Visitor;
+import carnival.Volunteer;
+
+import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
+
+import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
+ * @generated
+ */
+public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass namedElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass carnivalEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass carnivalDayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass activityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass boothEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eventEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass participantEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass visitorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass volunteerEClass = null;
+
+	/**
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see carnival.CarnivalPackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
+	private CarnivalPackageImpl() {
+		super(eNS_URI, CarnivalFactory.eINSTANCE);
+	}
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private static boolean isInited = false;
+
+	/**
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link CarnivalPackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
+	public static CarnivalPackage init() {
+		if (isInited) return (CarnivalPackage)EPackage.Registry.INSTANCE.getEPackage(CarnivalPackage.eNS_URI);
+
+		// Obtain or create and register package
+		Object registeredCarnivalPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		CarnivalPackageImpl theCarnivalPackage = registeredCarnivalPackage instanceof CarnivalPackageImpl ? (CarnivalPackageImpl)registeredCarnivalPackage : new CarnivalPackageImpl();
+
+		isInited = true;
+
+		// Create package meta-data objects
+		theCarnivalPackage.createPackageContents();
+
+		// Initialize created meta-data
+		theCarnivalPackage.initializePackageContents();
+
+		// Mark meta-data to indicate it can't be changed
+		theCarnivalPackage.freeze();
+
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(CarnivalPackage.eNS_URI, theCarnivalPackage);
+		return theCarnivalPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getNamedElement() {
+		return namedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNamedElement_Name() {
+		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCarnival() {
+		return carnivalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCarnival_CarnivalDays() {
+		return (EReference)carnivalEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCarnival_Attendees() {
+		return (EReference)carnivalEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getCarnivalDay() {
+		return carnivalDayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCarnivalDay_N() {
+		return (EAttribute)carnivalDayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCarnivalDay_Activities() {
+		return (EReference)carnivalDayEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getActivity() {
+		return activityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_Volunteer() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getActivity_Visitors() {
+		return (EReference)activityEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getBooth() {
+		return boothEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getBooth_AvailableSpace() {
+		return (EAttribute)boothEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getEvent() {
+		return eventEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getEvent_Time() {
+		return (EAttribute)eventEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getParticipant() {
+		return participantEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getParticipant_Age() {
+		return (EAttribute)participantEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getParticipant_Email() {
+		return (EAttribute)participantEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVisitor() {
+		return visitorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVisitor_Visit() {
+		return (EReference)visitorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getVolunteer() {
+		return volunteerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getVolunteer_Uid() {
+		return (EAttribute)volunteerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getVolunteer_Work() {
+		return (EReference)volunteerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CarnivalFactory getCarnivalFactory() {
+		return (CarnivalFactory)getEFactoryInstance();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isCreated = false;
+
+	/**
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void createPackageContents() {
+		if (isCreated) return;
+		isCreated = true;
+
+		// Create classes and their features
+		namedElementEClass = createEClass(NAMED_ELEMENT);
+		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
+
+		carnivalEClass = createEClass(CARNIVAL);
+		createEReference(carnivalEClass, CARNIVAL__CARNIVAL_DAYS);
+		createEReference(carnivalEClass, CARNIVAL__ATTENDEES);
+
+		carnivalDayEClass = createEClass(CARNIVAL_DAY);
+		createEAttribute(carnivalDayEClass, CARNIVAL_DAY__N);
+		createEReference(carnivalDayEClass, CARNIVAL_DAY__ACTIVITIES);
+
+		activityEClass = createEClass(ACTIVITY);
+		createEReference(activityEClass, ACTIVITY__VOLUNTEER);
+		createEReference(activityEClass, ACTIVITY__VISITORS);
+
+		boothEClass = createEClass(BOOTH);
+		createEAttribute(boothEClass, BOOTH__AVAILABLE_SPACE);
+
+		eventEClass = createEClass(EVENT);
+		createEAttribute(eventEClass, EVENT__TIME);
+
+		participantEClass = createEClass(PARTICIPANT);
+		createEAttribute(participantEClass, PARTICIPANT__AGE);
+		createEAttribute(participantEClass, PARTICIPANT__EMAIL);
+
+		visitorEClass = createEClass(VISITOR);
+		createEReference(visitorEClass, VISITOR__VISIT);
+
+		volunteerEClass = createEClass(VOLUNTEER);
+		createEAttribute(volunteerEClass, VOLUNTEER__UID);
+		createEReference(volunteerEClass, VOLUNTEER__WORK);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private boolean isInitialized = false;
+
+	/**
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void initializePackageContents() {
+		if (isInitialized) return;
+		isInitialized = true;
+
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
+
+		// Create type parameters
+
+		// Set bounds for type parameters
+
+		// Add supertypes to classes
+		carnivalEClass.getESuperTypes().add(this.getNamedElement());
+		carnivalDayEClass.getESuperTypes().add(this.getNamedElement());
+		activityEClass.getESuperTypes().add(this.getNamedElement());
+		boothEClass.getESuperTypes().add(this.getActivity());
+		eventEClass.getESuperTypes().add(this.getActivity());
+		participantEClass.getESuperTypes().add(this.getNamedElement());
+		visitorEClass.getESuperTypes().add(this.getParticipant());
+		volunteerEClass.getESuperTypes().add(this.getParticipant());
+
+		// Initialize classes and features; add operations and parameters
+		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(carnivalEClass, Carnival.class, "Carnival", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCarnival_CarnivalDays(), this.getCarnivalDay(), null, "carnivalDays", null, 0, -1, Carnival.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCarnival_Attendees(), this.getParticipant(), null, "attendees", null, 0, -1, Carnival.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(carnivalDayEClass, CarnivalDay.class, "CarnivalDay", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCarnivalDay_N(), ecorePackage.getEString(), "n", null, 0, 1, CarnivalDay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCarnivalDay_Activities(), this.getActivity(), null, "activities", null, 0, -1, CarnivalDay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(activityEClass, Activity.class, "Activity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getActivity_Volunteer(), this.getVolunteer(), this.getVolunteer_Work(), "volunteer", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Visitors(), this.getVisitor(), this.getVisitor_Visit(), "visitors", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(boothEClass, Booth.class, "Booth", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBooth_AvailableSpace(), ecorePackage.getEInt(), "availableSpace", null, 0, 1, Booth.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEvent_Time(), ecorePackage.getEString(), "time", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(participantEClass, Participant.class, "Participant", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getParticipant_Age(), ecorePackage.getEInt(), "age", null, 0, 1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getParticipant_Email(), ecorePackage.getEString(), "email", null, 0, 1, Participant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(visitorEClass, Visitor.class, "Visitor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVisitor_Visit(), this.getActivity(), this.getActivity_Visitors(), "visit", null, 0, 1, Visitor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(volunteerEClass, Volunteer.class, "Volunteer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVolunteer_Uid(), ecorePackage.getEInt(), "uid", null, 0, 1, Volunteer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVolunteer_Work(), this.getActivity(), this.getActivity_Volunteer(), "work", null, 0, 1, Volunteer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Create resource
+		createResource(eNS_URI);
+
+		// Create annotations
+		// gmf.diagram
+		createGmfAnnotations();
+		// gmf.node
+		createGmf_1Annotations();
+		// gmf.compartment
+		createGmf_2Annotations();
+		// gmf.link
+		createGmf_3Annotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.diagram</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmfAnnotations() {
+		String source = "gmf.diagram";
+		addAnnotation
+		  (carnivalEClass,
+		   source,
+		   new String[] {
+			   "model.extension", "Carnival"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.node</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_1Annotations() {
+		String source = "gmf.node";
+		addAnnotation
+		  (carnivalDayEClass,
+		   source,
+		   new String[] {
+			   "label", "name,n",
+			   "label.pattern", "Day {1}:{0}"
+		   });
+		addAnnotation
+		  (boothEClass,
+		   source,
+		   new String[] {
+			   "figure", "rectangle",
+			   "label", "name"
+		   });
+		addAnnotation
+		  (eventEClass,
+		   source,
+		   new String[] {
+			   "figure", "rectangle",
+			   "label", "name,time",
+			   "label.pattern", "{0}:{1}"
+		   });
+		addAnnotation
+		  (visitorEClass,
+		   source,
+		   new String[] {
+			   "label", "name",
+			   "label.pattern", "Guest {0}"
+		   });
+		addAnnotation
+		  (volunteerEClass,
+		   source,
+		   new String[] {
+			   "label", "name",
+			   "label.pattern", "Volunteer {0}"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.compartment</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_2Annotations() {
+		String source = "gmf.compartment";
+		addAnnotation
+		  (getCarnivalDay_Activities(),
+		   source,
+		   new String[] {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.link</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_3Annotations() {
+		String source = "gmf.link";
+		addAnnotation
+		  (getVisitor_Visit(),
+		   source,
+		   new String[] {
+			   "target.decoration", "arrow",
+			   "source.decoration", "none",
+			   "style", "dot",
+			   "width", "2",
+			   "color", "128,200,255"
+		   });
+		addAnnotation
+		  (getVolunteer_Work(),
+		   source,
+		   new String[] {
+			   "target.decoration", "arrow",
+			   "source.decoration", "none",
+			   "style", "solid",
+			   "width", "2",
+			   "color", "255,0,0"
+		   });
+	}
+
+} //CarnivalPackageImpl

@@ -1,0 +1,62 @@
+/*
+ * 
+ */
+package carnival.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class CarnivalModelingAssistantProviderOfBoothEditPart extends carnival.diagram.providers.CarnivalModelingAssistantProvider {
+
+					
+	
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getRelTypesOnTarget(org.eclipse.core.runtime.IAdaptable target) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetRelTypesOnTarget((carnival.diagram.edit.parts.BoothEditPart) targetEditPart);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetRelTypesOnTarget(carnival.diagram.edit.parts.BoothEditPart target) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+				types.add(carnival.diagram.providers.CarnivalElementTypes.VisitorVisit_4001);
+				types.add(carnival.diagram.providers.CarnivalElementTypes.VolunteerWork_4002);
+				return types;
+	}
+
+		/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForSource(org.eclipse.core.runtime.IAdaptable target,
+			org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart targetEditPart =
+				(org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) target.getAdapter(
+						org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart.class);
+		return doGetTypesForSource((carnival.diagram.edit.parts.BoothEditPart) targetEditPart, relationshipType);
+	}
+
+		/**
+ * @generated
+ */
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> doGetTypesForSource(carnival.diagram.edit.parts.BoothEditPart target, org.eclipse.gmf.runtime.emf.type.core.IElementType relationshipType) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>();
+				if (relationshipType == carnival.diagram.providers.CarnivalElementTypes.VisitorVisit_4001) {
+						types.add(carnival.diagram.providers.CarnivalElementTypes.Visitor_2001);
+					}
+		 else 		if (relationshipType == carnival.diagram.providers.CarnivalElementTypes.VolunteerWork_4002) {
+						types.add(carnival.diagram.providers.CarnivalElementTypes.Volunteer_2002);
+					}
+				return types;
+	}
+
+	}

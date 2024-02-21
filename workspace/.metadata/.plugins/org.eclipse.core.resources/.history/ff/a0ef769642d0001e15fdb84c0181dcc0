@@ -1,0 +1,10 @@
+/*
+ * 
+ */
+package carnival.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class EventEditHelper extends carnival.diagram.edit.helpers.CarnivalBaseEditHelper {
+	}
