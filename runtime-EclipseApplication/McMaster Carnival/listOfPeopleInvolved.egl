@@ -14,7 +14,7 @@
         <th>UID</th>
         <th>Name</th>
         <th>Email</th>
-        <th>Activity</th> <!-- Add Activity column -->
+        <th>Activity</th> 
     </tr>
     [% var counter = 1; %]
     [%for (d in carnival.carnivalDays.sortBy(d|d.n)){%]
@@ -38,7 +38,7 @@
         <th>Name</th>
         <th>Age</th>
         <th>Email</th>
-        <th>Activity</th> <!-- Add Activity column -->
+        <th>Activity</th> 
     </tr>
     [% var visitorCounter = 1; %]
     [%for (d in carnival.carnivalDays.sortBy(d|d.n)){%]
