@@ -4,8 +4,8 @@ package carnival.impl;
 
 import carnival.Activity;
 import carnival.CarnivalPackage;
+import carnival.Sponsor;
 import carnival.Visitor;
-import carnival.Volunteer;
 
 import java.util.Collection;
 
@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link carnival.impl.ActivityImpl#getVolunteer <em>Volunteer</em>}</li>
+ *   <li>{@link carnival.impl.ActivityImpl#getSponsors <em>Sponsors</em>}</li>
  *   <li>{@link carnival.impl.ActivityImpl#getVisitors <em>Visitors</em>}</li>
  * </ul>
  *
@@ -38,14 +38,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public abstract class ActivityImpl extends NamedElementImpl implements Activity {
 	/**
-	 * The cached value of the '{@link #getVolunteer() <em>Volunteer</em>}' reference.
+	 * The cached value of the '{@link #getSponsors() <em>Sponsors</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVolunteer()
+	 * @see #getSponsors()
 	 * @generated
 	 * @ordered
 	 */
-	protected Volunteer volunteer;
+	protected Sponsor sponsors;
 
 	/**
 	 * The cached value of the '{@link #getVisitors() <em>Visitors</em>}' reference list.
@@ -82,16 +82,16 @@ public abstract class ActivityImpl extends NamedElementImpl implements Activity 
 	 * @generated
 	 */
 	@Override
-	public Volunteer getVolunteer() {
-		if (volunteer != null && volunteer.eIsProxy()) {
-			InternalEObject oldVolunteer = (InternalEObject)volunteer;
-			volunteer = (Volunteer)eResolveProxy(oldVolunteer);
-			if (volunteer != oldVolunteer) {
+	public Sponsor getSponsors() {
+		if (sponsors != null && sponsors.eIsProxy()) {
+			InternalEObject oldSponsors = (InternalEObject)sponsors;
+			sponsors = (Sponsor)eResolveProxy(oldSponsors);
+			if (sponsors != oldSponsors) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CarnivalPackage.ACTIVITY__VOLUNTEER, oldVolunteer, volunteer));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, CarnivalPackage.ACTIVITY__SPONSORS, oldSponsors, sponsors));
 			}
 		}
-		return volunteer;
+		return sponsors;
 	}
 
 	/**
@@ -99,8 +99,8 @@ public abstract class ActivityImpl extends NamedElementImpl implements Activity 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Volunteer basicGetVolunteer() {
-		return volunteer;
+	public Sponsor basicGetSponsors() {
+		return sponsors;
 	}
 
 	/**
@@ -108,11 +108,11 @@ public abstract class ActivityImpl extends NamedElementImpl implements Activity 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVolunteer(Volunteer newVolunteer, NotificationChain msgs) {
-		Volunteer oldVolunteer = volunteer;
-		volunteer = newVolunteer;
+	public NotificationChain basicSetSponsors(Sponsor newSponsors, NotificationChain msgs) {
+		Sponsor oldSponsors = sponsors;
+		sponsors = newSponsors;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CarnivalPackage.ACTIVITY__VOLUNTEER, oldVolunteer, newVolunteer);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CarnivalPackage.ACTIVITY__SPONSORS, oldSponsors, newSponsors);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -124,18 +124,18 @@ public abstract class ActivityImpl extends NamedElementImpl implements Activity 
 	 * @generated
 	 */
 	@Override
-	public void setVolunteer(Volunteer newVolunteer) {
-		if (newVolunteer != volunteer) {
+	public void setSponsors(Sponsor newSponsors) {
+		if (newSponsors != sponsors) {
 			NotificationChain msgs = null;
-			if (volunteer != null)
-				msgs = ((InternalEObject)volunteer).eInverseRemove(this, CarnivalPackage.VOLUNTEER__WORK, Volunteer.class, msgs);
-			if (newVolunteer != null)
-				msgs = ((InternalEObject)newVolunteer).eInverseAdd(this, CarnivalPackage.VOLUNTEER__WORK, Volunteer.class, msgs);
-			msgs = basicSetVolunteer(newVolunteer, msgs);
+			if (sponsors != null)
+				msgs = ((InternalEObject)sponsors).eInverseRemove(this, CarnivalPackage.SPONSOR__WORK, Sponsor.class, msgs);
+			if (newSponsors != null)
+				msgs = ((InternalEObject)newSponsors).eInverseAdd(this, CarnivalPackage.SPONSOR__WORK, Sponsor.class, msgs);
+			msgs = basicSetSponsors(newSponsors, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CarnivalPackage.ACTIVITY__VOLUNTEER, newVolunteer, newVolunteer));
+			eNotify(new ENotificationImpl(this, Notification.SET, CarnivalPackage.ACTIVITY__SPONSORS, newSponsors, newSponsors));
 	}
 
 	/**
@@ -160,10 +160,10 @@ public abstract class ActivityImpl extends NamedElementImpl implements Activity 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CarnivalPackage.ACTIVITY__VOLUNTEER:
-				if (volunteer != null)
-					msgs = ((InternalEObject)volunteer).eInverseRemove(this, CarnivalPackage.VOLUNTEER__WORK, Volunteer.class, msgs);
-				return basicSetVolunteer((Volunteer)otherEnd, msgs);
+			case CarnivalPackage.ACTIVITY__SPONSORS:
+				if (sponsors != null)
+					msgs = ((InternalEObject)sponsors).eInverseRemove(this, CarnivalPackage.SPONSOR__WORK, Sponsor.class, msgs);
+				return basicSetSponsors((Sponsor)otherEnd, msgs);
 			case CarnivalPackage.ACTIVITY__VISITORS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getVisitors()).basicAdd(otherEnd, msgs);
 		}
@@ -178,8 +178,8 @@ public abstract class ActivityImpl extends NamedElementImpl implements Activity 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case CarnivalPackage.ACTIVITY__VOLUNTEER:
-				return basicSetVolunteer(null, msgs);
+			case CarnivalPackage.ACTIVITY__SPONSORS:
+				return basicSetSponsors(null, msgs);
 			case CarnivalPackage.ACTIVITY__VISITORS:
 				return ((InternalEList<?>)getVisitors()).basicRemove(otherEnd, msgs);
 		}
@@ -194,9 +194,9 @@ public abstract class ActivityImpl extends NamedElementImpl implements Activity 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case CarnivalPackage.ACTIVITY__VOLUNTEER:
-				if (resolve) return getVolunteer();
-				return basicGetVolunteer();
+			case CarnivalPackage.ACTIVITY__SPONSORS:
+				if (resolve) return getSponsors();
+				return basicGetSponsors();
 			case CarnivalPackage.ACTIVITY__VISITORS:
 				return getVisitors();
 		}
@@ -212,8 +212,8 @@ public abstract class ActivityImpl extends NamedElementImpl implements Activity 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case CarnivalPackage.ACTIVITY__VOLUNTEER:
-				setVolunteer((Volunteer)newValue);
+			case CarnivalPackage.ACTIVITY__SPONSORS:
+				setSponsors((Sponsor)newValue);
 				return;
 			case CarnivalPackage.ACTIVITY__VISITORS:
 				getVisitors().clear();
@@ -231,8 +231,8 @@ public abstract class ActivityImpl extends NamedElementImpl implements Activity 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case CarnivalPackage.ACTIVITY__VOLUNTEER:
-				setVolunteer((Volunteer)null);
+			case CarnivalPackage.ACTIVITY__SPONSORS:
+				setSponsors((Sponsor)null);
 				return;
 			case CarnivalPackage.ACTIVITY__VISITORS:
 				getVisitors().clear();
@@ -249,8 +249,8 @@ public abstract class ActivityImpl extends NamedElementImpl implements Activity 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case CarnivalPackage.ACTIVITY__VOLUNTEER:
-				return volunteer != null;
+			case CarnivalPackage.ACTIVITY__SPONSORS:
+				return sponsors != null;
 			case CarnivalPackage.ACTIVITY__VISITORS:
 				return visitors != null && !visitors.isEmpty();
 		}

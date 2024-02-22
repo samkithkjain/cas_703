@@ -67,13 +67,13 @@ public interface CarnivalFactory extends EFactory {
 	Visitor createVisitor();
 
 	/**
-	 * Returns a new object of class '<em>Volunteer</em>'.
+	 * Returns a new object of class '<em>Sponsor</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Volunteer</em>'.
+	 * @return a new object of class '<em>Sponsor</em>'.
 	 * @generated
 	 */
-	Volunteer createVolunteer();
+	Sponsor createSponsor();
 
 	/**
 	 * Returns the package supported by this factory.

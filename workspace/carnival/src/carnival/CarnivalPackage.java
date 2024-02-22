@@ -195,13 +195,13 @@ public interface CarnivalPackage extends EPackage {
 	int ACTIVITY__NAME = NAMED_ELEMENT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Volunteer</b></em>' reference.
+	 * The feature id for the '<em><b>Sponsors</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACTIVITY__VOLUNTEER = NAMED_ELEMENT_FEATURE_COUNT + 0;
+	int ACTIVITY__SPONSORS = NAMED_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Visitors</b></em>' reference list.
@@ -241,13 +241,13 @@ public interface CarnivalPackage extends EPackage {
 	int BOOTH__NAME = ACTIVITY__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Volunteer</b></em>' reference.
+	 * The feature id for the '<em><b>Sponsors</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOTH__VOLUNTEER = ACTIVITY__VOLUNTEER;
+	int BOOTH__SPONSORS = ACTIVITY__SPONSORS;
 
 	/**
 	 * The feature id for the '<em><b>Visitors</b></em>' reference list.
@@ -296,13 +296,13 @@ public interface CarnivalPackage extends EPackage {
 	int EVENT__NAME = ACTIVITY__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Volunteer</b></em>' reference.
+	 * The feature id for the '<em><b>Sponsors</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENT__VOLUNTEER = ACTIVITY__VOLUNTEER;
+	int EVENT__SPONSORS = ACTIVITY__SPONSORS;
 
 	/**
 	 * The feature id for the '<em><b>Visitors</b></em>' reference list.
@@ -433,14 +433,14 @@ public interface CarnivalPackage extends EPackage {
 	int VISITOR_FEATURE_COUNT = PARTICIPANT_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link carnival.impl.VolunteerImpl <em>Volunteer</em>}' class.
+	 * The meta object id for the '{@link carnival.impl.SponsorImpl <em>Sponsor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see carnival.impl.VolunteerImpl
-	 * @see carnival.impl.CarnivalPackageImpl#getVolunteer()
+	 * @see carnival.impl.SponsorImpl
+	 * @see carnival.impl.CarnivalPackageImpl#getSponsor()
 	 * @generated
 	 */
-	int VOLUNTEER = 8;
+	int SPONSOR = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -449,7 +449,7 @@ public interface CarnivalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUNTEER__NAME = PARTICIPANT__NAME;
+	int SPONSOR__NAME = PARTICIPANT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Age</b></em>' attribute.
@@ -458,7 +458,7 @@ public interface CarnivalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUNTEER__AGE = PARTICIPANT__AGE;
+	int SPONSOR__AGE = PARTICIPANT__AGE;
 
 	/**
 	 * The feature id for the '<em><b>Email</b></em>' attribute.
@@ -467,7 +467,7 @@ public interface CarnivalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUNTEER__EMAIL = PARTICIPANT__EMAIL;
+	int SPONSOR__EMAIL = PARTICIPANT__EMAIL;
 
 	/**
 	 * The feature id for the '<em><b>Uid</b></em>' attribute.
@@ -476,7 +476,7 @@ public interface CarnivalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUNTEER__UID = PARTICIPANT_FEATURE_COUNT + 0;
+	int SPONSOR__UID = PARTICIPANT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Work</b></em>' reference list.
@@ -485,16 +485,16 @@ public interface CarnivalPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUNTEER__WORK = PARTICIPANT_FEATURE_COUNT + 1;
+	int SPONSOR__WORK = PARTICIPANT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Volunteer</em>' class.
+	 * The number of structural features of the '<em>Sponsor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VOLUNTEER_FEATURE_COUNT = PARTICIPANT_FEATURE_COUNT + 2;
+	int SPONSOR_FEATURE_COUNT = PARTICIPANT_FEATURE_COUNT + 2;
 
 
 	/**
@@ -593,15 +593,15 @@ public interface CarnivalPackage extends EPackage {
 	EClass getActivity();
 
 	/**
-	 * Returns the meta object for the reference '{@link carnival.Activity#getVolunteer <em>Volunteer</em>}'.
+	 * Returns the meta object for the reference '{@link carnival.Activity#getSponsors <em>Sponsors</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Volunteer</em>'.
-	 * @see carnival.Activity#getVolunteer()
+	 * @return the meta object for the reference '<em>Sponsors</em>'.
+	 * @see carnival.Activity#getSponsors()
 	 * @see #getActivity()
 	 * @generated
 	 */
-	EReference getActivity_Volunteer();
+	EReference getActivity_Sponsors();
 
 	/**
 	 * Returns the meta object for the reference list '{@link carnival.Activity#getVisitors <em>Visitors</em>}'.
@@ -710,36 +710,36 @@ public interface CarnivalPackage extends EPackage {
 	EReference getVisitor_Visit();
 
 	/**
-	 * Returns the meta object for class '{@link carnival.Volunteer <em>Volunteer</em>}'.
+	 * Returns the meta object for class '{@link carnival.Sponsor <em>Sponsor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Volunteer</em>'.
-	 * @see carnival.Volunteer
+	 * @return the meta object for class '<em>Sponsor</em>'.
+	 * @see carnival.Sponsor
 	 * @generated
 	 */
-	EClass getVolunteer();
+	EClass getSponsor();
 
 	/**
-	 * Returns the meta object for the attribute '{@link carnival.Volunteer#getUid <em>Uid</em>}'.
+	 * Returns the meta object for the attribute '{@link carnival.Sponsor#getUid <em>Uid</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Uid</em>'.
-	 * @see carnival.Volunteer#getUid()
-	 * @see #getVolunteer()
+	 * @see carnival.Sponsor#getUid()
+	 * @see #getSponsor()
 	 * @generated
 	 */
-	EAttribute getVolunteer_Uid();
+	EAttribute getSponsor_Uid();
 
 	/**
-	 * Returns the meta object for the reference list '{@link carnival.Volunteer#getWork <em>Work</em>}'.
+	 * Returns the meta object for the reference list '{@link carnival.Sponsor#getWork <em>Work</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference list '<em>Work</em>'.
-	 * @see carnival.Volunteer#getWork()
-	 * @see #getVolunteer()
+	 * @see carnival.Sponsor#getWork()
+	 * @see #getSponsor()
 	 * @generated
 	 */
-	EReference getVolunteer_Work();
+	EReference getSponsor_Work();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -844,12 +844,12 @@ public interface CarnivalPackage extends EPackage {
 		EClass ACTIVITY = eINSTANCE.getActivity();
 
 		/**
-		 * The meta object literal for the '<em><b>Volunteer</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Sponsors</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACTIVITY__VOLUNTEER = eINSTANCE.getActivity_Volunteer();
+		EReference ACTIVITY__SPONSORS = eINSTANCE.getActivity_Sponsors();
 
 		/**
 		 * The meta object literal for the '<em><b>Visitors</b></em>' reference list feature.
@@ -940,14 +940,14 @@ public interface CarnivalPackage extends EPackage {
 		EReference VISITOR__VISIT = eINSTANCE.getVisitor_Visit();
 
 		/**
-		 * The meta object literal for the '{@link carnival.impl.VolunteerImpl <em>Volunteer</em>}' class.
+		 * The meta object literal for the '{@link carnival.impl.SponsorImpl <em>Sponsor</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see carnival.impl.VolunteerImpl
-		 * @see carnival.impl.CarnivalPackageImpl#getVolunteer()
+		 * @see carnival.impl.SponsorImpl
+		 * @see carnival.impl.CarnivalPackageImpl#getSponsor()
 		 * @generated
 		 */
-		EClass VOLUNTEER = eINSTANCE.getVolunteer();
+		EClass SPONSOR = eINSTANCE.getSponsor();
 
 		/**
 		 * The meta object literal for the '<em><b>Uid</b></em>' attribute feature.
@@ -955,7 +955,7 @@ public interface CarnivalPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VOLUNTEER__UID = eINSTANCE.getVolunteer_Uid();
+		EAttribute SPONSOR__UID = eINSTANCE.getSponsor_Uid();
 
 		/**
 		 * The meta object literal for the '<em><b>Work</b></em>' reference list feature.
@@ -963,7 +963,7 @@ public interface CarnivalPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VOLUNTEER__WORK = eINSTANCE.getVolunteer_Work();
+		EReference SPONSOR__WORK = eINSTANCE.getSponsor_Work();
 
 	}
 

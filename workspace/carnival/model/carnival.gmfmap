@@ -14,9 +14,9 @@
           href="carnival.ecore#//Visitor"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping"
-          viewPattern="Guest {0}"
-          editorPattern="Guest {0}"
-          editPattern="Guest {0}">
+          viewPattern="Visitor {0}"
+          editorPattern="Visitor {0}"
+          editPattern="Visitor {0}">
         <diagramLabel
             href="carnival.gmfgraph#VisitorLabel"/>
         <features
@@ -24,7 +24,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="carnival.gmftool#//@palette/@tools.0/@tools.3"/>
+          href="carnival.gmftool#//@palette/@tools.0/@tools.4"/>
       <diagramNode
           href="carnival.gmfgraph#Visitor"/>
     </ownedChild>
@@ -34,22 +34,22 @@
         href="carnival.ecore#//Carnival/attendees"/>
     <ownedChild>
       <domainMetaElement
-          href="carnival.ecore#//Volunteer"/>
+          href="carnival.ecore#//Sponsor"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping"
-          viewPattern="Volunteer {0}"
-          editorPattern="Volunteer {0}"
-          editPattern="Volunteer {0}">
+          viewPattern="Sponsor {0}"
+          editorPattern="Sponsor {0}"
+          editPattern="Sponsor {0}">
         <diagramLabel
-            href="carnival.gmfgraph#VolunteerLabel"/>
+            href="carnival.gmfgraph#SponsorLabel"/>
         <features
             href="carnival.ecore#//NamedElement/name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="carnival.gmftool#//@palette/@tools.0/@tools.4"/>
+          href="carnival.gmftool#//@palette/@tools.0/@tools.3"/>
       <diagramNode
-          href="carnival.gmfgraph#Volunteer"/>
+          href="carnival.gmfgraph#Sponsor"/>
     </ownedChild>
   </nodes>
   <nodes>
@@ -151,16 +151,16 @@
         xsi:type="gmfmap:DesignLabelMapping"
         readOnly="true">
       <diagramLabel
-          href="carnival.gmfgraph#VolunteerWorkExternalLabel"/>
+          href="carnival.gmfgraph#SponsorWorkExternalLabel"/>
     </labelMappings>
     <tool
         xsi:type="gmftool:CreationTool"
         href="carnival.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
-        href="carnival.gmfgraph#VolunteerWork"/>
+        href="carnival.gmfgraph#SponsorWork"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="carnival.ecore#//Volunteer/work"/>
+        href="carnival.ecore#//Sponsor/work"/>
   </links>
   <diagram>
     <diagramCanvas

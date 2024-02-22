@@ -1,0 +1,29 @@
+<h1> [%= carnival.name %] Sponsors</h1>
+<table border="1">
+	<tr><td>Serial Number</td><td>UID</td><td>Name</td><td>Email</td></tr>
+	[% var counter = 1; %]
+	[%for (d in carnival.carnivalDays.sortBy(d|d.n)){%]
+		[%for (a in d.activities){%]
+		<tr>
+			<td>[%= counter %]</td>
+			<td>[%= a.sponsors.uid %]</td>
+			<td>[%= a.sponsors.name %]</td>
+			<td>[%= a.sponsors.email %]</td>
+		</tr>
+		[% counter = counter + 1; %]
+		[%}%]
+	[%}%]
+</table>
+
+<h1> [%= carnival.name %] Schedule</h1>
+<table border="1">
+	<tr><td>Day</td><td>Activity</td></tr>
+	[%for (d in carnival.carnivalDays.sortBy(d|d.n)){%]
+		[%for (a in d.activities){%]
+		<tr>
+			<td>[%= d.n %]</td>
+			<td>[%= a.name %]</td>
+		</tr>
+		[%}%]
+	[%}%]
+</table>

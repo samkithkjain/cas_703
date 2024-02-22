@@ -11,8 +11,8 @@ import carnival.CarnivalPackage;
 import carnival.Event;
 import carnival.NamedElement;
 import carnival.Participant;
+import carnival.Sponsor;
 import carnival.Visitor;
-import carnival.Volunteer;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -89,7 +89,7 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass volunteerEClass = null;
+	private EClass sponsorEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -247,7 +247,7 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getActivity_Volunteer() {
+	public EReference getActivity_Sponsors() {
 		return (EReference)activityEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -357,8 +357,8 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 	 * @generated
 	 */
 	@Override
-	public EClass getVolunteer() {
-		return volunteerEClass;
+	public EClass getSponsor() {
+		return sponsorEClass;
 	}
 
 	/**
@@ -367,8 +367,8 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 	 * @generated
 	 */
 	@Override
-	public EAttribute getVolunteer_Uid() {
-		return (EAttribute)volunteerEClass.getEStructuralFeatures().get(0);
+	public EAttribute getSponsor_Uid() {
+		return (EAttribute)sponsorEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -377,8 +377,8 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 	 * @generated
 	 */
 	@Override
-	public EReference getVolunteer_Work() {
-		return (EReference)volunteerEClass.getEStructuralFeatures().get(1);
+	public EReference getSponsor_Work() {
+		return (EReference)sponsorEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -422,7 +422,7 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 		createEReference(carnivalDayEClass, CARNIVAL_DAY__ACTIVITIES);
 
 		activityEClass = createEClass(ACTIVITY);
-		createEReference(activityEClass, ACTIVITY__VOLUNTEER);
+		createEReference(activityEClass, ACTIVITY__SPONSORS);
 		createEReference(activityEClass, ACTIVITY__VISITORS);
 
 		boothEClass = createEClass(BOOTH);
@@ -438,9 +438,9 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 		visitorEClass = createEClass(VISITOR);
 		createEReference(visitorEClass, VISITOR__VISIT);
 
-		volunteerEClass = createEClass(VOLUNTEER);
-		createEAttribute(volunteerEClass, VOLUNTEER__UID);
-		createEReference(volunteerEClass, VOLUNTEER__WORK);
+		sponsorEClass = createEClass(SPONSOR);
+		createEAttribute(sponsorEClass, SPONSOR__UID);
+		createEReference(sponsorEClass, SPONSOR__WORK);
 	}
 
 	/**
@@ -478,7 +478,7 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 		eventEClass.getESuperTypes().add(this.getActivity());
 		participantEClass.getESuperTypes().add(this.getNamedElement());
 		visitorEClass.getESuperTypes().add(this.getParticipant());
-		volunteerEClass.getESuperTypes().add(this.getParticipant());
+		sponsorEClass.getESuperTypes().add(this.getParticipant());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -493,7 +493,7 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 		initEReference(getCarnivalDay_Activities(), this.getActivity(), null, "activities", null, 0, -1, CarnivalDay.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(activityEClass, Activity.class, "Activity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getActivity_Volunteer(), this.getVolunteer(), this.getVolunteer_Work(), "volunteer", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getActivity_Sponsors(), this.getSponsor(), this.getSponsor_Work(), "sponsors", null, 0, 1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getActivity_Visitors(), this.getVisitor(), this.getVisitor_Visit(), "visitors", null, 0, -1, Activity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(boothEClass, Booth.class, "Booth", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -509,9 +509,9 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 		initEClass(visitorEClass, Visitor.class, "Visitor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVisitor_Visit(), this.getActivity(), this.getActivity_Visitors(), "visit", null, 0, -1, Visitor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(volunteerEClass, Volunteer.class, "Volunteer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVolunteer_Uid(), ecorePackage.getEInt(), "uid", null, 0, 1, Volunteer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVolunteer_Work(), this.getActivity(), this.getActivity_Volunteer(), "work", null, 0, -1, Volunteer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(sponsorEClass, Sponsor.class, "Sponsor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSponsor_Uid(), ecorePackage.getEInt(), "uid", null, 0, 1, Sponsor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSponsor_Work(), this.getActivity(), this.getActivity_Sponsors(), "work", null, 0, -1, Sponsor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -578,14 +578,14 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 		   source,
 		   new String[] {
 			   "label", "name",
-			   "label.pattern", "Guest {0}"
+			   "label.pattern", "Visitor {0}"
 		   });
 		addAnnotation
-		  (volunteerEClass,
+		  (sponsorEClass,
 		   source,
 		   new String[] {
 			   "label", "name",
-			   "label.pattern", "Volunteer {0}"
+			   "label.pattern", "Sponsor {0}"
 		   });
 	}
 
@@ -623,7 +623,7 @@ public class CarnivalPackageImpl extends EPackageImpl implements CarnivalPackage
 			   "color", "128,200,255"
 		   });
 		addAnnotation
-		  (getVolunteer_Work(),
+		  (getSponsor_Work(),
 		   source,
 		   new String[] {
 			   "target.decoration", "arrow",

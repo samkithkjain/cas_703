@@ -1,0 +1,68 @@
+context Carnival {
+    constraint HasAtleastOneDay {
+        check: self.carnivalDays.size() > 0
+        message: "Carnival " + self.name + " needs at least one day"
+    }
+    
+    constraint HasAtleastOnePerson {
+        check: self.attendees.size() > 0
+        message: "Carnival " + self.name + " needs at least one person"
+    }
+}
+
+context CarnivalDay {
+    critique HasId {
+        check: self.n.isDefined()
+        message: "Carnival Day " + self.name + " needs a day digit"
+    }
+
+    constraint HasAtleastOneActivity {
+        check: self.activities.size() > 0
+        message: "Carnival Day " + self.n + " needs at least one activity"
+    }
+}
+
+context Activity {    
+    constraint HasVisitor {
+        check: self.visitors.size() > 0
+        message: "Activity " + self.name + " needs a visitor"
+    }
+    
+    constraint HasSponsor {
+        check: self.sponsors.isDefined()
+        message: "Activity " + self.name + " needs a sponsor"
+    }
+}
+
+context Booth {
+    constraint HasAvailableSpace {
+        check: self.availableSpace.isDefined()
+        message: "Booth " + self.name + " must provide space available"
+    }
+}
+
+context Participant {
+    constraint HasAge {
+        check: self.age.isDefined()
+        message: "Participant " + self.name + " must have an age"
+    }
+    
+    critique HasEmail {
+        check: self.email.isDefined()
+        message: "Participant " + self.name + " should have an email"
+    }
+}
+
+context Sponsor {
+    constraint HasPartnerId {
+        check: self.uid.isDefined()
+        message: "Sponsor " + self.name + " must have a partner id"
+    }
+}
+
+context NamedElement {
+    constraint HasName {
+        check: self.name.isDefined()
+        message: "Element needs a name"
+    }
+}

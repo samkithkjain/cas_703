@@ -4,7 +4,6 @@ package carnival;
 
 import org.eclipse.emf.common.util.EList;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Visitor</b></em>'.
@@ -18,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see carnival.CarnivalPackage#getVisitor()
- * @model annotation="gmf.node label='name' label.pattern='Guest {0}'"
+ * @model annotation="gmf.node label='name' label.pattern='Visitor {0}'"
  * @generated
  */
 public interface Visitor extends Participant {

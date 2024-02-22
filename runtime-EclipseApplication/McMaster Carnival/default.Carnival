@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carnival:Carnival xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:carnival="vr/carnival" name="McMaster University Carnival">
+  <carnivalDays name="McMaster Kick-off" n="1">
+    <activities xsi:type="carnival:Event" name="Opening Ceremony" sponsors="//@attendees.1" visitors="//@attendees.0" time="8:00 - 13:00"/>
+    <activities xsi:type="carnival:Booth" name="Taste of McMaster" sponsors="//@attendees.2" visitors="//@attendees.10" availableSpace="5"/>
+    <activities xsi:type="carnival:Booth" name="Health Hub" sponsors="//@attendees.3" visitors="//@attendees.9" availableSpace="10"/>
+  </carnivalDays>
+  <carnivalDays name="Academic Extravaganza" n="2">
+    <activities xsi:type="carnival:Event" name="Tech Showcase" sponsors="//@attendees.2" visitors="//@attendees.10" time="10:00 - 13:00"/>
+    <activities xsi:type="carnival:Event" name="Research Symposium" sponsors="//@attendees.4" visitors="//@attendees.9" time="14:00 - 16:00"/>
+    <activities xsi:type="carnival:Booth" name="Innovation Zone" sponsors="//@attendees.5" visitors="//@attendees.11" availableSpace="3"/>
+  </carnivalDays>
+  <carnivalDays name="Grand Finale Celebration" n="3">
+    <activities xsi:type="carnival:Event" name="Cultural Fusion Gala" sponsors="//@attendees.7" visitors="//@attendees.11" time="10:30 - 13:00"/>
+    <activities xsi:type="carnival:Booth" name="Global Flavors Market" sponsors="//@attendees.6" visitors="//@attendees.8" availableSpace="20"/>
+  </carnivalDays>
+  <attendees xsi:type="carnival:Visitor" name="Sana Ishtiaq" age="20" email="sana@mcmaster.ca" visit="//@carnivalDays.0/@activities.0"/>
+  <attendees xsi:type="carnival:Sponsor" name="Samkith K Jain" age="25" email="samkith@mcmaster.ca" uid="100" work="//@carnivalDays.0/@activities.0"/>
+  <attendees xsi:type="carnival:Sponsor" name="Amin T" age="42" email="amin@mcmaster.ca" uid="200" work="//@carnivalDays.0/@activities.1 //@carnivalDays.1/@activities.0"/>
+  <attendees xsi:type="carnival:Sponsor" name="Dr. Oscar Wilde" age="30" email="Oscar@mcmaster.ca" uid="300" work="//@carnivalDays.0/@activities.2"/>
+  <attendees xsi:type="carnival:Sponsor" name="Jason Peterson" age="31" email="jason@mcmaster.ca" uid="400" work="//@carnivalDays.1/@activities.1"/>
+  <attendees xsi:type="carnival:Sponsor" name="Robin Tunney" age="35" email="robin@mcmaster.ca" uid="500" work="//@carnivalDays.1/@activities.2"/>
+  <attendees xsi:type="carnival:Sponsor" name="Cage Harper" age="40" email="cage@mcmaster.ca" uid="700" work="//@carnivalDays.2/@activities.1"/>
+  <attendees xsi:type="carnival:Sponsor" name="John Red" age="50" email="john@mcmaster.cs" uid="800" work="//@carnivalDays.2/@activities.0"/>
+  <attendees xsi:type="carnival:Visitor" name="Dr. William John" age="50" email="john@mcmaster.ca" visit="//@carnivalDays.2/@activities.1"/>
+  <attendees xsi:type="carnival:Visitor" name="Dr. Rohin Twain" age="40" email="rohin@mcmaster.ca" visit="//@carnivalDays.1/@activities.1 //@carnivalDays.0/@activities.2"/>
+  <attendees xsi:type="carnival:Visitor" name="Nivetha Raj P" age="25" email="Alan@mcmaster.ca" visit="//@carnivalDays.0/@activities.1 //@carnivalDays.1/@activities.0"/>
+  <attendees xsi:type="carnival:Visitor" name="Simon Baker" age="28" email="Simon@mcmaster.ca" visit="//@carnivalDays.2/@activities.0 //@carnivalDays.1/@activities.2"/>
+</carnival:Carnival>

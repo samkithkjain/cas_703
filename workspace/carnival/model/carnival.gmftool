@@ -39,8 +39,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Visitor"
-          description="Create new Visitor">
+          title="Sponsor"
+          description="Create new Sponsor">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon
@@ -48,8 +48,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Volunteer"
-          description="Create new Volunteer">
+          title="Visitor"
+          description="Create new Visitor">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
         <largeIcon

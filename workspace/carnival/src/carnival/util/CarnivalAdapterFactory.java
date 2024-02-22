@@ -100,8 +100,8 @@ public class CarnivalAdapterFactory extends AdapterFactoryImpl {
 				return createVisitorAdapter();
 			}
 			@Override
-			public Adapter caseVolunteer(Volunteer object) {
-				return createVolunteerAdapter();
+			public Adapter caseSponsor(Sponsor object) {
+				return createSponsorAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -236,16 +236,16 @@ public class CarnivalAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link carnival.Volunteer <em>Volunteer</em>}'.
+	 * Creates a new adapter for an object of class '{@link carnival.Sponsor <em>Sponsor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see carnival.Volunteer
+	 * @see carnival.Sponsor
 	 * @generated
 	 */
-	public Adapter createVolunteerAdapter() {
+	public Adapter createSponsorAdapter() {
 		return null;
 	}
 

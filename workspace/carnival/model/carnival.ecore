@@ -25,8 +25,8 @@
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Activity" abstract="true" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="volunteer" eType="#//Volunteer"
-        eOpposite="#//Volunteer/work"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sponsors" eType="#//Sponsor"
+        eOpposite="#//Sponsor/work"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="visitors" upperBound="-1"
         eType="#//Visitor" eOpposite="#//Visitor/visit"/>
   </eClassifiers>
@@ -52,7 +52,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Visitor" eSuperTypes="#//Participant">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
-      <details key="label.pattern" value="Guest {0}"/>
+      <details key="label.pattern" value="Visitor {0}"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="visit" upperBound="-1"
         eType="#//Activity" eOpposite="#//Activity/visitors">
@@ -65,14 +65,14 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Volunteer" eSuperTypes="#//Participant">
+  <eClassifiers xsi:type="ecore:EClass" name="Sponsor" eSuperTypes="#//Participant">
     <eAnnotations source="gmf.node">
       <details key="label" value="name"/>
-      <details key="label.pattern" value="Volunteer {0}"/>
+      <details key="label.pattern" value="Sponsor {0}"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="uid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="work" upperBound="-1" eType="#//Activity"
-        eOpposite="#//Activity/volunteer">
+        eOpposite="#//Activity/sponsors">
       <eAnnotations source="gmf.link">
         <details key="target.decoration" value="arrow"/>
         <details key="source.decoration" value="none"/>

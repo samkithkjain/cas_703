@@ -124,11 +124,11 @@ public class CarnivalSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case CarnivalPackage.VOLUNTEER: {
-				Volunteer volunteer = (Volunteer)theEObject;
-				T result = caseVolunteer(volunteer);
-				if (result == null) result = caseParticipant(volunteer);
-				if (result == null) result = caseNamedElement(volunteer);
+			case CarnivalPackage.SPONSOR: {
+				Sponsor sponsor = (Sponsor)theEObject;
+				T result = caseSponsor(sponsor);
+				if (result == null) result = caseParticipant(sponsor);
+				if (result == null) result = caseNamedElement(sponsor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -257,17 +257,17 @@ public class CarnivalSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Volunteer</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Sponsor</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Volunteer</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Sponsor</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVolunteer(Volunteer object) {
+	public T caseSponsor(Sponsor object) {
 		return null;
 	}
 

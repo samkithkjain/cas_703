@@ -54,24 +54,24 @@
       <labels visualID="5001" editPartClassName="VisitorNameEditPart" itemSemanticEditPolicyClassName="VisitorNameItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureVisitorLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
-        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="Guest {0}" editorPattern="Guest {0}" editPattern="Guest {0}">
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="Visitor {0}" editorPattern="Visitor {0}" editPattern="Visitor {0}">
           <metaFeatures href="carnival.genmodel#//carnival/NamedElement/name"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
-    <topLevelNodes visualID="2002" editPartClassName="VolunteerEditPart" itemSemanticEditPolicyClassName="VolunteerItemSemanticEditPolicy" canonicalEditPolicyClassName="VolunteerCanonicalEditPolicy" graphicalNodeEditPolicyClassName="VolunteerGraphicalNodeEditPolicy" createCommandClassName="VolunteerCreateCommand">
+    <topLevelNodes visualID="2002" editPartClassName="SponsorEditPart" itemSemanticEditPolicyClassName="SponsorItemSemanticEditPolicy" canonicalEditPolicyClassName="SponsorCanonicalEditPolicy" graphicalNodeEditPolicyClassName="SponsorGraphicalNodeEditPolicy" createCommandClassName="SponsorCreateCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="VolunteerEditHelper"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="VolunteerFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class VolunteerFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureVolunteerLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public VolunteerFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureVolunteerLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureVolunteerLabelFigure.setText(&quot;Volunteer&quot;);&#xA;&#xA;this.add(fFigureVolunteerLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureVolunteerLabelFigure() {&#xA;&#x9;&#x9;return fFigureVolunteerLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="SponsorEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="SponsorFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class SponsorFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureSponsorLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public SponsorFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureSponsorLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureSponsorLabelFigure.setText(&quot;Sponsor&quot;);&#xA;&#xA;this.add(fFigureSponsorLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureSponsorLabelFigure() {&#xA;&#x9;&#x9;return fFigureSponsorLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet>
-        <metaClass href="carnival.genmodel#//carnival/Volunteer"/>
+        <metaClass href="carnival.genmodel#//carnival/Sponsor"/>
         <containmentMetaFeature href="carnival.genmodel#//carnival/Carnival/attendees"/>
         <childMetaFeature href="carnival.genmodel#//carnival/Carnival/attendees"/>
       </modelFacet>
-      <labels visualID="5002" editPartClassName="VolunteerNameEditPart" itemSemanticEditPolicyClassName="VolunteerNameItemSemanticEditPolicy" elementIcon="true">
+      <labels visualID="5002" editPartClassName="SponsorNameEditPart" itemSemanticEditPolicyClassName="SponsorNameItemSemanticEditPolicy" elementIcon="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureVolunteerLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
-        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="Volunteer {0}" editorPattern="Volunteer {0}" editPattern="Volunteer {0}">
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureSponsorLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0" viewPattern="Sponsor {0}" editorPattern="Sponsor {0}" editPattern="Sponsor {0}">
           <metaFeatures href="carnival.genmodel#//carnival/NamedElement/name"/>
         </modelFacet>
       </labels>
@@ -112,14 +112,14 @@
         <modelFacet xsi:type="gmfgen:DesignLabelModelFacet" parser="//@labelParsers/@implementations.1"/>
       </labels>
     </links>
-    <links visualID="4002" editPartClassName="VolunteerWorkEditPart" itemSemanticEditPolicyClassName="VolunteerWorkItemSemanticEditPolicy" createCommandClassName="VolunteerWorkCreateCommand" reorientCommandClassName="VolunteerWorkReorientCommand">
+    <links visualID="4002" editPartClassName="SponsorWorkEditPart" itemSemanticEditPolicyClassName="SponsorWorkItemSemanticEditPolicy" createCommandClassName="SponsorWorkCreateCommand" reorientCommandClassName="SponsorWorkReorientCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
       <elementType xsi:type="gmfgen:SpecializationType"/>
-      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="VolunteerWorkFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class VolunteerWorkFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public VolunteerWorkFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 255, 200, 128);&#xA;&#xA;">
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="SponsorWorkFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class SponsorWorkFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public SponsorWorkFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 255, 200, 128);&#xA;&#xA;">
         <attributes xsi:type="gmfgen:StyleAttributes" fixedForeground="true"/>
       </viewmap>
       <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
-        <metaFeature href="carnival.genmodel#//carnival/Volunteer/work"/>
+        <metaFeature href="carnival.genmodel#//carnival/Sponsor/work"/>
       </modelFacet>
       <labels visualID="6002" editPartClassName="WrappingLabel2EditPart" itemSemanticEditPolicyClassName="WrappingLabel2ItemSemanticEditPolicy" readOnly="true">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -138,8 +138,8 @@
         <entries xsi:type="gmfgen:ToolEntry" title="Booth" description="Create new Booth" genNodes="//@diagram/@childNodes.0"/>
         <entries xsi:type="gmfgen:ToolEntry" title="CarnivalDay" description="Create new CarnivalDay" genNodes="//@diagram/@topLevelNodes.2"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Event" description="Create new Event" genNodes="//@diagram/@childNodes.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Sponsor" description="Create new Sponsor" genNodes="//@diagram/@topLevelNodes.1"/>
         <entries xsi:type="gmfgen:ToolEntry" title="Visitor" description="Create new Visitor" genNodes="//@diagram/@topLevelNodes.0"/>
-        <entries xsi:type="gmfgen:ToolEntry" title="Volunteer" description="Create new Volunteer" genNodes="//@diagram/@topLevelNodes.1"/>
       </groups>
       <groups title="Connections" collapse="true">
         <entries xsi:type="gmfgen:ToolEntry" title="Visit" description="Create new Visit" genLinks="//@diagram/@links.0"/>

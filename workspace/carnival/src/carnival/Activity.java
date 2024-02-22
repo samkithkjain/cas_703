@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link carnival.Activity#getVolunteer <em>Volunteer</em>}</li>
+ *   <li>{@link carnival.Activity#getSponsors <em>Sponsors</em>}</li>
  *   <li>{@link carnival.Activity#getVisitors <em>Visitors</em>}</li>
  * </ul>
  *
@@ -23,28 +23,28 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Activity extends NamedElement {
 	/**
-	 * Returns the value of the '<em><b>Volunteer</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link carnival.Volunteer#getWork <em>Work</em>}'.
+	 * Returns the value of the '<em><b>Sponsors</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link carnival.Sponsor#getWork <em>Work</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Volunteer</em>' reference.
-	 * @see #setVolunteer(Volunteer)
-	 * @see carnival.CarnivalPackage#getActivity_Volunteer()
-	 * @see carnival.Volunteer#getWork
+	 * @return the value of the '<em>Sponsors</em>' reference.
+	 * @see #setSponsors(Sponsor)
+	 * @see carnival.CarnivalPackage#getActivity_Sponsors()
+	 * @see carnival.Sponsor#getWork
 	 * @model opposite="work"
 	 * @generated
 	 */
-	Volunteer getVolunteer();
+	Sponsor getSponsors();
 
 	/**
-	 * Sets the value of the '{@link carnival.Activity#getVolunteer <em>Volunteer</em>}' reference.
+	 * Sets the value of the '{@link carnival.Activity#getSponsors <em>Sponsors</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Volunteer</em>' reference.
-	 * @see #getVolunteer()
+	 * @param value the new value of the '<em>Sponsors</em>' reference.
+	 * @see #getSponsors()
 	 * @generated
 	 */
-	void setVolunteer(Volunteer value);
+	void setSponsors(Sponsor value);
 
 	/**
 	 * Returns the value of the '<em><b>Visitors</b></em>' reference list.

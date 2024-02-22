@@ -20,7 +20,7 @@ class CarnivalDay extends NamedElement {
 }
 
 abstract class Activity extends NamedElement {
-	ref Volunteer#work volunteer;
+	ref Sponsor#work sponsors;
 	ref Visitor[*]#visit visitors;
 }
 
@@ -39,18 +39,18 @@ abstract class Participant extends NamedElement {
 	attr String email;
 }
 
-@gmf.node(label="name", label.pattern="Guest {0}")
+@gmf.node(label="name", label.pattern="Visitor {0}")
 class Visitor extends Participant {
 
 	@gmf.link(target.decoration="arrow", source.decoration="none", style="dot", width="2", color="128,200,255")
 	ref Activity[*]#visitors visit;
 }
 
-@gmf.node(label="name", label.pattern="Volunteer {0}")
-class Volunteer extends Participant {
+@gmf.node(label="name", label.pattern="Sponsor {0}")
+class Sponsor extends Participant {
 	attr int uid;
 
 	@gmf.link(target.decoration="arrow", source.decoration="none", style="solid", width="2", color="255,200,128")
-	ref Activity[*]#volunteer work;
+	ref Activity[*]#sponsors work;
 }
 

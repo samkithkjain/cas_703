@@ -61,7 +61,7 @@ public class CarnivalFactoryImpl extends EFactoryImpl implements CarnivalFactory
 			case CarnivalPackage.BOOTH: return createBooth();
 			case CarnivalPackage.EVENT: return createEvent();
 			case CarnivalPackage.VISITOR: return createVisitor();
-			case CarnivalPackage.VOLUNTEER: return createVolunteer();
+			case CarnivalPackage.SPONSOR: return createSponsor();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -128,9 +128,9 @@ public class CarnivalFactoryImpl extends EFactoryImpl implements CarnivalFactory
 	 * @generated
 	 */
 	@Override
-	public Volunteer createVolunteer() {
-		VolunteerImpl volunteer = new VolunteerImpl();
-		return volunteer;
+	public Sponsor createSponsor() {
+		SponsorImpl sponsor = new SponsorImpl();
+		return sponsor;
 	}
 
 	/**

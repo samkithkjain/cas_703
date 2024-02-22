@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>Visitors List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+<h1>[%= carnival.name %] Schedule</h1>
+<table>
+    <tr>
+        <th>Day</th>
+        <th>Activity</th>
+    </tr>
+    [%for (d in carnival.carnivalDays.sortBy(d|d.n)){%]
+        [%for (a in d.activities){%]
+            <tr>
+                <td>[%= d.n %]</td>
+                <td>[%= a.name %]</td>
+            </tr>
+        [%}%]
+    [%}%]
+</table>
+</body>
+</html>

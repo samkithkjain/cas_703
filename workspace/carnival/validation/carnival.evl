@@ -1,70 +1,79 @@
-context NamedElement {
-	constraint HasName {
-		check: self.name.isDefined()
-		message: "Element needs a name"
-	}
-}
-
 context Carnival {
-	constraint HasAtleastOneDay {
-		check: self.carnivalDays.size() > 0
-		message: "Carnival " + self.name + " needs at least one day"
-	}
-	
-	constraint HasAtleastOnePerson {
-		check: self.attendees.size() > 0
-		message: "Carnival " + self.name + " needs at least one person"
-	}
+    constraint HasAtleastOneDay {
+        check: self.carnivalDays.size() > 0
+        message: "Carnival " + self.name + " needs at least one day"
+    }
+    
+    constraint HasAtleastOnePerson {
+        check: self.attendees.size() > 0
+        message: "Carnival " + self.name + " needs at least one person"
+    }
 }
 
 context CarnivalDay {
-	critique HasId {
-		check: self.n.isDefined()
-		message: "Carnival Day " + self.name + " needs a day digit"
-	}
+    critique HasId {
+        check: self.n.isDefined()
+        message: "Carnival Day " + self.name + " needs a day digit"
+    }
 
-	constraint HasAtleastOneActivity {
-		check: self.activities.size() > 0
-		message: "Carnival Day " + self.n + " needs at least one activity"
-	}
+    constraint HasAtleastOneActivity {
+        check: self.activities.size() > 0
+        message: "Carnival Day " + self.n + " needs at least one activity"
+    }
 }
 
 context Activity {
-	constraint HasVolunteer {
-		check: self.volunteer.isDefined()
-		message: "Activity " + self.name + " needs a volunteer"
-	}
-}
-
-context Event {
-	constraint HasDuration {
-		check: self.time.isDefined()
-		message: "Event " + self.name + " must have a duration"
-	}
+    constraint HasVolunteer {
+        check: self.volunteer.isDefined()
+        message: "Activity " + self.name + " needs a sponsor"
+    }
+    
+    constraint AllEventsHaveDurations {
+        check: self.time.isDefined()
+        message: "Event " + self.name + " must have a duration"
+    }
 }
 
 context Booth {
-	constraint HasAvailableSpace {
-		check: self.availableSpace.isDefined()
-		message: "Booth " + self.name + " must provide space available"
-	}
+    constraint HasAvailableSpace {
+        check: self.availableSpace.isDefined()
+        message: "Booth " + self.name + " must provide space available"
+    }
 }
 
 context Person {
-	constraint HasAge {
-		check: self.age.isDefined()
-		message: "Person " + self.name + " must have an age"
-	}
-	
-	critique HasEmail {
-		check: self.email.isDefined()
-		message: "Person " + self.name + " should have an email"
-	}
+    constraint HasAge {
+        check: self.age.isDefined()
+        message: "Person " + self.name + " must have an age"
+    }
+    
+    critique HasEmail {
+        check: self.email.isDefined()
+        message: "Person " + self.name + " should have an email"
+    }
+    
+    constraint AllPersonsHaveUniqueEmails {
+        check: self.allInstances()->collect(p | p.email)->asSet()->size() == self.allInstances()->collect(p | p.email)->size()
+        message: "All persons must have unique email addresses"
+    }
 }
 
-context Volunteer {
-	constraint HasPartnerId {
-		check: self.partnerId.isDefined()
-		message: "Volunteer " + self.name + " must have a partner id"
-	}
+context Sponsor {
+    constraint HasPartnerId {
+        check: self.partnerId.isDefined()
+        message: "Sponsor " + self.name + " must have a partner id"
+    }
+    
+    constraint AllSponsorIdsUnique {
+        check: self.allInstances()->collect(s | s.id)->asSet()->size() == self.allInstances()->size()
+        message: "Sponsor IDs must be unique"
+    }
 }
+
+context NamedElement {
+    constraint HasName {
+        check: self.name.isDefined()
+        message: "Element needs a name"
+    }
+}
+

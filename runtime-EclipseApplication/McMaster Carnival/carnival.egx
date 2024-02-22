@@ -1,0 +1,15 @@
+rule CarnivalModelToSchedule
+	transform carnival : Carnival {
+	
+		template: "schedule.egl"
+	
+		target: "CarnivalSchedule.html"
+	}
+	
+rule CarnivalModelToList
+	transform carnival : Carnival {
+	
+		template: "listOfPeopleInvolved.egl"
+	
+		target: "CarnivalList.html"
+	}
