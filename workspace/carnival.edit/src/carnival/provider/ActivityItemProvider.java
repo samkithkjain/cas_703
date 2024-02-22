@@ -43,26 +43,26 @@ public class ActivityItemProvider extends NamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addVolunteerPropertyDescriptor(object);
+			addSponsorsPropertyDescriptor(object);
 			addVisitorsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Volunteer feature.
+	 * This adds a property descriptor for the Sponsors feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addVolunteerPropertyDescriptor(Object object) {
+	protected void addSponsorsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Activity_volunteer_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_volunteer_feature", "_UI_Activity_type"),
-				 CarnivalPackage.Literals.ACTIVITY__VOLUNTEER,
+				 getString("_UI_Activity_sponsors_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Activity_sponsors_feature", "_UI_Activity_type"),
+				 CarnivalPackage.Literals.ACTIVITY__SPONSORS,
 				 true,
 				 false,
 				 true,

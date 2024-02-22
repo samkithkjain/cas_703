@@ -13,14 +13,14 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 
 import carnival.diagram.edit.parts.BoothEditPart;
 import carnival.diagram.edit.parts.EventEditPart;
-import carnival.diagram.edit.parts.VolunteerEditPart;
+import carnival.diagram.edit.parts.SponsorEditPart;
 import carnival.diagram.providers.CarnivalElementTypes;
 import carnival.diagram.providers.CarnivalModelingAssistantProvider;
 
 /**
  * @generated
  */
-public class CarnivalModelingAssistantProviderOfVolunteerEditPart extends CarnivalModelingAssistantProvider {
+public class CarnivalModelingAssistantProviderOfSponsorEditPart extends CarnivalModelingAssistantProvider {
 
 	/**
 	* @generated
@@ -29,15 +29,15 @@ public class CarnivalModelingAssistantProviderOfVolunteerEditPart extends Carniv
 
 	public List<IElementType> getRelTypesOnSource(IAdaptable source) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
-		return doGetRelTypesOnSource((VolunteerEditPart) sourceEditPart);
+		return doGetRelTypesOnSource((SponsorEditPart) sourceEditPart);
 	}
 
 	/**
 	* @generated
 	*/
-	public List<IElementType> doGetRelTypesOnSource(VolunteerEditPart source) {
+	public List<IElementType> doGetRelTypesOnSource(SponsorEditPart source) {
 		List<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(CarnivalElementTypes.VolunteerWork_4002);
+		types.add(CarnivalElementTypes.SponsorWork_4002);
 		return types;
 	}
 
@@ -49,20 +49,20 @@ public class CarnivalModelingAssistantProviderOfVolunteerEditPart extends Carniv
 	public List<IElementType> getRelTypesOnSourceAndTarget(IAdaptable source, IAdaptable target) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target.getAdapter(IGraphicalEditPart.class);
-		return doGetRelTypesOnSourceAndTarget((VolunteerEditPart) sourceEditPart, targetEditPart);
+		return doGetRelTypesOnSourceAndTarget((SponsorEditPart) sourceEditPart, targetEditPart);
 	}
 
 	/**
 	* @generated
 	*/
-	public List<IElementType> doGetRelTypesOnSourceAndTarget(VolunteerEditPart source,
+	public List<IElementType> doGetRelTypesOnSourceAndTarget(SponsorEditPart source,
 			IGraphicalEditPart targetEditPart) {
 		List<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof BoothEditPart) {
-			types.add(CarnivalElementTypes.VolunteerWork_4002);
+			types.add(CarnivalElementTypes.SponsorWork_4002);
 		}
 		if (targetEditPart instanceof EventEditPart) {
-			types.add(CarnivalElementTypes.VolunteerWork_4002);
+			types.add(CarnivalElementTypes.SponsorWork_4002);
 		}
 		return types;
 	}
@@ -74,15 +74,15 @@ public class CarnivalModelingAssistantProviderOfVolunteerEditPart extends Carniv
 
 	public List<IElementType> getTypesForTarget(IAdaptable source, IElementType relationshipType) {
 		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
-		return doGetTypesForTarget((VolunteerEditPart) sourceEditPart, relationshipType);
+		return doGetTypesForTarget((SponsorEditPart) sourceEditPart, relationshipType);
 	}
 
 	/**
 	* @generated
 	*/
-	public List<IElementType> doGetTypesForTarget(VolunteerEditPart source, IElementType relationshipType) {
+	public List<IElementType> doGetTypesForTarget(SponsorEditPart source, IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
-		if (relationshipType == CarnivalElementTypes.VolunteerWork_4002) {
+		if (relationshipType == CarnivalElementTypes.SponsorWork_4002) {
 			types.add(CarnivalElementTypes.Booth_3001);
 			types.add(CarnivalElementTypes.Event_3002);
 		}

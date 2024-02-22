@@ -34,11 +34,11 @@ public class CarnivalEditPartFactory implements EditPartFactory {
 			case VisitorNameEditPart.VISUAL_ID:
 				return new VisitorNameEditPart(view);
 
-			case VolunteerEditPart.VISUAL_ID:
-				return new VolunteerEditPart(view);
+			case SponsorEditPart.VISUAL_ID:
+				return new SponsorEditPart(view);
 
-			case VolunteerNameEditPart.VISUAL_ID:
-				return new VolunteerNameEditPart(view);
+			case SponsorNameEditPart.VISUAL_ID:
+				return new SponsorNameEditPart(view);
 
 			case CarnivalDayEditPart.VISUAL_ID:
 				return new CarnivalDayEditPart(view);
@@ -67,8 +67,8 @@ public class CarnivalEditPartFactory implements EditPartFactory {
 			case WrappingLabelEditPart.VISUAL_ID:
 				return new WrappingLabelEditPart(view);
 
-			case VolunteerWorkEditPart.VISUAL_ID:
-				return new VolunteerWorkEditPart(view);
+			case SponsorWorkEditPart.VISUAL_ID:
+				return new SponsorWorkEditPart(view);
 
 			case WrappingLabel2EditPart.VISUAL_ID:
 				return new WrappingLabel2EditPart(view);

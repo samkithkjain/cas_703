@@ -39,7 +39,6 @@ Require-Bundle: org.eclipse.core.runtime,
  carnival;visibility:=reexport,
  carnival.edit;visibility:=reexport,
  org.eclipse.emf.validation;visibility:=reexport,
- org.eclipse.gef;visibility:=reexport,
- org.eclipse.gmf.runtime.lite.svg;visibility:=reexport
+ org.eclipse.gef;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

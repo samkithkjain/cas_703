@@ -16,17 +16,16 @@ import carnival.diagram.edit.parts.BoothEditPart;
 import carnival.diagram.edit.parts.BoothNameEditPart;
 import carnival.diagram.edit.parts.CarnivalDayCarnivalDayActivitiesCompartmentEditPart;
 import carnival.diagram.edit.parts.CarnivalDayEditPart;
-import carnival.diagram.edit.parts.CarnivalDayNameEditPart;
 import carnival.diagram.edit.parts.CarnivalDayNameNEditPart;
 import carnival.diagram.edit.parts.CarnivalEditPart;
 import carnival.diagram.edit.parts.EventEditPart;
 import carnival.diagram.edit.parts.EventNameTimeEditPart;
+import carnival.diagram.edit.parts.SponsorEditPart;
+import carnival.diagram.edit.parts.SponsorNameEditPart;
+import carnival.diagram.edit.parts.SponsorWorkEditPart;
 import carnival.diagram.edit.parts.VisitorEditPart;
 import carnival.diagram.edit.parts.VisitorNameEditPart;
 import carnival.diagram.edit.parts.VisitorVisitEditPart;
-import carnival.diagram.edit.parts.VolunteerEditPart;
-import carnival.diagram.edit.parts.VolunteerNameEditPart;
-import carnival.diagram.edit.parts.VolunteerWorkEditPart;
 import carnival.diagram.edit.parts.WrappingLabel2EditPart;
 import carnival.diagram.edit.parts.WrappingLabelEditPart;
 
@@ -135,8 +134,8 @@ public class CarnivalVisualIDRegistry {
 			if (CarnivalPackage.eINSTANCE.getVisitor().isSuperTypeOf(domainElement.eClass())) {
 				return VisitorEditPart.VISUAL_ID;
 			}
-			if (CarnivalPackage.eINSTANCE.getVolunteer().isSuperTypeOf(domainElement.eClass())) {
-				return VolunteerEditPart.VISUAL_ID;
+			if (CarnivalPackage.eINSTANCE.getSponsor().isSuperTypeOf(domainElement.eClass())) {
+				return SponsorEditPart.VISUAL_ID;
 			}
 			if (CarnivalPackage.eINSTANCE.getCarnivalDay().isSuperTypeOf(domainElement.eClass())) {
 				return CarnivalDayEditPart.VISUAL_ID;
@@ -177,7 +176,7 @@ public class CarnivalVisualIDRegistry {
 			if (VisitorEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (VolunteerEditPart.VISUAL_ID == nodeVisualID) {
+			if (SponsorEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (CarnivalDayEditPart.VISUAL_ID == nodeVisualID) {
@@ -189,8 +188,8 @@ public class CarnivalVisualIDRegistry {
 				return true;
 			}
 			break;
-		case VolunteerEditPart.VISUAL_ID:
-			if (VolunteerNameEditPart.VISUAL_ID == nodeVisualID) {
+		case SponsorEditPart.VISUAL_ID:
+			if (SponsorNameEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -225,7 +224,7 @@ public class CarnivalVisualIDRegistry {
 				return true;
 			}
 			break;
-		case VolunteerWorkEditPart.VISUAL_ID:
+		case SponsorWorkEditPart.VISUAL_ID:
 			if (WrappingLabel2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -287,7 +286,7 @@ public class CarnivalVisualIDRegistry {
 		case CarnivalEditPart.VISUAL_ID:
 			return false;
 		case VisitorEditPart.VISUAL_ID:
-		case VolunteerEditPart.VISUAL_ID:
+		case SponsorEditPart.VISUAL_ID:
 		case BoothEditPart.VISUAL_ID:
 		case EventEditPart.VISUAL_ID:
 			return true;

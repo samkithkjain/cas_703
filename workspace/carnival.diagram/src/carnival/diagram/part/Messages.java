@@ -286,22 +286,22 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String Visitor4CreationTool_title;
+	public static String Sponsor4CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Visitor4CreationTool_desc;
+	public static String Sponsor4CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Volunteer5CreationTool_title;
+	public static String Visitor5CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Volunteer5CreationTool_desc;
+	public static String Visitor5CreationTool_desc;
 
 	/**
 	* @generated
@@ -346,7 +346,7 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_Volunteer_2002_outgoinglinks;
+	public static String NavigatorGroupName_Sponsor_2002_outgoinglinks;
 
 	/**
 	* @generated
@@ -371,12 +371,12 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_VolunteerWork_4002_target;
+	public static String NavigatorGroupName_SponsorWork_4002_target;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_VolunteerWork_4002_source;
+	public static String NavigatorGroupName_SponsorWork_4002_source;
 
 	/**
 	* @generated

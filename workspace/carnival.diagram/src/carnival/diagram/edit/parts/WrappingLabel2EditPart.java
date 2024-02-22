@@ -309,7 +309,7 @@ public class WrappingLabel2EditPart extends LabelEditPart implements ITextAwareE
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CarnivalParserProvider.getParser(CarnivalElementTypes.VolunteerWork_4002, getParserElement(),
+			parser = CarnivalParserProvider.getParser(CarnivalElementTypes.SponsorWork_4002, getParserElement(),
 					CommonParserHint.DESCRIPTION);
 		}
 		return parser;

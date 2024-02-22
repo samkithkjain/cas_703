@@ -38,8 +38,8 @@ public class CarnivalPaletteFactory {
 		paletteContainer.add(createBooth1CreationTool());
 		paletteContainer.add(createCarnivalDay2CreationTool());
 		paletteContainer.add(createEvent3CreationTool());
-		paletteContainer.add(createVisitor4CreationTool());
-		paletteContainer.add(createVolunteer5CreationTool());
+		paletteContainer.add(createSponsor4CreationTool());
+		paletteContainer.add(createVisitor5CreationTool());
 		return paletteContainer;
 	}
 
@@ -95,11 +95,11 @@ public class CarnivalPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createVisitor4CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Visitor4CreationTool_title,
-				Messages.Visitor4CreationTool_desc, Collections.singletonList(CarnivalElementTypes.Visitor_2001));
-		entry.setId("createVisitor4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(CarnivalElementTypes.getImageDescriptor(CarnivalElementTypes.Visitor_2001));
+	private ToolEntry createSponsor4CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Sponsor4CreationTool_title,
+				Messages.Sponsor4CreationTool_desc, Collections.singletonList(CarnivalElementTypes.Sponsor_2002));
+		entry.setId("createSponsor4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CarnivalElementTypes.getImageDescriptor(CarnivalElementTypes.Sponsor_2002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -107,11 +107,11 @@ public class CarnivalPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createVolunteer5CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Volunteer5CreationTool_title,
-				Messages.Volunteer5CreationTool_desc, Collections.singletonList(CarnivalElementTypes.Volunteer_2002));
-		entry.setId("createVolunteer5CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(CarnivalElementTypes.getImageDescriptor(CarnivalElementTypes.Volunteer_2002));
+	private ToolEntry createVisitor5CreationTool() {
+		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(Messages.Visitor5CreationTool_title,
+				Messages.Visitor5CreationTool_desc, Collections.singletonList(CarnivalElementTypes.Visitor_2001));
+		entry.setId("createVisitor5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(CarnivalElementTypes.getImageDescriptor(CarnivalElementTypes.Visitor_2001));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -133,9 +133,9 @@ public class CarnivalPaletteFactory {
 	*/
 	private ToolEntry createWork2CreationTool() {
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(Messages.Work2CreationTool_title,
-				Messages.Work2CreationTool_desc, Collections.singletonList(CarnivalElementTypes.VolunteerWork_4002));
+				Messages.Work2CreationTool_desc, Collections.singletonList(CarnivalElementTypes.SponsorWork_4002));
 		entry.setId("createWork2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(CarnivalElementTypes.getImageDescriptor(CarnivalElementTypes.VolunteerWork_4002));
+		entry.setSmallIcon(CarnivalElementTypes.getImageDescriptor(CarnivalElementTypes.SponsorWork_4002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

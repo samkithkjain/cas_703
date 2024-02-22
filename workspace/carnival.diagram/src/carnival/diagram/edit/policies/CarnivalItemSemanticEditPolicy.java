@@ -11,8 +11,8 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest;
 
 import carnival.diagram.edit.commands.CarnivalDayCreateCommand;
+import carnival.diagram.edit.commands.SponsorCreateCommand;
 import carnival.diagram.edit.commands.VisitorCreateCommand;
-import carnival.diagram.edit.commands.VolunteerCreateCommand;
 import carnival.diagram.providers.CarnivalElementTypes;
 
 /**
@@ -34,8 +34,8 @@ public class CarnivalItemSemanticEditPolicy extends CarnivalBaseItemSemanticEdit
 		if (CarnivalElementTypes.Visitor_2001 == req.getElementType()) {
 			return getGEFWrapper(new VisitorCreateCommand(req));
 		}
-		if (CarnivalElementTypes.Volunteer_2002 == req.getElementType()) {
-			return getGEFWrapper(new VolunteerCreateCommand(req));
+		if (CarnivalElementTypes.Sponsor_2002 == req.getElementType()) {
+			return getGEFWrapper(new SponsorCreateCommand(req));
 		}
 		if (CarnivalElementTypes.CarnivalDay_2003 == req.getElementType()) {
 			return getGEFWrapper(new CarnivalDayCreateCommand(req));

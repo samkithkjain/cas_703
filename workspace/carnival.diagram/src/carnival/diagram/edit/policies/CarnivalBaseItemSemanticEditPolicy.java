@@ -36,8 +36,8 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 
 import carnival.Activity;
+import carnival.Sponsor;
 import carnival.Visitor;
-import carnival.Volunteer;
 import carnival.diagram.part.CarnivalDiagramEditorPlugin;
 import carnival.diagram.part.CarnivalVisualIDRegistry;
 import carnival.diagram.providers.CarnivalElementTypes;
@@ -328,17 +328,17 @@ public class CarnivalBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public boolean canCreateVolunteerWork_4002(Volunteer source, Activity target) {
+		public boolean canCreateSponsorWork_4002(Sponsor source, Activity target) {
 			if (source != null) {
 				if (source.getWork().contains(target)) {
 					return false;
 				}
 			}
-			if (target != null && (target.getVolunteer() != null)) {
+			if (target != null && (target.getSponsors() != null)) {
 				return false;
 			}
 
-			return canExistVolunteerWork_4002(source, target);
+			return canExistSponsorWork_4002(source, target);
 		}
 
 		/**
@@ -351,7 +351,7 @@ public class CarnivalBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		* @generated
 		*/
-		public boolean canExistVolunteerWork_4002(Volunteer source, Activity target) {
+		public boolean canExistSponsorWork_4002(Sponsor source, Activity target) {
 			return true;
 		}
 	}

@@ -3,17 +3,17 @@
 package carnival.tests;
 
 import carnival.CarnivalFactory;
-import carnival.Volunteer;
+import carnival.Sponsor;
 
 import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Volunteer</b></em>'.
+ * A test case for the model object '<em><b>Sponsor</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class VolunteerTest extends ParticipantTest {
+public class SponsorTest extends ParticipantTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -21,28 +21,28 @@ public class VolunteerTest extends ParticipantTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(VolunteerTest.class);
+		TestRunner.run(SponsorTest.class);
 	}
 
 	/**
-	 * Constructs a new Volunteer test case with the given name.
+	 * Constructs a new Sponsor test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VolunteerTest(String name) {
+	public SponsorTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Volunteer test case.
+	 * Returns the fixture for this Sponsor test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected Volunteer getFixture() {
-		return (Volunteer)fixture;
+	protected Sponsor getFixture() {
+		return (Sponsor)fixture;
 	}
 
 	/**
@@ -53,7 +53,7 @@ public class VolunteerTest extends ParticipantTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(CarnivalFactory.eINSTANCE.createVolunteer());
+		setFixture(CarnivalFactory.eINSTANCE.createSponsor());
 	}
 
 	/**
@@ -67,4 +67,4 @@ public class VolunteerTest extends ParticipantTest {
 		setFixture(null);
 	}
 
-} //VolunteerTest
+} //SponsorTest

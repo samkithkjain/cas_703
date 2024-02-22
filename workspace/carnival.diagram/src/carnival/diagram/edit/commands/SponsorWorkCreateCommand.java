@@ -12,13 +12,13 @@ import org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand;
 import org.eclipse.gmf.runtime.emf.type.core.requests.CreateRelationshipRequest;
 
 import carnival.Activity;
-import carnival.Volunteer;
+import carnival.Sponsor;
 import carnival.diagram.edit.policies.CarnivalBaseItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class VolunteerWorkCreateCommand extends EditElementCommand {
+public class SponsorWorkCreateCommand extends EditElementCommand {
 
 	/**
 	* @generated
@@ -33,7 +33,7 @@ public class VolunteerWorkCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	public VolunteerWorkCreateCommand(CreateRelationshipRequest request, EObject source, EObject target) {
+	public SponsorWorkCreateCommand(CreateRelationshipRequest request, EObject source, EObject target) {
 		super(request.getLabel(), null, request);
 		this.source = source;
 		this.target = target;
@@ -46,7 +46,7 @@ public class VolunteerWorkCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof Volunteer) {
+		if (source != null && false == source instanceof Sponsor) {
 			return false;
 		}
 		if (target != null && false == target instanceof Activity) {
@@ -56,7 +56,7 @@ public class VolunteerWorkCreateCommand extends EditElementCommand {
 			return true; // link creation is in progress; source is not defined yet
 		}
 		// target may be null here but it's possible to check constraint
-		return CarnivalBaseItemSemanticEditPolicy.getLinkConstraints().canCreateVolunteerWork_4002(getSource(),
+		return CarnivalBaseItemSemanticEditPolicy.getLinkConstraints().canCreateSponsorWork_4002(getSource(),
 				getTarget());
 	}
 
@@ -85,8 +85,8 @@ public class VolunteerWorkCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected Volunteer getSource() {
-		return (Volunteer) source;
+	protected Sponsor getSource() {
+		return (Sponsor) source;
 	}
 
 	/**

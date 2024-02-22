@@ -25,17 +25,16 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
-import org.eclipse.gmf.runtime.lite.svg.SVGFigure;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import carnival.diagram.edit.policies.VolunteerItemSemanticEditPolicy;
+import carnival.diagram.edit.policies.SponsorItemSemanticEditPolicy;
 import carnival.diagram.part.CarnivalVisualIDRegistry;
 
 /**
  * @generated
  */
-public class VolunteerEditPart extends ShapeNodeEditPart {
+public class SponsorEditPart extends ShapeNodeEditPart {
 
 	/**
 	* @generated
@@ -55,7 +54,7 @@ public class VolunteerEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public VolunteerEditPart(View view) {
+	public SponsorEditPart(View view) {
 		super(view);
 	}
 
@@ -64,7 +63,7 @@ public class VolunteerEditPart extends ShapeNodeEditPart {
 	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new VolunteerItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new SponsorItemSemanticEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, createLayoutEditPolicy());
 		// XXX need an SCR to runtime to have another abstract superclass that would let children add reasonable editpolicies
 		// removeEditPolicy(org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles.CONNECTION_HANDLES_ROLE);
@@ -99,22 +98,22 @@ public class VolunteerEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected IFigure createNodeShape() {
-		return primaryShape = new VolunteerFigure();
+		return primaryShape = new SponsorFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public VolunteerFigure getPrimaryShape() {
-		return (VolunteerFigure) primaryShape;
+	public SponsorFigure getPrimaryShape() {
+		return (SponsorFigure) primaryShape;
 	}
 
 	/**
 	* @generated
 	*/
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof VolunteerNameEditPart) {
-			((VolunteerNameEditPart) childEditPart).setLabel(getPrimaryShape().getFigureVolunteerLabelFigure());
+		if (childEditPart instanceof SponsorNameEditPart) {
+			((SponsorNameEditPart) childEditPart).setLabel(getPrimaryShape().getFigureSponsorLabelFigure());
 			return true;
 		}
 		return false;
@@ -124,7 +123,7 @@ public class VolunteerEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	protected boolean removeFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof VolunteerNameEditPart) {
+		if (childEditPart instanceof SponsorNameEditPart) {
 			return true;
 		}
 		return false;
@@ -247,7 +246,7 @@ public class VolunteerEditPart extends ShapeNodeEditPart {
 	* @generated
 	*/
 	public EditPart getPrimaryChildEditPart() {
-		return getChildBySemanticHint(CarnivalVisualIDRegistry.getType(VolunteerNameEditPart.VISUAL_ID));
+		return getChildBySemanticHint(CarnivalVisualIDRegistry.getType(SponsorNameEditPart.VISUAL_ID));
 	}
 
 	/**
@@ -265,17 +264,17 @@ public class VolunteerEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public class VolunteerFigure extends RoundedRectangle {
+	public class SponsorFigure extends RoundedRectangle {
 
 		/**
 		 * @generated
 		 */
-		private WrappingLabel fFigureVolunteerLabelFigure;
+		private WrappingLabel fFigureSponsorLabelFigure;
 
 		/**
 		 * @generated
 		 */
-		public VolunteerFigure() {
+		public SponsorFigure() {
 			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(8), getMapMode().DPtoLP(8)));
 			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5), getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
 					getMapMode().DPtoLP(5)));
@@ -287,19 +286,19 @@ public class VolunteerEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			fFigureVolunteerLabelFigure = new WrappingLabel();
+			fFigureSponsorLabelFigure = new WrappingLabel();
 
-			fFigureVolunteerLabelFigure.setText("Volunteer");
+			fFigureSponsorLabelFigure.setText("Sponsor");
 
-			this.add(fFigureVolunteerLabelFigure);
+			this.add(fFigureSponsorLabelFigure);
 
 		}
 
 		/**
 		 * @generated
 		 */
-		public WrappingLabel getFigureVolunteerLabelFigure() {
-			return fFigureVolunteerLabelFigure;
+		public WrappingLabel getFigureSponsorLabelFigure() {
+			return fFigureSponsorLabelFigure;
 		}
 
 	}

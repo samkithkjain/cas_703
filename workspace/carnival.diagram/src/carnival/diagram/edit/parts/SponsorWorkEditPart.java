@@ -13,12 +13,12 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 import org.eclipse.swt.graphics.Color;
 
-import carnival.diagram.edit.policies.VolunteerWorkItemSemanticEditPolicy;
+import carnival.diagram.edit.policies.SponsorWorkItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class VolunteerWorkEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
+public class SponsorWorkEditPart extends ConnectionNodeEditPart implements ITreeBranchEditPart {
 
 	/**
 	* @generated
@@ -28,7 +28,7 @@ public class VolunteerWorkEditPart extends ConnectionNodeEditPart implements ITr
 	/**
 	* @generated
 	*/
-	public VolunteerWorkEditPart(View view) {
+	public SponsorWorkEditPart(View view) {
 		super(view);
 	}
 
@@ -37,7 +37,7 @@ public class VolunteerWorkEditPart extends ConnectionNodeEditPart implements ITr
 	*/
 	protected void createDefaultEditPolicies() {
 		super.createDefaultEditPolicies();
-		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new VolunteerWorkItemSemanticEditPolicy());
+		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE, new SponsorWorkItemSemanticEditPolicy());
 	}
 
 	/**
@@ -50,25 +50,25 @@ public class VolunteerWorkEditPart extends ConnectionNodeEditPart implements ITr
 	*/
 
 	protected Connection createConnectionFigure() {
-		return new VolunteerWorkFigure();
+		return new SponsorWorkFigure();
 	}
 
 	/**
 	* @generated
 	*/
-	public VolunteerWorkFigure getPrimaryShape() {
-		return (VolunteerWorkFigure) getFigure();
+	public SponsorWorkFigure getPrimaryShape() {
+		return (SponsorWorkFigure) getFigure();
 	}
 
 	/**
 	 * @generated
 	 */
-	public class VolunteerWorkFigure extends PolylineConnectionEx {
+	public class SponsorWorkFigure extends PolylineConnectionEx {
 
 		/**
 		 * @generated
 		 */
-		public VolunteerWorkFigure() {
+		public SponsorWorkFigure() {
 			this.setLineWidth(2);
 			this.setForegroundColor(THIS_FORE);
 

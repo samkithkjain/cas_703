@@ -35,7 +35,7 @@ public class CarnivalModelingAssistantProviderOfBoothEditPart extends CarnivalMo
 	public List<IElementType> doGetRelTypesOnTarget(BoothEditPart target) {
 		List<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(CarnivalElementTypes.VisitorVisit_4001);
-		types.add(CarnivalElementTypes.VolunteerWork_4002);
+		types.add(CarnivalElementTypes.SponsorWork_4002);
 		return types;
 	}
 
@@ -56,8 +56,8 @@ public class CarnivalModelingAssistantProviderOfBoothEditPart extends CarnivalMo
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == CarnivalElementTypes.VisitorVisit_4001) {
 			types.add(CarnivalElementTypes.Visitor_2001);
-		} else if (relationshipType == CarnivalElementTypes.VolunteerWork_4002) {
-			types.add(CarnivalElementTypes.Volunteer_2002);
+		} else if (relationshipType == CarnivalElementTypes.SponsorWork_4002) {
+			types.add(CarnivalElementTypes.Sponsor_2002);
 		}
 		return types;
 	}

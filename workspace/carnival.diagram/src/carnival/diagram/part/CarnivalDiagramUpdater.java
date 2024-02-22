@@ -23,17 +23,17 @@ import carnival.CarnivalDay;
 import carnival.CarnivalPackage;
 import carnival.Event;
 import carnival.Participant;
+import carnival.Sponsor;
 import carnival.Visitor;
-import carnival.Volunteer;
 import carnival.diagram.edit.parts.BoothEditPart;
 import carnival.diagram.edit.parts.CarnivalDayCarnivalDayActivitiesCompartmentEditPart;
 import carnival.diagram.edit.parts.CarnivalDayEditPart;
 import carnival.diagram.edit.parts.CarnivalEditPart;
 import carnival.diagram.edit.parts.EventEditPart;
+import carnival.diagram.edit.parts.SponsorEditPart;
+import carnival.diagram.edit.parts.SponsorWorkEditPart;
 import carnival.diagram.edit.parts.VisitorEditPart;
 import carnival.diagram.edit.parts.VisitorVisitEditPart;
-import carnival.diagram.edit.parts.VolunteerEditPart;
-import carnival.diagram.edit.parts.VolunteerWorkEditPart;
 import carnival.diagram.providers.CarnivalElementTypes;
 
 /**
@@ -77,7 +77,7 @@ public class CarnivalDiagramUpdater {
 				result.add(new CarnivalNodeDescriptor(childElement, visualID));
 				continue;
 			}
-			if (visualID == VolunteerEditPart.VISUAL_ID) {
+			if (visualID == SponsorEditPart.VISUAL_ID) {
 				result.add(new CarnivalNodeDescriptor(childElement, visualID));
 				continue;
 			}
@@ -131,8 +131,8 @@ public class CarnivalDiagramUpdater {
 			return getCarnival_1000ContainedLinks(view);
 		case VisitorEditPart.VISUAL_ID:
 			return getVisitor_2001ContainedLinks(view);
-		case VolunteerEditPart.VISUAL_ID:
-			return getVolunteer_2002ContainedLinks(view);
+		case SponsorEditPart.VISUAL_ID:
+			return getSponsor_2002ContainedLinks(view);
 		case CarnivalDayEditPart.VISUAL_ID:
 			return getCarnivalDay_2003ContainedLinks(view);
 		case BoothEditPart.VISUAL_ID:
@@ -150,8 +150,8 @@ public class CarnivalDiagramUpdater {
 		switch (CarnivalVisualIDRegistry.getVisualID(view)) {
 		case VisitorEditPart.VISUAL_ID:
 			return getVisitor_2001IncomingLinks(view);
-		case VolunteerEditPart.VISUAL_ID:
-			return getVolunteer_2002IncomingLinks(view);
+		case SponsorEditPart.VISUAL_ID:
+			return getSponsor_2002IncomingLinks(view);
 		case CarnivalDayEditPart.VISUAL_ID:
 			return getCarnivalDay_2003IncomingLinks(view);
 		case BoothEditPart.VISUAL_ID:
@@ -169,8 +169,8 @@ public class CarnivalDiagramUpdater {
 		switch (CarnivalVisualIDRegistry.getVisualID(view)) {
 		case VisitorEditPart.VISUAL_ID:
 			return getVisitor_2001OutgoingLinks(view);
-		case VolunteerEditPart.VISUAL_ID:
-			return getVolunteer_2002OutgoingLinks(view);
+		case SponsorEditPart.VISUAL_ID:
+			return getSponsor_2002OutgoingLinks(view);
 		case CarnivalDayEditPart.VISUAL_ID:
 			return getCarnivalDay_2003OutgoingLinks(view);
 		case BoothEditPart.VISUAL_ID:
@@ -201,10 +201,10 @@ public class CarnivalDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<CarnivalLinkDescriptor> getVolunteer_2002ContainedLinks(View view) {
-		Volunteer modelElement = (Volunteer) view.getElement();
+	public static List<CarnivalLinkDescriptor> getSponsor_2002ContainedLinks(View view) {
+		Sponsor modelElement = (Sponsor) view.getElement();
 		LinkedList<CarnivalLinkDescriptor> result = new LinkedList<CarnivalLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_Volunteer_Work_4002(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Sponsor_Work_4002(modelElement));
 		return result;
 	}
 
@@ -239,7 +239,7 @@ public class CarnivalDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<CarnivalLinkDescriptor> getVolunteer_2002IncomingLinks(View view) {
+	public static List<CarnivalLinkDescriptor> getSponsor_2002IncomingLinks(View view) {
 		return Collections.emptyList();
 	}
 
@@ -259,7 +259,7 @@ public class CarnivalDiagramUpdater {
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<CarnivalLinkDescriptor> result = new LinkedList<CarnivalLinkDescriptor>();
 		result.addAll(getIncomingFeatureModelFacetLinks_Visitor_Visit_4001(modelElement, crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_Volunteer_Work_4002(modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Sponsor_Work_4002(modelElement, crossReferences));
 		return result;
 	}
 
@@ -272,7 +272,7 @@ public class CarnivalDiagramUpdater {
 				.find(view.eResource().getResourceSet().getResources());
 		LinkedList<CarnivalLinkDescriptor> result = new LinkedList<CarnivalLinkDescriptor>();
 		result.addAll(getIncomingFeatureModelFacetLinks_Visitor_Visit_4001(modelElement, crossReferences));
-		result.addAll(getIncomingFeatureModelFacetLinks_Volunteer_Work_4002(modelElement, crossReferences));
+		result.addAll(getIncomingFeatureModelFacetLinks_Sponsor_Work_4002(modelElement, crossReferences));
 		return result;
 	}
 
@@ -289,10 +289,10 @@ public class CarnivalDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<CarnivalLinkDescriptor> getVolunteer_2002OutgoingLinks(View view) {
-		Volunteer modelElement = (Volunteer) view.getElement();
+	public static List<CarnivalLinkDescriptor> getSponsor_2002OutgoingLinks(View view) {
+		Sponsor modelElement = (Sponsor) view.getElement();
 		LinkedList<CarnivalLinkDescriptor> result = new LinkedList<CarnivalLinkDescriptor>();
-		result.addAll(getOutgoingFeatureModelFacetLinks_Volunteer_Work_4002(modelElement));
+		result.addAll(getOutgoingFeatureModelFacetLinks_Sponsor_Work_4002(modelElement));
 		return result;
 	}
 
@@ -336,14 +336,14 @@ public class CarnivalDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection<CarnivalLinkDescriptor> getIncomingFeatureModelFacetLinks_Volunteer_Work_4002(
+	private static Collection<CarnivalLinkDescriptor> getIncomingFeatureModelFacetLinks_Sponsor_Work_4002(
 			Activity target, Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
 		LinkedList<CarnivalLinkDescriptor> result = new LinkedList<CarnivalLinkDescriptor>();
 		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
 		for (EStructuralFeature.Setting setting : settings) {
-			if (setting.getEStructuralFeature() == CarnivalPackage.eINSTANCE.getVolunteer_Work()) {
+			if (setting.getEStructuralFeature() == CarnivalPackage.eINSTANCE.getSponsor_Work()) {
 				result.add(new CarnivalLinkDescriptor(setting.getEObject(), target,
-						CarnivalElementTypes.VolunteerWork_4002, VolunteerWorkEditPart.VISUAL_ID));
+						CarnivalElementTypes.SponsorWork_4002, SponsorWorkEditPart.VISUAL_ID));
 			}
 		}
 		return result;
@@ -366,13 +366,13 @@ public class CarnivalDiagramUpdater {
 	/**
 	* @generated
 	*/
-	private static Collection<CarnivalLinkDescriptor> getOutgoingFeatureModelFacetLinks_Volunteer_Work_4002(
-			Volunteer source) {
+	private static Collection<CarnivalLinkDescriptor> getOutgoingFeatureModelFacetLinks_Sponsor_Work_4002(
+			Sponsor source) {
 		LinkedList<CarnivalLinkDescriptor> result = new LinkedList<CarnivalLinkDescriptor>();
 		for (Iterator<?> destinations = source.getWork().iterator(); destinations.hasNext();) {
 			Activity destination = (Activity) destinations.next();
-			result.add(new CarnivalLinkDescriptor(source, destination, CarnivalElementTypes.VolunteerWork_4002,
-					VolunteerWorkEditPart.VISUAL_ID));
+			result.add(new CarnivalLinkDescriptor(source, destination, CarnivalElementTypes.SponsorWork_4002,
+					SponsorWorkEditPart.VISUAL_ID));
 		}
 		return result;
 	}

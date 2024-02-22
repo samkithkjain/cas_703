@@ -22,10 +22,10 @@ import carnival.diagram.edit.parts.BoothEditPart;
 import carnival.diagram.edit.parts.CarnivalDayEditPart;
 import carnival.diagram.edit.parts.CarnivalEditPart;
 import carnival.diagram.edit.parts.EventEditPart;
+import carnival.diagram.edit.parts.SponsorEditPart;
+import carnival.diagram.edit.parts.SponsorWorkEditPart;
 import carnival.diagram.edit.parts.VisitorEditPart;
 import carnival.diagram.edit.parts.VisitorVisitEditPart;
-import carnival.diagram.edit.parts.VolunteerEditPart;
-import carnival.diagram.edit.parts.VolunteerWorkEditPart;
 import carnival.diagram.part.CarnivalDiagramEditorPlugin;
 
 /**
@@ -66,7 +66,7 @@ public class CarnivalElementTypes {
 	/**
 	* @generated
 	*/
-	public static final IElementType Volunteer_2002 = getElementType("carnival.diagram.Volunteer_2002"); //$NON-NLS-1$
+	public static final IElementType Sponsor_2002 = getElementType("carnival.diagram.Sponsor_2002"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
@@ -86,7 +86,7 @@ public class CarnivalElementTypes {
 	/**
 	* @generated
 	*/
-	public static final IElementType VolunteerWork_4002 = getElementType("carnival.diagram.VolunteerWork_4002"); //$NON-NLS-1$
+	public static final IElementType SponsorWork_4002 = getElementType("carnival.diagram.SponsorWork_4002"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -130,7 +130,7 @@ public class CarnivalElementTypes {
 
 			elements.put(Visitor_2001, CarnivalPackage.eINSTANCE.getVisitor());
 
-			elements.put(Volunteer_2002, CarnivalPackage.eINSTANCE.getVolunteer());
+			elements.put(Sponsor_2002, CarnivalPackage.eINSTANCE.getSponsor());
 
 			elements.put(CarnivalDay_2003, CarnivalPackage.eINSTANCE.getCarnivalDay());
 
@@ -140,7 +140,7 @@ public class CarnivalElementTypes {
 
 			elements.put(VisitorVisit_4001, CarnivalPackage.eINSTANCE.getVisitor_Visit());
 
-			elements.put(VolunteerWork_4002, CarnivalPackage.eINSTANCE.getVolunteer_Work());
+			elements.put(SponsorWork_4002, CarnivalPackage.eINSTANCE.getSponsor_Work());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -160,12 +160,12 @@ public class CarnivalElementTypes {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(Carnival_1000);
 			KNOWN_ELEMENT_TYPES.add(Visitor_2001);
-			KNOWN_ELEMENT_TYPES.add(Volunteer_2002);
+			KNOWN_ELEMENT_TYPES.add(Sponsor_2002);
 			KNOWN_ELEMENT_TYPES.add(CarnivalDay_2003);
 			KNOWN_ELEMENT_TYPES.add(Booth_3001);
 			KNOWN_ELEMENT_TYPES.add(Event_3002);
 			KNOWN_ELEMENT_TYPES.add(VisitorVisit_4001);
-			KNOWN_ELEMENT_TYPES.add(VolunteerWork_4002);
+			KNOWN_ELEMENT_TYPES.add(SponsorWork_4002);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -179,8 +179,8 @@ public class CarnivalElementTypes {
 			return Carnival_1000;
 		case VisitorEditPart.VISUAL_ID:
 			return Visitor_2001;
-		case VolunteerEditPart.VISUAL_ID:
-			return Volunteer_2002;
+		case SponsorEditPart.VISUAL_ID:
+			return Sponsor_2002;
 		case CarnivalDayEditPart.VISUAL_ID:
 			return CarnivalDay_2003;
 		case BoothEditPart.VISUAL_ID:
@@ -189,8 +189,8 @@ public class CarnivalElementTypes {
 			return Event_3002;
 		case VisitorVisitEditPart.VISUAL_ID:
 			return VisitorVisit_4001;
-		case VolunteerWorkEditPart.VISUAL_ID:
-			return VolunteerWork_4002;
+		case SponsorWorkEditPart.VISUAL_ID:
+			return SponsorWork_4002;
 		}
 		return null;
 	}

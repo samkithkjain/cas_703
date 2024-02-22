@@ -49,17 +49,16 @@ import carnival.diagram.edit.parts.BoothEditPart;
 import carnival.diagram.edit.parts.BoothNameEditPart;
 import carnival.diagram.edit.parts.CarnivalDayCarnivalDayActivitiesCompartmentEditPart;
 import carnival.diagram.edit.parts.CarnivalDayEditPart;
-import carnival.diagram.edit.parts.CarnivalDayNameEditPart;
 import carnival.diagram.edit.parts.CarnivalDayNameNEditPart;
 import carnival.diagram.edit.parts.CarnivalEditPart;
 import carnival.diagram.edit.parts.EventEditPart;
 import carnival.diagram.edit.parts.EventNameTimeEditPart;
+import carnival.diagram.edit.parts.SponsorEditPart;
+import carnival.diagram.edit.parts.SponsorNameEditPart;
+import carnival.diagram.edit.parts.SponsorWorkEditPart;
 import carnival.diagram.edit.parts.VisitorEditPart;
 import carnival.diagram.edit.parts.VisitorNameEditPart;
 import carnival.diagram.edit.parts.VisitorVisitEditPart;
-import carnival.diagram.edit.parts.VolunteerEditPart;
-import carnival.diagram.edit.parts.VolunteerNameEditPart;
-import carnival.diagram.edit.parts.VolunteerWorkEditPart;
 import carnival.diagram.edit.parts.WrappingLabel2EditPart;
 import carnival.diagram.edit.parts.WrappingLabelEditPart;
 import carnival.diagram.part.CarnivalVisualIDRegistry;
@@ -146,7 +145,7 @@ public class CarnivalViewProvider extends AbstractProvider implements IViewProvi
 				}
 				switch (visualID) {
 				case VisitorEditPart.VISUAL_ID:
-				case VolunteerEditPart.VISUAL_ID:
+				case SponsorEditPart.VISUAL_ID:
 				case CarnivalDayEditPart.VISUAL_ID:
 				case BoothEditPart.VISUAL_ID:
 				case EventEditPart.VISUAL_ID:
@@ -160,7 +159,7 @@ public class CarnivalViewProvider extends AbstractProvider implements IViewProvi
 				}
 			}
 		}
-		return VisitorEditPart.VISUAL_ID == visualID || VolunteerEditPart.VISUAL_ID == visualID
+		return VisitorEditPart.VISUAL_ID == visualID || SponsorEditPart.VISUAL_ID == visualID
 				|| CarnivalDayEditPart.VISUAL_ID == visualID || BoothEditPart.VISUAL_ID == visualID
 				|| EventEditPart.VISUAL_ID == visualID;
 	}
@@ -213,8 +212,8 @@ public class CarnivalViewProvider extends AbstractProvider implements IViewProvi
 		switch (visualID) {
 		case VisitorEditPart.VISUAL_ID:
 			return createVisitor_2001(domainElement, containerView, index, persisted, preferencesHint);
-		case VolunteerEditPart.VISUAL_ID:
-			return createVolunteer_2002(domainElement, containerView, index, persisted, preferencesHint);
+		case SponsorEditPart.VISUAL_ID:
+			return createSponsor_2002(domainElement, containerView, index, persisted, preferencesHint);
 		case CarnivalDayEditPart.VISUAL_ID:
 			return createCarnivalDay_2003(domainElement, containerView, index, persisted, preferencesHint);
 		case BoothEditPart.VISUAL_ID:
@@ -236,8 +235,8 @@ public class CarnivalViewProvider extends AbstractProvider implements IViewProvi
 		switch (CarnivalVisualIDRegistry.getVisualID(elementTypeHint)) {
 		case VisitorVisitEditPart.VISUAL_ID:
 			return createVisitorVisit_4001(containerView, index, persisted, preferencesHint);
-		case VolunteerWorkEditPart.VISUAL_ID:
-			return createVolunteerWork_4002(containerView, index, persisted, preferencesHint);
+		case SponsorWorkEditPart.VISUAL_ID:
+			return createSponsorWork_4002(containerView, index, persisted, preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
 		return null;
@@ -283,11 +282,11 @@ public class CarnivalViewProvider extends AbstractProvider implements IViewProvi
 	/**
 	* @generated
 	*/
-	public Node createVolunteer_2002(EObject domainElement, View containerView, int index, boolean persisted,
+	public Node createSponsor_2002(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Shape node = NotationFactory.eINSTANCE.createShape();
 		node.setLayoutConstraint(NotationFactory.eINSTANCE.createBounds());
-		node.setType(CarnivalVisualIDRegistry.getType(VolunteerEditPart.VISUAL_ID));
+		node.setType(CarnivalVisualIDRegistry.getType(SponsorEditPart.VISUAL_ID));
 		ViewUtil.insertChildView(containerView, node, index, persisted);
 		node.setElement(domainElement);
 		stampShortcut(containerView, node);
@@ -313,7 +312,7 @@ public class CarnivalViewProvider extends AbstractProvider implements IViewProvi
 				IPreferenceConstants.PREF_FILL_COLOR);
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5002 = createLabel(node, CarnivalVisualIDRegistry.getType(VolunteerNameEditPart.VISUAL_ID));
+		Node label5002 = createLabel(node, CarnivalVisualIDRegistry.getType(SponsorNameEditPart.VISUAL_ID));
 		return node;
 	}
 
@@ -476,7 +475,7 @@ public class CarnivalViewProvider extends AbstractProvider implements IViewProvi
 	/**
 	* @generated
 	*/
-	public Edge createVolunteerWork_4002(View containerView, int index, boolean persisted,
+	public Edge createSponsorWork_4002(View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
 		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
@@ -488,7 +487,7 @@ public class CarnivalViewProvider extends AbstractProvider implements IViewProvi
 		bendpoints.setPoints(points);
 		edge.setBendpoints(bendpoints);
 		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(CarnivalVisualIDRegistry.getType(VolunteerWorkEditPart.VISUAL_ID));
+		edge.setType(CarnivalVisualIDRegistry.getType(SponsorWorkEditPart.VISUAL_ID));
 		edge.setElement(null);
 		// initializePreferences
 		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();

@@ -12,13 +12,13 @@ import carnival.diagram.providers.CarnivalElementTypes;
 /**
  * @generated
  */
-public class VolunteerWorkItemSemanticEditPolicy extends CarnivalBaseItemSemanticEditPolicy {
+public class SponsorWorkItemSemanticEditPolicy extends CarnivalBaseItemSemanticEditPolicy {
 
 	/**
 	* @generated
 	*/
-	public VolunteerWorkItemSemanticEditPolicy() {
-		super(CarnivalElementTypes.VolunteerWork_4002);
+	public SponsorWorkItemSemanticEditPolicy() {
+		super(CarnivalElementTypes.SponsorWork_4002);
 	}
 
 	/**

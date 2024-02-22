@@ -6,5 +6,5 @@ package carnival.diagram.edit.helpers;
 /**
  * @generated
  */
-public class VolunteerEditHelper extends CarnivalBaseEditHelper {
+public class SponsorEditHelper extends CarnivalBaseEditHelper {
 }

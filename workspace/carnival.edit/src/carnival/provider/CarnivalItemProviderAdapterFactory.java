@@ -187,26 +187,26 @@ public class CarnivalItemProviderAdapterFactory extends CarnivalAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link carnival.Volunteer} instances.
+	 * This keeps track of the one adapter used for all {@link carnival.Sponsor} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VolunteerItemProvider volunteerItemProvider;
+	protected SponsorItemProvider sponsorItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link carnival.Volunteer}.
+	 * This creates an adapter for a {@link carnival.Sponsor}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createVolunteerAdapter() {
-		if (volunteerItemProvider == null) {
-			volunteerItemProvider = new VolunteerItemProvider(this);
+	public Adapter createSponsorAdapter() {
+		if (sponsorItemProvider == null) {
+			sponsorItemProvider = new SponsorItemProvider(this);
 		}
 
-		return volunteerItemProvider;
+		return sponsorItemProvider;
 	}
 
 	/**
@@ -319,7 +319,7 @@ public class CarnivalItemProviderAdapterFactory extends CarnivalAdapterFactory i
 		if (boothItemProvider != null) boothItemProvider.dispose();
 		if (eventItemProvider != null) eventItemProvider.dispose();
 		if (visitorItemProvider != null) visitorItemProvider.dispose();
-		if (volunteerItemProvider != null) volunteerItemProvider.dispose();
+		if (sponsorItemProvider != null) sponsorItemProvider.dispose();
 	}
 
 }

@@ -25,17 +25,16 @@ import carnival.Carnival;
 import carnival.diagram.edit.parts.BoothEditPart;
 import carnival.diagram.edit.parts.BoothNameEditPart;
 import carnival.diagram.edit.parts.CarnivalDayEditPart;
-import carnival.diagram.edit.parts.CarnivalDayNameEditPart;
 import carnival.diagram.edit.parts.CarnivalDayNameNEditPart;
 import carnival.diagram.edit.parts.CarnivalEditPart;
 import carnival.diagram.edit.parts.EventEditPart;
 import carnival.diagram.edit.parts.EventNameTimeEditPart;
+import carnival.diagram.edit.parts.SponsorEditPart;
+import carnival.diagram.edit.parts.SponsorNameEditPart;
+import carnival.diagram.edit.parts.SponsorWorkEditPart;
 import carnival.diagram.edit.parts.VisitorEditPart;
 import carnival.diagram.edit.parts.VisitorNameEditPart;
 import carnival.diagram.edit.parts.VisitorVisitEditPart;
-import carnival.diagram.edit.parts.VolunteerEditPart;
-import carnival.diagram.edit.parts.VolunteerNameEditPart;
-import carnival.diagram.edit.parts.VolunteerWorkEditPart;
 import carnival.diagram.part.CarnivalDiagramEditorPlugin;
 import carnival.diagram.part.CarnivalVisualIDRegistry;
 import carnival.diagram.providers.CarnivalElementTypes;
@@ -106,8 +105,8 @@ public class CarnivalNavigatorLabelProvider extends LabelProvider
 			return getImage("Navigator?Diagram?vr/carnival?Carnival", CarnivalElementTypes.Carnival_1000); //$NON-NLS-1$
 		case VisitorEditPart.VISUAL_ID:
 			return getImage("Navigator?TopLevelNode?vr/carnival?Visitor", CarnivalElementTypes.Visitor_2001); //$NON-NLS-1$
-		case VolunteerEditPart.VISUAL_ID:
-			return getImage("Navigator?TopLevelNode?vr/carnival?Volunteer", CarnivalElementTypes.Volunteer_2002); //$NON-NLS-1$
+		case SponsorEditPart.VISUAL_ID:
+			return getImage("Navigator?TopLevelNode?vr/carnival?Sponsor", CarnivalElementTypes.Sponsor_2002); //$NON-NLS-1$
 		case CarnivalDayEditPart.VISUAL_ID:
 			return getImage("Navigator?TopLevelNode?vr/carnival?CarnivalDay", CarnivalElementTypes.CarnivalDay_2003); //$NON-NLS-1$
 		case BoothEditPart.VISUAL_ID:
@@ -116,8 +115,8 @@ public class CarnivalNavigatorLabelProvider extends LabelProvider
 			return getImage("Navigator?Node?vr/carnival?Event", CarnivalElementTypes.Event_3002); //$NON-NLS-1$
 		case VisitorVisitEditPart.VISUAL_ID:
 			return getImage("Navigator?Link?vr/carnival?Visitor?visit", CarnivalElementTypes.VisitorVisit_4001); //$NON-NLS-1$
-		case VolunteerWorkEditPart.VISUAL_ID:
-			return getImage("Navigator?Link?vr/carnival?Volunteer?work", CarnivalElementTypes.VolunteerWork_4002); //$NON-NLS-1$
+		case SponsorWorkEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?vr/carnival?Sponsor?work", CarnivalElementTypes.SponsorWork_4002); //$NON-NLS-1$
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -180,8 +179,8 @@ public class CarnivalNavigatorLabelProvider extends LabelProvider
 			return getCarnival_1000Text(view);
 		case VisitorEditPart.VISUAL_ID:
 			return getVisitor_2001Text(view);
-		case VolunteerEditPart.VISUAL_ID:
-			return getVolunteer_2002Text(view);
+		case SponsorEditPart.VISUAL_ID:
+			return getSponsor_2002Text(view);
 		case CarnivalDayEditPart.VISUAL_ID:
 			return getCarnivalDay_2003Text(view);
 		case BoothEditPart.VISUAL_ID:
@@ -190,8 +189,8 @@ public class CarnivalNavigatorLabelProvider extends LabelProvider
 			return getEvent_3002Text(view);
 		case VisitorVisitEditPart.VISUAL_ID:
 			return getVisitorVisit_4001Text(view);
-		case VolunteerWorkEditPart.VISUAL_ID:
-			return getVolunteerWork_4002Text(view);
+		case SponsorWorkEditPart.VISUAL_ID:
+			return getSponsorWork_4002Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -228,10 +227,10 @@ public class CarnivalNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getVolunteer_2002Text(View view) {
-		IParser parser = CarnivalParserProvider.getParser(CarnivalElementTypes.Volunteer_2002,
+	private String getSponsor_2002Text(View view) {
+		IParser parser = CarnivalParserProvider.getParser(CarnivalElementTypes.Sponsor_2002,
 				view.getElement() != null ? view.getElement() : view,
-				CarnivalVisualIDRegistry.getType(VolunteerNameEditPart.VISUAL_ID));
+				CarnivalVisualIDRegistry.getType(SponsorNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -307,8 +306,8 @@ public class CarnivalNavigatorLabelProvider extends LabelProvider
 	/**
 	* @generated
 	*/
-	private String getVolunteerWork_4002Text(View view) {
-		IParser parser = CarnivalParserProvider.getParser(CarnivalElementTypes.VolunteerWork_4002,
+	private String getSponsorWork_4002Text(View view) {
+		IParser parser = CarnivalParserProvider.getParser(CarnivalElementTypes.SponsorWork_4002,
 				view.getElement() != null ? view.getElement() : view, CommonParserHint.DESCRIPTION);
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),

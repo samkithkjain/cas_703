@@ -39,8 +39,8 @@ import carnival.diagram.edit.parts.BoothEditPart;
 import carnival.diagram.edit.parts.CarnivalDayEditPart;
 import carnival.diagram.edit.parts.CarnivalEditPart;
 import carnival.diagram.edit.parts.EventEditPart;
+import carnival.diagram.edit.parts.SponsorEditPart;
 import carnival.diagram.edit.parts.VisitorEditPart;
-import carnival.diagram.edit.parts.VolunteerEditPart;
 import carnival.diagram.part.CarnivalDiagramUpdater;
 import carnival.diagram.part.CarnivalLinkDescriptor;
 import carnival.diagram.part.CarnivalNodeDescriptor;
@@ -111,7 +111,7 @@ public class CarnivalCanonicalEditPolicy extends CanonicalEditPolicy {
 	*/
 	private boolean isMyDiagramElement(View view) {
 		int visualID = CarnivalVisualIDRegistry.getVisualID(view);
-		return visualID == VisitorEditPart.VISUAL_ID || visualID == VolunteerEditPart.VISUAL_ID
+		return visualID == VisitorEditPart.VISUAL_ID || visualID == SponsorEditPart.VISUAL_ID
 				|| visualID == CarnivalDayEditPart.VISUAL_ID;
 	}
 
@@ -276,9 +276,9 @@ public class CarnivalCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
-		case VolunteerEditPart.VISUAL_ID: {
+		case SponsorEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
-				result.addAll(CarnivalDiagramUpdater.getVolunteer_2002ContainedLinks(view));
+				result.addAll(CarnivalDiagramUpdater.getSponsor_2002ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

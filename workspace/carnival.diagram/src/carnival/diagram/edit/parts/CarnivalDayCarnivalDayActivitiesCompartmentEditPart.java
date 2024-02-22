@@ -106,7 +106,7 @@ public class CarnivalDayCarnivalDayActivitiesCompartmentEditPart extends ShapeCo
 					if (type instanceof IElementType) {
 						IElementType elementType = (IElementType) type;
 						if (elementType.equals(CarnivalElementTypes.VisitorVisit_4001)
-								|| elementType.equals(CarnivalElementTypes.VolunteerWork_4002))
+								|| elementType.equals(CarnivalElementTypes.SponsorWork_4002))
 							return super.getTargetEditPart(request);
 					}
 				}

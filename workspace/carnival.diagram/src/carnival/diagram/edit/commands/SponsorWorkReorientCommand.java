@@ -13,13 +13,13 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 
 import carnival.Activity;
-import carnival.Volunteer;
+import carnival.Sponsor;
 import carnival.diagram.edit.policies.CarnivalBaseItemSemanticEditPolicy;
 
 /**
  * @generated
  */
-public class VolunteerWorkReorientCommand extends EditElementCommand {
+public class SponsorWorkReorientCommand extends EditElementCommand {
 
 	/**
 	* @generated
@@ -44,7 +44,7 @@ public class VolunteerWorkReorientCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	public VolunteerWorkReorientCommand(ReorientReferenceRelationshipRequest request) {
+	public SponsorWorkReorientCommand(ReorientReferenceRelationshipRequest request) {
 		super(request.getLabel(), null, request);
 		reorientDirection = request.getDirection();
 		referenceOwner = request.getReferenceOwner();
@@ -56,7 +56,7 @@ public class VolunteerWorkReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	public boolean canExecute() {
-		if (false == referenceOwner instanceof Volunteer) {
+		if (false == referenceOwner instanceof Sponsor) {
 			return false;
 		}
 		if (reorientDirection == ReorientRelationshipRequest.REORIENT_SOURCE) {
@@ -72,10 +72,10 @@ public class VolunteerWorkReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof Activity && newEnd instanceof Volunteer)) {
+		if (!(oldEnd instanceof Activity && newEnd instanceof Sponsor)) {
 			return false;
 		}
-		return CarnivalBaseItemSemanticEditPolicy.getLinkConstraints().canExistVolunteerWork_4002(getNewSource(),
+		return CarnivalBaseItemSemanticEditPolicy.getLinkConstraints().canExistSponsorWork_4002(getNewSource(),
 				getOldTarget());
 	}
 
@@ -86,7 +86,7 @@ public class VolunteerWorkReorientCommand extends EditElementCommand {
 		if (!(oldEnd instanceof Activity && newEnd instanceof Activity)) {
 			return false;
 		}
-		return CarnivalBaseItemSemanticEditPolicy.getLinkConstraints().canExistVolunteerWork_4002(getOldSource(),
+		return CarnivalBaseItemSemanticEditPolicy.getLinkConstraints().canExistSponsorWork_4002(getOldSource(),
 				getNewTarget());
 	}
 
@@ -127,15 +127,15 @@ public class VolunteerWorkReorientCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected Volunteer getOldSource() {
-		return (Volunteer) referenceOwner;
+	protected Sponsor getOldSource() {
+		return (Sponsor) referenceOwner;
 	}
 
 	/**
 	* @generated
 	*/
-	protected Volunteer getNewSource() {
-		return (Volunteer) newEnd;
+	protected Sponsor getNewSource() {
+		return (Sponsor) newEnd;
 	}
 
 	/**

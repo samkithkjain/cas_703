@@ -55,12 +55,12 @@ import carnival.diagram.providers.CarnivalParserProvider;
 /**
  * @generated
  */
-public class CarnivalDayNameEditPart extends CompartmentEditPart implements ITextAwareEditPart {
+public class SponsorNameEditPart extends CompartmentEditPart implements ITextAwareEditPart {
 
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5005;
+	public static final int VISUAL_ID = 5002;
 
 	/**
 	* @generated
@@ -90,7 +90,7 @@ public class CarnivalDayNameEditPart extends CompartmentEditPart implements ITex
 	/**
 	* @generated
 	*/
-	public CarnivalDayNameEditPart(View view) {
+	public SponsorNameEditPart(View view) {
 		super(view);
 	}
 
@@ -295,8 +295,8 @@ public class CarnivalDayNameEditPart extends CompartmentEditPart implements ITex
 	*/
 	public IParser getParser() {
 		if (parser == null) {
-			parser = CarnivalParserProvider.getParser(CarnivalElementTypes.CarnivalDay_2003, getParserElement(),
-					CarnivalVisualIDRegistry.getType(carnival.diagram.edit.parts.CarnivalDayNameEditPart.VISUAL_ID));
+			parser = CarnivalParserProvider.getParser(CarnivalElementTypes.Sponsor_2002, getParserElement(),
+					CarnivalVisualIDRegistry.getType(carnival.diagram.edit.parts.SponsorNameEditPart.VISUAL_ID));
 		}
 		return parser;
 	}

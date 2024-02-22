@@ -151,7 +151,7 @@ public class CarnivalItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(CarnivalPackage.Literals.CARNIVAL__ATTENDEES,
-				 CarnivalFactory.eINSTANCE.createVolunteer()));
+				 CarnivalFactory.eINSTANCE.createSponsor()));
 	}
 
 }

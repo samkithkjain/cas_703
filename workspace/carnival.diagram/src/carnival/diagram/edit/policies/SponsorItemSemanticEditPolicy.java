@@ -18,22 +18,22 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.View;
 
-import carnival.diagram.edit.commands.VolunteerWorkCreateCommand;
-import carnival.diagram.edit.commands.VolunteerWorkReorientCommand;
-import carnival.diagram.edit.parts.VolunteerWorkEditPart;
+import carnival.diagram.edit.commands.SponsorWorkCreateCommand;
+import carnival.diagram.edit.commands.SponsorWorkReorientCommand;
+import carnival.diagram.edit.parts.SponsorWorkEditPart;
 import carnival.diagram.part.CarnivalVisualIDRegistry;
 import carnival.diagram.providers.CarnivalElementTypes;
 
 /**
  * @generated
  */
-public class VolunteerItemSemanticEditPolicy extends CarnivalBaseItemSemanticEditPolicy {
+public class SponsorItemSemanticEditPolicy extends CarnivalBaseItemSemanticEditPolicy {
 
 	/**
 	* @generated
 	*/
-	public VolunteerItemSemanticEditPolicy() {
-		super(CarnivalElementTypes.Volunteer_2002);
+	public SponsorItemSemanticEditPolicy() {
+		super(CarnivalElementTypes.Sponsor_2002);
 	}
 
 	/**
@@ -45,7 +45,7 @@ public class VolunteerItemSemanticEditPolicy extends CarnivalBaseItemSemanticEdi
 		cmd.setTransactionNestingEnabled(false);
 		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
-			if (CarnivalVisualIDRegistry.getVisualID(outgoingLink) == VolunteerWorkEditPart.VISUAL_ID) {
+			if (CarnivalVisualIDRegistry.getVisualID(outgoingLink) == SponsorWorkEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(outgoingLink.getSource().getElement(), null,
 						outgoingLink.getTarget().getElement(), false);
 				cmd.add(new DestroyReferenceCommand(r));
@@ -78,8 +78,8 @@ public class VolunteerItemSemanticEditPolicy extends CarnivalBaseItemSemanticEdi
 	 * @generated
 	 */
 	protected Command getStartCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (CarnivalElementTypes.VolunteerWork_4002 == req.getElementType()) {
-			return getGEFWrapper(new VolunteerWorkCreateCommand(req, req.getSource(), req.getTarget()));
+		if (CarnivalElementTypes.SponsorWork_4002 == req.getElementType()) {
+			return getGEFWrapper(new SponsorWorkCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -88,7 +88,7 @@ public class VolunteerItemSemanticEditPolicy extends CarnivalBaseItemSemanticEdi
 	 * @generated
 	 */
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (CarnivalElementTypes.VolunteerWork_4002 == req.getElementType()) {
+		if (CarnivalElementTypes.SponsorWork_4002 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -102,8 +102,8 @@ public class VolunteerItemSemanticEditPolicy extends CarnivalBaseItemSemanticEdi
 	 */
 	protected Command getReorientReferenceRelationshipCommand(ReorientReferenceRelationshipRequest req) {
 		switch (getVisualID(req)) {
-		case VolunteerWorkEditPart.VISUAL_ID:
-			return getGEFWrapper(new VolunteerWorkReorientCommand(req));
+		case SponsorWorkEditPart.VISUAL_ID:
+			return getGEFWrapper(new SponsorWorkReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

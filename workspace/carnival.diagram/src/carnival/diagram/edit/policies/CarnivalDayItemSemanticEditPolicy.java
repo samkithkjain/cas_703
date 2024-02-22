@@ -21,8 +21,8 @@ import org.eclipse.gmf.runtime.notation.View;
 import carnival.diagram.edit.parts.BoothEditPart;
 import carnival.diagram.edit.parts.CarnivalDayCarnivalDayActivitiesCompartmentEditPart;
 import carnival.diagram.edit.parts.EventEditPart;
+import carnival.diagram.edit.parts.SponsorWorkEditPart;
 import carnival.diagram.edit.parts.VisitorVisitEditPart;
-import carnival.diagram.edit.parts.VolunteerWorkEditPart;
 import carnival.diagram.part.CarnivalVisualIDRegistry;
 import carnival.diagram.providers.CarnivalElementTypes;
 
@@ -81,7 +81,7 @@ public class CarnivalDayItemSemanticEditPolicy extends CarnivalBaseItemSemanticE
 								cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 								continue;
 							}
-							if (CarnivalVisualIDRegistry.getVisualID(incomingLink) == VolunteerWorkEditPart.VISUAL_ID) {
+							if (CarnivalVisualIDRegistry.getVisualID(incomingLink) == SponsorWorkEditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										incomingLink.getSource().getElement(), null,
 										incomingLink.getTarget().getElement(), false);
@@ -106,7 +106,7 @@ public class CarnivalDayItemSemanticEditPolicy extends CarnivalBaseItemSemanticE
 								cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 								continue;
 							}
-							if (CarnivalVisualIDRegistry.getVisualID(incomingLink) == VolunteerWorkEditPart.VISUAL_ID) {
+							if (CarnivalVisualIDRegistry.getVisualID(incomingLink) == SponsorWorkEditPart.VISUAL_ID) {
 								DestroyReferenceRequest r = new DestroyReferenceRequest(
 										incomingLink.getSource().getElement(), null,
 										incomingLink.getTarget().getElement(), false);

@@ -18,12 +18,12 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.View;
 
+import carnival.diagram.edit.commands.SponsorWorkCreateCommand;
+import carnival.diagram.edit.commands.SponsorWorkReorientCommand;
 import carnival.diagram.edit.commands.VisitorVisitCreateCommand;
 import carnival.diagram.edit.commands.VisitorVisitReorientCommand;
-import carnival.diagram.edit.commands.VolunteerWorkCreateCommand;
-import carnival.diagram.edit.commands.VolunteerWorkReorientCommand;
+import carnival.diagram.edit.parts.SponsorWorkEditPart;
 import carnival.diagram.edit.parts.VisitorVisitEditPart;
-import carnival.diagram.edit.parts.VolunteerWorkEditPart;
 import carnival.diagram.part.CarnivalVisualIDRegistry;
 import carnival.diagram.providers.CarnivalElementTypes;
 
@@ -55,7 +55,7 @@ public class EventItemSemanticEditPolicy extends CarnivalBaseItemSemanticEditPol
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-			if (CarnivalVisualIDRegistry.getVisualID(incomingLink) == VolunteerWorkEditPart.VISUAL_ID) {
+			if (CarnivalVisualIDRegistry.getVisualID(incomingLink) == SponsorWorkEditPart.VISUAL_ID) {
 				DestroyReferenceRequest r = new DestroyReferenceRequest(incomingLink.getSource().getElement(), null,
 						incomingLink.getTarget().getElement(), false);
 				cmd.add(new DestroyReferenceCommand(r));
@@ -91,7 +91,7 @@ public class EventItemSemanticEditPolicy extends CarnivalBaseItemSemanticEditPol
 		if (CarnivalElementTypes.VisitorVisit_4001 == req.getElementType()) {
 			return null;
 		}
-		if (CarnivalElementTypes.VolunteerWork_4002 == req.getElementType()) {
+		if (CarnivalElementTypes.SponsorWork_4002 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -104,8 +104,8 @@ public class EventItemSemanticEditPolicy extends CarnivalBaseItemSemanticEditPol
 		if (CarnivalElementTypes.VisitorVisit_4001 == req.getElementType()) {
 			return getGEFWrapper(new VisitorVisitCreateCommand(req, req.getSource(), req.getTarget()));
 		}
-		if (CarnivalElementTypes.VolunteerWork_4002 == req.getElementType()) {
-			return getGEFWrapper(new VolunteerWorkCreateCommand(req, req.getSource(), req.getTarget()));
+		if (CarnivalElementTypes.SponsorWork_4002 == req.getElementType()) {
+			return getGEFWrapper(new SponsorWorkCreateCommand(req, req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -120,8 +120,8 @@ public class EventItemSemanticEditPolicy extends CarnivalBaseItemSemanticEditPol
 		switch (getVisualID(req)) {
 		case VisitorVisitEditPart.VISUAL_ID:
 			return getGEFWrapper(new VisitorVisitReorientCommand(req));
-		case VolunteerWorkEditPart.VISUAL_ID:
-			return getGEFWrapper(new VolunteerWorkReorientCommand(req));
+		case SponsorWorkEditPart.VISUAL_ID:
+			return getGEFWrapper(new SponsorWorkReorientCommand(req));
 		}
 		return super.getReorientReferenceRelationshipCommand(req);
 	}

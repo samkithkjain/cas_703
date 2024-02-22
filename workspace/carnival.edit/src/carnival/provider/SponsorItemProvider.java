@@ -4,7 +4,7 @@ package carnival.provider;
 
 
 import carnival.CarnivalPackage;
-import carnival.Volunteer;
+import carnival.Sponsor;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,19 +18,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link carnival.Volunteer} object.
+ * This is the item provider adapter for a {@link carnival.Sponsor} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class VolunteerItemProvider extends ParticipantItemProvider {
+public class SponsorItemProvider extends ParticipantItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VolunteerItemProvider(AdapterFactory adapterFactory) {
+	public SponsorItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -62,9 +62,9 @@ public class VolunteerItemProvider extends ParticipantItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Volunteer_uid_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Volunteer_uid_feature", "_UI_Volunteer_type"),
-				 CarnivalPackage.Literals.VOLUNTEER__UID,
+				 getString("_UI_Sponsor_uid_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Sponsor_uid_feature", "_UI_Sponsor_type"),
+				 CarnivalPackage.Literals.SPONSOR__UID,
 				 true,
 				 false,
 				 false,
@@ -84,9 +84,9 @@ public class VolunteerItemProvider extends ParticipantItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Volunteer_work_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Volunteer_work_feature", "_UI_Volunteer_type"),
-				 CarnivalPackage.Literals.VOLUNTEER__WORK,
+				 getString("_UI_Sponsor_work_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Sponsor_work_feature", "_UI_Sponsor_type"),
+				 CarnivalPackage.Literals.SPONSOR__WORK,
 				 true,
 				 false,
 				 true,
@@ -96,14 +96,14 @@ public class VolunteerItemProvider extends ParticipantItemProvider {
 	}
 
 	/**
-	 * This returns Volunteer.gif.
+	 * This returns Sponsor.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Volunteer"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Sponsor"));
 	}
 
 	/**
@@ -114,10 +114,10 @@ public class VolunteerItemProvider extends ParticipantItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Volunteer)object).getName();
+		String label = ((Sponsor)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Volunteer_type") :
-			getString("_UI_Volunteer_type") + " " + label;
+			getString("_UI_Sponsor_type") :
+			getString("_UI_Sponsor_type") + " " + label;
 	}
 
 
@@ -132,8 +132,8 @@ public class VolunteerItemProvider extends ParticipantItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Volunteer.class)) {
-			case CarnivalPackage.VOLUNTEER__UID:
+		switch (notification.getFeatureID(Sponsor.class)) {
+			case CarnivalPackage.SPONSOR__UID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

@@ -17,17 +17,17 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import carnival.Carnival;
 import carnival.CarnivalFactory;
-import carnival.Volunteer;
+import carnival.Sponsor;
 
 /**
  * @generated
  */
-public class VolunteerCreateCommand extends EditElementCommand {
+public class SponsorCreateCommand extends EditElementCommand {
 
 	/**
 	* @generated
 	*/
-	public VolunteerCreateCommand(CreateElementRequest req) {
+	public SponsorCreateCommand(CreateElementRequest req) {
 		super(req.getLabel(), null, req);
 	}
 
@@ -55,7 +55,7 @@ public class VolunteerCreateCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult doExecuteWithResult(IProgressMonitor monitor, IAdaptable info) throws ExecutionException {
-		Volunteer newElement = CarnivalFactory.eINSTANCE.createVolunteer();
+		Sponsor newElement = CarnivalFactory.eINSTANCE.createSponsor();
 
 		Carnival owner = (Carnival) getElementToEdit();
 		owner.getAttendees().add(newElement);
@@ -69,7 +69,7 @@ public class VolunteerCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected void doConfigure(Volunteer newElement, IProgressMonitor monitor, IAdaptable info)
+	protected void doConfigure(Sponsor newElement, IProgressMonitor monitor, IAdaptable info)
 			throws ExecutionException {
 		IElementType elementType = ((CreateElementRequest) getRequest()).getElementType();
 		ConfigureRequest configureRequest = new ConfigureRequest(getEditingDomain(), newElement, elementType);

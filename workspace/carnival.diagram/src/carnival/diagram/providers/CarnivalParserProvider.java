@@ -18,11 +18,10 @@ import org.eclipse.gmf.runtime.notation.View;
 
 import carnival.CarnivalPackage;
 import carnival.diagram.edit.parts.BoothNameEditPart;
-import carnival.diagram.edit.parts.CarnivalDayNameEditPart;
 import carnival.diagram.edit.parts.CarnivalDayNameNEditPart;
 import carnival.diagram.edit.parts.EventNameTimeEditPart;
+import carnival.diagram.edit.parts.SponsorNameEditPart;
 import carnival.diagram.edit.parts.VisitorNameEditPart;
-import carnival.diagram.edit.parts.VolunteerNameEditPart;
 import carnival.diagram.parsers.MessageFormatParser;
 import carnival.diagram.part.CarnivalVisualIDRegistry;
 
@@ -43,9 +42,9 @@ public class CarnivalParserProvider extends AbstractProvider implements IParserP
 		if (visitorName_5001Parser == null) {
 			EAttribute[] features = new EAttribute[] { CarnivalPackage.eINSTANCE.getNamedElement_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("Guest {0}"); //$NON-NLS-1$
-			parser.setEditorPattern("Guest {0}"); //$NON-NLS-1$
-			parser.setEditPattern("Guest {0}"); //$NON-NLS-1$
+			parser.setViewPattern("Visitor {0}"); //$NON-NLS-1$
+			parser.setEditorPattern("Visitor {0}"); //$NON-NLS-1$
+			parser.setEditPattern("Visitor {0}"); //$NON-NLS-1$
 			visitorName_5001Parser = parser;
 		}
 		return visitorName_5001Parser;
@@ -54,21 +53,21 @@ public class CarnivalParserProvider extends AbstractProvider implements IParserP
 	/**
 	* @generated
 	*/
-	private IParser volunteerName_5002Parser;
+	private IParser sponsorName_5002Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getVolunteerName_5002Parser() {
-		if (volunteerName_5002Parser == null) {
+	private IParser getSponsorName_5002Parser() {
+		if (sponsorName_5002Parser == null) {
 			EAttribute[] features = new EAttribute[] { CarnivalPackage.eINSTANCE.getNamedElement_Name() };
 			MessageFormatParser parser = new MessageFormatParser(features);
-			parser.setViewPattern("Volunteer {0}"); //$NON-NLS-1$
-			parser.setEditorPattern("Volunteer {0}"); //$NON-NLS-1$
-			parser.setEditPattern("Volunteer {0}"); //$NON-NLS-1$
-			volunteerName_5002Parser = parser;
+			parser.setViewPattern("Sponsor {0}"); //$NON-NLS-1$
+			parser.setEditorPattern("Sponsor {0}"); //$NON-NLS-1$
+			parser.setEditPattern("Sponsor {0}"); //$NON-NLS-1$
+			sponsorName_5002Parser = parser;
 		}
-		return volunteerName_5002Parser;
+		return sponsorName_5002Parser;
 	}
 
 	/**
@@ -137,8 +136,8 @@ public class CarnivalParserProvider extends AbstractProvider implements IParserP
 		switch (visualID) {
 		case VisitorNameEditPart.VISUAL_ID:
 			return getVisitorName_5001Parser();
-		case VolunteerNameEditPart.VISUAL_ID:
-			return getVolunteerName_5002Parser();
+		case SponsorNameEditPart.VISUAL_ID:
+			return getSponsorName_5002Parser();
 		case CarnivalDayNameNEditPart.VISUAL_ID:
 			return getCarnivalDayNameN_5005Parser();
 		case BoothNameEditPart.VISUAL_ID:

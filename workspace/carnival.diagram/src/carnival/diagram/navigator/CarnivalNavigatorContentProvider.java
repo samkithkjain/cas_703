@@ -33,10 +33,10 @@ import carnival.diagram.edit.parts.CarnivalDayCarnivalDayActivitiesCompartmentEd
 import carnival.diagram.edit.parts.CarnivalDayEditPart;
 import carnival.diagram.edit.parts.CarnivalEditPart;
 import carnival.diagram.edit.parts.EventEditPart;
+import carnival.diagram.edit.parts.SponsorEditPart;
+import carnival.diagram.edit.parts.SponsorWorkEditPart;
 import carnival.diagram.edit.parts.VisitorEditPart;
 import carnival.diagram.edit.parts.VisitorVisitEditPart;
-import carnival.diagram.edit.parts.VolunteerEditPart;
-import carnival.diagram.edit.parts.VolunteerWorkEditPart;
 import carnival.diagram.part.CarnivalVisualIDRegistry;
 import carnival.diagram.part.Messages;
 
@@ -242,7 +242,7 @@ public class CarnivalNavigatorContentProvider implements ICommonContentProvider 
 					CarnivalVisualIDRegistry.getType(VisitorEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
-					CarnivalVisualIDRegistry.getType(VolunteerEditPart.VISUAL_ID));
+					CarnivalVisualIDRegistry.getType(SponsorEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
 					CarnivalVisualIDRegistry.getType(CarnivalDayEditPart.VISUAL_ID));
@@ -251,7 +251,7 @@ public class CarnivalNavigatorContentProvider implements ICommonContentProvider 
 					CarnivalVisualIDRegistry.getType(VisitorVisitEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					CarnivalVisualIDRegistry.getType(VolunteerWorkEditPart.VISUAL_ID));
+					CarnivalVisualIDRegistry.getType(SponsorWorkEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			if (!links.isEmpty()) {
 				result.add(links);
@@ -275,15 +275,15 @@ public class CarnivalNavigatorContentProvider implements ICommonContentProvider 
 			return result.toArray();
 		}
 
-		case VolunteerEditPart.VISUAL_ID: {
+		case SponsorEditPart.VISUAL_ID: {
 			LinkedList<CarnivalAbstractNavigatorItem> result = new LinkedList<CarnivalAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			CarnivalNavigatorGroup outgoinglinks = new CarnivalNavigatorGroup(
-					Messages.NavigatorGroupName_Volunteer_2002_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
+					Messages.NavigatorGroupName_Sponsor_2002_outgoinglinks, "icons/outgoingLinksNavigatorGroup.gif", //$NON-NLS-1$
 					parentElement);
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
-					CarnivalVisualIDRegistry.getType(VolunteerWorkEditPart.VISUAL_ID));
+					CarnivalVisualIDRegistry.getType(SponsorWorkEditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
@@ -319,7 +319,7 @@ public class CarnivalNavigatorContentProvider implements ICommonContentProvider 
 					CarnivalVisualIDRegistry.getType(VisitorVisitEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					CarnivalVisualIDRegistry.getType(VolunteerWorkEditPart.VISUAL_ID));
+					CarnivalVisualIDRegistry.getType(SponsorWorkEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 			if (!incominglinks.isEmpty()) {
 				result.add(incominglinks);
@@ -338,7 +338,7 @@ public class CarnivalNavigatorContentProvider implements ICommonContentProvider 
 					CarnivalVisualIDRegistry.getType(VisitorVisitEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					CarnivalVisualIDRegistry.getType(VolunteerWorkEditPart.VISUAL_ID));
+					CarnivalVisualIDRegistry.getType(SponsorWorkEditPart.VISUAL_ID));
 			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
 			if (!incominglinks.isEmpty()) {
 				result.add(incominglinks);
@@ -374,14 +374,14 @@ public class CarnivalNavigatorContentProvider implements ICommonContentProvider 
 			return result.toArray();
 		}
 
-		case VolunteerWorkEditPart.VISUAL_ID: {
+		case SponsorWorkEditPart.VISUAL_ID: {
 			LinkedList<CarnivalAbstractNavigatorItem> result = new LinkedList<CarnivalAbstractNavigatorItem>();
 			Edge sv = (Edge) view;
 			CarnivalNavigatorGroup target = new CarnivalNavigatorGroup(
-					Messages.NavigatorGroupName_VolunteerWork_4002_target, "icons/linkTargetNavigatorGroup.gif", //$NON-NLS-1$
+					Messages.NavigatorGroupName_SponsorWork_4002_target, "icons/linkTargetNavigatorGroup.gif", //$NON-NLS-1$
 					parentElement);
 			CarnivalNavigatorGroup source = new CarnivalNavigatorGroup(
-					Messages.NavigatorGroupName_VolunteerWork_4002_source, "icons/linkSourceNavigatorGroup.gif", //$NON-NLS-1$
+					Messages.NavigatorGroupName_SponsorWork_4002_source, "icons/linkSourceNavigatorGroup.gif", //$NON-NLS-1$
 					parentElement);
 			Collection<View> connectedViews;
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
@@ -391,7 +391,7 @@ public class CarnivalNavigatorContentProvider implements ICommonContentProvider 
 					CarnivalVisualIDRegistry.getType(EventEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
-					CarnivalVisualIDRegistry.getType(VolunteerEditPart.VISUAL_ID));
+					CarnivalVisualIDRegistry.getType(SponsorEditPart.VISUAL_ID));
 			source.addChildren(createNavigatorItems(connectedViews, source, true));
 			if (!target.isEmpty()) {
 				result.add(target);
