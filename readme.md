@@ -7,7 +7,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Meta-modelling](#metamodelling)
+- [Meta-modeling](#metamodeling)
   - [Class Diagram](#class-diagram)
   - [Assumptions](#assumptions)
   - [Alternatives](#alternatives)
@@ -23,13 +23,13 @@
 - [Contributors](#contributors)
 
 ## Introduction
-Welcome to the world of the Carnivals, a vibrant celebration that captivates hearts and sparks joy. Carnivals are festive gatherings that draw people from far and wide, offering a range of entertainment and excitement. In the spirit of embracing this joyful atmosphere, a domain-specific language using Epsilon has been designed to capture the essence of Carnivals through meta-modelling.
+Welcome to the world of the Carnivals, a vibrant celebration that captivates hearts and sparks joy. Carnivals are festive gatherings that draw people from far and wide, offering a range of entertainment and excitement. In the spirit of embracing this joyful atmosphere, a domain-specific language using Epsilon has been designed to capture the essence of Carnivals through meta-modeling.
 
 Our journey begins with designing the ECore meta-model for our Carnival using Emfatic, carefully selecting classes, relationships, and multiplicities to capture the essence of our celebration. After ensuring the model's validity and registering it, we turn to Eugenia to generate the boilerplate code for the Graphical Modeling Framework (GMF). With a keen focus on clarity, we establish a direct correlation between model constructs and graphical symbols, ensuring semiotic clarity. With our newly minted GMF-based editor, we dive into creating our model - the McMaster Carnival! Moving forward, we employ the Epsilon Validation Language to add robust constraints, ensuring its integrity and correctness. Finally, leveraging the power of Epsilon Generative Languages, we generate vibrant HTML pages.
 
-Our goal is not only to develop a comprehensive meta-model for carnivals but also to provide insights into the practical applications of meta-modeling in software engineering contexts. By engaging in this project, you will gain hands-on experience with metamodeling techniques and deepen your understanding of eclipse based development environments.
+Our goal is not only to develop a comprehensive meta-model for carnivals but also to provide insights into the practical applications of meta-modeling in software engineering contexts. By engaging in this project, you will gain hands-on experience with meta-modeling techniques and deepen your understanding of eclipse based development environments.
 
-## Meta-modelling
+## Meta-modeling
 To model the dynamic aspects of the Carnival, emfatic has been used to create the ECore model. The design encompasses fundamental elements that define the carnival experience, ranging from diverse activities to enthusiastic participants.
 
 ### Class Diagram
@@ -49,7 +49,7 @@ To model the dynamic aspects of the Carnival, emfatic has been used to create th
 8. **CarnivalDay:** Class defining a specific day within the carnival, comprising a variety of engaging activities.
 9. **Carnival:** Base class encapsulating the entire carnival celebration, composed of carnival days and diverse participants.
 
-This metamodelling structure forms the framework for a comprehensive representation of the Carnival, offering flexibility and customization based on the unique characteristics of your specific carnival celebration. Additional details, associations, and constraints can be incorporated to tailor the model to your project's requirements.
+This metamodeling structure forms the framework for a comprehensive representation of the Carnival, offering flexibility and customization based on the unique characteristics of your specific carnival celebration. Additional details, associations, and constraints can be incorporated to tailor the model to your project's requirements.
 
 ### Assumptions
 - The sponsors will assume responsibility for event and booth management, thereby eliminating the need for additional helpers or staff.
@@ -185,7 +185,7 @@ These transformation rules define the templates to be used and specify the targe
 - We attempted to come up with graphs in HTML for visualizing the sponsors and visitor distribution across different days and acivities but it was not straightforward to do so. Alternatively, we could have transformation rules to dump the data to a CSV file and produce visuals as necessary. 
 
 ## Summary 
-Our project delves into the creation of a Carnival meta-model using Epsilon and its various aspects. Meta-modelling is extensively covered, showcasing the ECore meta-model for the carnival, along with assumptions and alternatives considered. Next, we look into the concrete syntax & editor details the graphical modeling framework (GMF) and its advantages, followed by a discussion on validation using EVL and integration with the editor. Model to text transformation is explored through EGL and EGX, demonstrating the generation of HTML documents. Overall, we have captured the comprehensive journey of designing and implementing the Carnival meta-model, providing valuable insights into each phase of the project.
+Our project delves into the creation of a Carnival meta-model using Epsilon and its various aspects. Meta-modeling is extensively covered, showcasing the ECore meta-model for the carnival, along with assumptions and alternatives considered. Next, we look into the concrete syntax & editor details the graphical modeling framework (GMF) and its advantages, followed by a discussion on validation using EVL and integration with the editor. Model to text transformation is explored through EGL and EGX, demonstrating the generation of HTML documents. Overall, we have captured the comprehensive journey of designing and implementing the Carnival meta-model, providing valuable insights into each phase of the project.
 
 ## Software and Dependencies 
 
