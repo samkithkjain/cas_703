@@ -7,7 +7,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Meta-modeling](#metamodeling)
+- [Meta-modeling](#meta-modeling)
   - [Class Diagram](#class-diagram)
   - [Assumptions](#assumptions)
   - [Alternatives](#alternatives)
