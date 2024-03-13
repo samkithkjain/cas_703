@@ -1,7 +1,3 @@
-<style>
-  body {text-align: justify}
-</style>
-
 <div style="text-align: center;">
     <h1> CAS 703 - Software Design Project </h1>
     <h2> Winter 2024 McMaster University </h2>
