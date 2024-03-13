@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:carnival="vr/carnival" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmi:id="_VwJVMNTUEe6sydbGYE1AUQ" type="Carnival" name="default2.Carnival_diagram" measurementUnit="Pixel">
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_VwJVMdTUEe6sydbGYE1AUQ"/>
+  <element xmi:type="carnival:Carnival" href="default2.Carnival#/"/>
+</notation:Diagram>
