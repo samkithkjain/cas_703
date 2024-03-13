@@ -46,8 +46,8 @@ To model the dynamic aspects of the carnival, Emfatic has been used to create th
 5. **Participant:** An abstract class encompassing the different individuals engaged in the carnival.
 6. **Visitor:** Class representing attendees who join the carnival as visitors, embracing the fun-filled spirit.
 7. **Sponsor:** Class representing folks who actively contribute as sponsors, enhancing the carnival experience.
-8. **carnivalDay:** Class defining a specific day within the carnival, comprising a variety of engaging activities.
-9. **carnival:** Base class encapsulating the entire carnival celebration, composed of carnival days and diverse participants.
+8. **CarnivalDay:** Class defining a specific day within the carnival, comprising a variety of engaging activities.
+9. **Carnival:** Base class encapsulating the entire carnival celebration, composed of carnival days and diverse participants.
 
 This metamodeling structure forms the framework for a comprehensive representation of the carnival, offering flexibility and customization based on the unique characteristics of your specific carnival celebration. Additional details, associations, and constraints can be incorporated to tailor the model to your project's requirements.
 
