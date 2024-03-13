@@ -25,6 +25,10 @@
 ## Introduction
 Welcome to the world of the Carnivals, a vibrant celebration that captivates hearts and sparks joy. Carnivals are festive gatherings that draw people from far and wide, offering a range of entertainment and excitement. In the spirit of embracing this joyful atmosphere, a domain-specific language using Epsilon has been designed to capture the essence of Carnivals through meta-modelling.
 
+We start off with the design of the ECore meta-model for the carnival using Emfatic. The classes, relationships and multiplicities are carefully chosen. The meta-model is checked for its validity and is registered. Eugenia is then employed to generate the Graphical Modeling Framework (GMF) boiler-plate code. A one-to-one mapping of constructs to graphical symbols is defined ensuring for semiotic clarity. The newly created GMF based editor instantiated to create a model, the McMaster Carnival! Next, epsilon validation language is used to define stronger constraints on the model. Finally, we use epsilon generative languages for model to text transformation to generate HTML pages. 
+
+Our goal is not only to develop a comprehensive metamodel for carnivals but also to provide insights into the practical applications of metamodeling in software engineering contexts. By engaging in this project, you will gain hands-on experience with metamodeling techniques and deepen your understanding of eclipse-based development environments.
+
 ## Meta-modelling
 To model the dynamic aspects of the Carnival, emfatic has been used to create the ECore model. The design encompasses fundamental elements that define the carnival experience, ranging from diverse activities to enthusiastic participants.
 
