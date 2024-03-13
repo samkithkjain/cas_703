@@ -25,17 +25,17 @@
 ## Introduction
 Welcome to the world of the carnivals, a vibrant celebration that captivates hearts and sparks joy. Carnivals are festive gatherings that draw people from far and wide, offering a range of entertainment and excitement. In the spirit of embracing this joyful atmosphere, a domain-specific language using Epsilon has been designed to capture the essence of carnivals through meta-modeling.
 
-Our journey begins with designing the ECore meta-model for our Carnival using Emfatic, carefully selecting classes, relationships, and multiplicities to capture the essence of our celebration. After ensuring the model's validity and registering it, we turn to Eugenia to generate the boilerplate code for the Graphical Modeling Framework (GMF). With a keen focus on clarity, we establish a direct correlation between model constructs and graphical symbols, ensuring semiotic clarity. With our newly minted GMF-based editor, we dive into creating our model - the McMaster Carnival! Moving forward, we employ the Epsilon Validation Language to add robust constraints, ensuring its integrity and correctness. Finally, leveraging the power of Epsilon Generative Languages, we generate vibrant HTML pages.
+Our journey begins with designing the ECore meta-model for our carnival using Emfatic, carefully selecting classes, relationships, and multiplicities to capture the essence of our celebration. After ensuring the model's validity and registering it, we turn to Eugenia to generate the boilerplate code for the Graphical Modeling Framework (GMF). With a keen focus on clarity, we establish a direct correlation between model constructs and graphical symbols, ensuring semiotic clarity. With our newly minted GMF-based editor, we dive into creating our model - the McMaster carnival! Moving forward, we employ the Epsilon Validation Language to add robust constraints, ensuring its integrity and correctness. Finally, leveraging the power of Epsilon Generative Languages, we generate vibrant HTML pages.
 
 Our goal is not only to develop a comprehensive meta-model for carnivals but also to provide insights into the practical applications of meta-modeling in software engineering contexts. By engaging in this project, you will gain hands-on experience with meta-modeling techniques and deepen your understanding of eclipse based development environments.
 
 ## Meta-modeling
-To model the dynamic aspects of the Carnival, emfatic has been used to create the ECore model. The design encompasses fundamental elements that define the carnival experience, ranging from diverse activities to enthusiastic participants.
+To model the dynamic aspects of the carnival, Emfatic has been used to create the ECore model. The design encompasses fundamental elements that define the carnival experience, ranging from diverse activities to enthusiastic participants.
 
 ### Class Diagram
-**Figure 1** illustrates the ECore meta-model for the Carnival
+**Figure 1** illustrates the ECore meta-model for the carnival
 <figure>
-  <img src="./workspace/images/carnival_class_diagram.jpg" alt="Carnival Image" style="max-width: 65%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <img src="./workspace/images/carnival_class_diagram.jpg" alt="carnival Image" style="max-width: 65%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
   <figcaption style="text-align:center;">Figure 1: Class Diagram</figcaption>
 </figure>
 
@@ -46,10 +46,10 @@ To model the dynamic aspects of the Carnival, emfatic has been used to create th
 5. **Participant:** An abstract class encompassing the different individuals engaged in the carnival.
 6. **Visitor:** Class representing attendees who join the carnival as visitors, embracing the fun-filled spirit.
 7. **Sponsor:** Class representing folks who actively contribute as sponsors, enhancing the carnival experience.
-8. **CarnivalDay:** Class defining a specific day within the carnival, comprising a variety of engaging activities.
-9. **Carnival:** Base class encapsulating the entire carnival celebration, composed of carnival days and diverse participants.
+8. **carnivalDay:** Class defining a specific day within the carnival, comprising a variety of engaging activities.
+9. **carnival:** Base class encapsulating the entire carnival celebration, composed of carnival days and diverse participants.
 
-This metamodeling structure forms the framework for a comprehensive representation of the Carnival, offering flexibility and customization based on the unique characteristics of your specific carnival celebration. Additional details, associations, and constraints can be incorporated to tailor the model to your project's requirements.
+This metamodeling structure forms the framework for a comprehensive representation of the carnival, offering flexibility and customization based on the unique characteristics of your specific carnival celebration. Additional details, associations, and constraints can be incorporated to tailor the model to your project's requirements.
 
 ### Assumptions
 - The sponsors will assume responsibility for event and booth management, thereby eliminating the need for additional helpers or staff.
@@ -57,19 +57,19 @@ This metamodeling structure forms the framework for a comprehensive representati
 - Each event takes place at a distinct time during the day, and no two events can happen simultaneously on the same day.
 
 ### Alternatives
-In the alternate design of the Carnival meta model within the context of ECore modeling, the introduction of the "Helper" EClass would enhance the existing structure by providing a dedicated representation for staff or assistants involved in event and booth management tasks. This new EClass would establish a clear distinction between sponsors and the individuals responsible for executing various operational aspects of the Carnival.
+In the alternate design of the carnival meta model within the context of ECore modeling, the introduction of the "Helper" EClass would enhance the existing structure by providing a dedicated representation for staff or assistants involved in event and booth management tasks. This new EClass would establish a clear distinction between sponsors and the individuals responsible for executing various operational aspects of the carnival.
 
-The "Helper" EClass would contain attributes defining the roles, skills, and availability of each staff member. Additionally, it would have references to other relevant classes within the meta model, such as events or booths, to indicate the specific areas where helpers are deployed. These references would enable efficient navigation and management of helpers within the Carnival ecosystem.
+The "Helper" EClass would contain attributes defining the roles, skills, and availability of each staff member. Additionally, it would have references to other relevant classes within the meta model, such as events or booths, to indicate the specific areas where helpers are deployed. These references would enable efficient navigation and management of helpers within the carnival ecosystem.
 
-By introducing the "Helper" EClass, the meta model gains added flexibility and granularity in representing the organizational structure and operational dynamics of the Carnival. Sponsors can now have a dedicated team of helpers under their purview, allowing for more effective coordination and delegation of tasks. However, this addition may necessitate adjustments to the concrete syntax and navigation paths within the model to accommodate the new class and its relationships effectively. Nonetheless, the inclusion of helpers enhances the overall functionality and realism of the Carnival meta model.
+By introducing the "Helper" EClass, the meta model gains added flexibility and granularity in representing the organizational structure and operational dynamics of the carnival. Sponsors can now have a dedicated team of helpers under their purview, allowing for more effective coordination and delegation of tasks. However, this addition may necessitate adjustments to the concrete syntax and navigation paths within the model to accommodate the new class and its relationships effectively. Nonetheless, the inclusion of helpers enhances the overall functionality and realism of the carnival meta model.
 
 ## Concrete Syntax & Editor
 
 ### Semiotic Clarity 
-In our Carnival meta model design, achieving semiotic clarity was important to ensure that the graphical representations effectively conveyed the underlying model constructs. We first established a one-to-one mapping between model elements and their graphical symbols, ensuring each entity, such as sponsors, events, and helpers, was distinctly and clearly represented. (Refer to **Figure 2**: Semiotic Clarity for an illustration of this mapping.)
+In our carnival meta model design, achieving semiotic clarity was important to ensure that the graphical representations effectively conveyed the underlying model constructs. We first established a one-to-one mapping between model elements and their graphical symbols, ensuring each entity, such as sponsors, events, and helpers, was distinctly and clearly represented. (Refer to **Figure 2**: Semiotic Clarity for an illustration of this mapping.)
 
 <figure>
-  <img src="./workspace/images/Semiotic_Clarity.png" alt="Carnival Image" style="max-width: 65%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <img src="./workspace/images/Semiotic_Clarity.png" alt="carnival Image" style="max-width: 65%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
   <figcaption style="text-align:center;">Figure 2: Semiotic Clarity</figcaption>
 </figure>
 
@@ -77,40 +77,40 @@ In our Carnival meta model design, achieving semiotic clarity was important to e
 We employed Eugenia, an Eclipse-based tool built on the Graphical Modeling Framework (GMF), to create the Concrete Syntax and Editor The Eugenia generated editor was run as a plugin on Eclipse, using which we created a sample carnival model illustrated in **Figure 3** below. The resulting graphical editor provides stakeholders with an intuitive and easily interpretable visual representation of the meta model's structure and relationships.
 
 <figure>
-  <img src="./workspace/images/GMF Editor.png" alt="Carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <img src="./workspace/images/GMF Editor.png" alt="carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
   <figcaption style="text-align:center;">Figure 3: GMF Editor / Model Instance</figcaption>
 </figure>
 
 ### Advantages
-Using GMF (Graphical Modeling Framework) for the Carnival meta-model offers several advantages. One major advantage is its ability to provide a customizable and visually appealing graphical editor tailored specifically to the domain of the Carnival meta-model. This enables stakeholders to intuitively create, edit, and visualize the model's elements and relationships, enhancing understanding and collaboration. Additionally, GMF automates much of the underlying infrastructure required for creating graphical editors, saving time and effort in development.  
+Using GMF (Graphical Modeling Framework) for the carnival meta-model offers several advantages. One major advantage is its ability to provide a customizable and visually appealing graphical editor tailored specifically to the domain of the carnival meta-model. This enables stakeholders to intuitively create, edit, and visualize the model's elements and relationships, enhancing understanding and collaboration. Additionally, GMF automates much of the underlying infrastructure required for creating graphical editors, saving time and effort in development.  
 
 ### Disadvantages
-The alternative design incorporating a set of helpers/staff, while adding functionality, poses challenges in terms of clutter and symbol flooding. Introducing additional elements like helpers/staff may lead to a denser diagram with an increased number of graphical symbols, potentially making it more difficult to discern and interpret the model's structure. This issue can diminish the clarity and usability of the graphical representation, counteracting the benefits of using GMF for visual modeling. Thus, careful consideration and balancing of functionality and clarity are essential when incorporating such complex features into the graphical representation of the Carnival meta-model using GMF.
+The alternative design incorporating a set of helpers/staff, while adding functionality, poses challenges in terms of clutter and symbol flooding. Introducing additional elements like helpers/staff may lead to a denser diagram with an increased number of graphical symbols, potentially making it more difficult to discern and interpret the model's structure. This issue can diminish the clarity and usability of the graphical representation, counteracting the benefits of using GMF for visual modeling. Thus, careful consideration and balancing of functionality and clarity are essential when incorporating such complex features into the graphical representation of the carnival meta-model using GMF.
 
 ## Validation
-EVL (Epsilon Validation Language) has played a crucial role in ensuring the integrity and correctness of our Carnival meta-model. Leveraging EVL, we added validation constraints to the meta-model, ensuring that it adheres to the specified criteria. Different critiques and constraints have been strategically applied to various classes within the meta-model to produce human-readable error messages, aiding in the identification and resolution of potential issues. **Figure 4** below, provides an example of EVL validation in action, demonstrating how it helps detect and report violations of defined constraints. 
+Epsilon Validation Language (EVL) has played a crucial role in ensuring the integrity and correctness of our carnival meta-model. Leveraging EVL, we added validation constraints to the meta-model, ensuring that it adheres to the specified criteria. Different critiques and constraints have been strategically applied to various classes within the meta-model to produce human-readable error messages, aiding in the identification and resolution of potential issues. **Figure 4** below, provides an example of EVL validation in action, demonstrating how it helps detect and report violations of defined constraints. 
 
 <figure>
-  <img src="./workspace/images/EVL Validation.png" alt="Carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <img src="./workspace/images/EVL Validation.png" alt="carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
   <figcaption style="text-align:center;">Figure 4: Validation using EVL</figcaption>
 </figure>
 
 ### Validation Constraints
-1. **Carnival root class Constraints:**
+1. **carnival root class Constraints:**
     - **HasAtleastOneDay:**
         - Checks if the carnival has at least one day.
-        - Message: Carnival needs at least one day.
+        - Message: carnival needs at least one day.
     - **HasAtleastOnePerson:**
         - Checks if the carnival has at least one person.
-        - Message: Carnival needs at least one person
+        - Message: carnival needs at least one person
 
-2. **Carnival Day Constraints:**
+2. **carnival Day Constraints:**
     - **HasId:**
         - Critique ensuring each carnival day has a day digit.
-        - Message: Carnival Day needs a day digit
+        - Message: carnival Day needs a day digit
     - **HasAtleastOneActivity:**
         - Checks if the carnival day has at least one activity.
-        - Message: Carnival Day needs at least one activity
+        - Message: carnival Day needs at least one activity
 
 3. **Activity Constraints:**
     - **HasVolunteer:**
@@ -155,26 +155,26 @@ Leveraging the EVL documentation and insights from course slide decks, we implem
 For more details on the EVL validation process and specific constraints code, please refer to the validation section of our [GitHub repository - carnival.evl](https://github.com/samkithkjain/cas_703/tree/main/workspace/carnival/validation).
 
 ## Model to Text Transformation
-Model to Text Transformation is a crucial aspect of the Carnival project, facilitating the generation of human-readable documents from the underlying model. In this project, we utilized EGL (Epsilon Generation Language) and EGX to transform the Carnival meta-model into HTML documents for displaying the sponsors, visitors, and schedule of activities during the carnival.
+Model to text transformation is a crucial aspect of the carnival project, facilitating the generation of human-readable documents from the underlying model. In this project, we utilized Epsilon Generation Language (EGL) and EGL Co-Ordination Language (EGX) to transform the carnival meta-model into HTML documents for displaying the sponsors, visitors, and schedule of activities during the carnival.
 
 ### Summary of Transformation Files:
 1. Visitors List HTML Template:
 The Visitors List HTML template generates a document displaying information about sponsors and visitors attending the carnival. It presents a tabular format with columns for Serial Number, UID, Name, Email, and Activity. Using EGL syntax, the template iterates through carnival days and activities to populate the table with relevant data.
 
 2. Carnival Schedule HTML Template:
-The Carnival Schedule HTML template generates a document presenting the schedule of activities for each day of the carnival. It organizes the information in a table format with columns for Day and Activity. Similar to the Visitors List template, EGL is used to iterate through carnival days and activities, filling the table with the schedule details.
+The carnival Schedule HTML template generates a document presenting the schedule of activities for each day of the carnival. It organizes the information in a table format with columns for Day and Activity. Similar to the Visitors List template, EGL is used to iterate through carnival days and activities, filling the table with the schedule details.
 
 3. Transformation Rules:
-Two transformation rules are defined to apply the templates to the Carnival meta-model:
-- **CarnivalModelToSchedule:** Applies the Carnival Schedule template to generate the CarnivalSchedule.html document, **Figure 5** shows the output for the same.
+Two transformation rules are defined to apply the templates to the carnival meta-model:
+- **carnivalModelToSchedule:** Applies the carnival Schedule template to generate the carnivalSchedule.html document, **Figure 5** shows the output for the same.
 <figure>
-  <img src="./workspace/images/schedule_html.png" alt="Carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
-  <figcaption style="text-align:center;">Figure 5: Schedule of Carnival</figcaption>
+  <img src="./workspace/images/schedule_html.png" alt="carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <figcaption style="text-align:center;">Figure 5: Schedule of carnival</figcaption>
 </figure>
 
-- **CarnivalModelToList:** Applies the Visitors List template to generate the CarnivalList.html document, **Figure 6** shows the output for the same.
+- **carnivalModelToList:** Applies the Visitors List template to generate the carnivalList.html document, **Figure 6** shows the output for the same.
 <figure>
-  <img src="./workspace/images/list_html.png" alt="Carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <img src="./workspace/images/list_html.png" alt="carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
   <figcaption style="text-align:center;">Figure 6: Visitor and Sponsor List</figcaption>
 </figure>
 
@@ -185,7 +185,7 @@ These transformation rules define the templates to be used and specify the targe
 - We attempted to come up with graphs in HTML for visualizing the sponsors and visitor distribution across different days and acivities but it was not straightforward to do so. Alternatively, we could have transformation rules to dump the data to a CSV file and produce visuals as necessary. 
 
 ## Summary 
-Our project delves into the creation of a Carnival meta-model using Epsilon and its various aspects. Meta-modeling is extensively covered, showcasing the ECore meta-model for the carnival, along with assumptions and alternatives considered. Next, we look into the concrete syntax & editor details the graphical modeling framework (GMF) and its advantages, followed by a discussion on validation using EVL and integration with the editor. Model to text transformation is explored through EGL and EGX, demonstrating the generation of HTML documents. Overall, we have captured the comprehensive journey of designing and implementing the Carnival meta-model, providing valuable insights into each phase of the project.
+Our project delves into the creation of a carnival meta-model using Epsilon and its various aspects. Meta-modeling is extensively covered, showcasing the ECore meta-model for the carnival, along with assumptions and alternatives considered. Next, we look into the concrete syntax & editor details the graphical modeling framework (GMF) and its advantages, followed by a discussion on validation using EVL and integration with the editor. Model to text transformation is explored through EGL and EGX, demonstrating the generation of HTML documents. Overall, we have captured the comprehensive journey of designing and implementing the carnival meta-model, providing valuable insights into each phase of the project.
 
 ## Software and Dependencies 
 
