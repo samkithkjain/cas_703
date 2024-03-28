@@ -1,0 +1,318 @@
+\documentclass[a4paper,11pt]{report}
+\parindent 0pt
+\usepackage{amssymb,amsmath,amsthm,amsfonts,graphicx,geometry, hyperref, xcolor,}
+\usepackage{enumitem, adjustbox}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\bibname}{\Large References}
+
+
+\geometry{
+	left=3cm,   % Adjust the left margin
+	right=3cm,  % Adjust the right margin
+	top=2cm,    % Adjust the top margin
+	bottom=2cm, % Adjust the bottom margin
+}
+
+%---------------------------------------------------------------%
+
+\begin{document}
+%---------------------------------------------------------------%
+
+\begin{center}
+	{\bf Domain-Specific Language Design}\\
+	Carnivals Management System
+\end{center}
+\begin{center}
+	Participants: {\it S. Ishtiaq, S.K. Jain, N. Raj Pappuraj, A.Toloekashefpakdel}\\
+	\vspace{0.2 cm}
+	{\small Deadline: $10^{\text{th}}$ April 2024 -- Dr. Richard Paige}
+\end{center}
+\vspace{0.5 cm}
+
+\section{Introduction}
+Welcome to the world of the carnivals, a vibrant celebration that captivates hearts and sparks joy. Carnivals are festive gatherings that draw people from far and wide, offering a range of entertainment and excitement. In the spirit of embracing this joyful atmosphere, a domain--specific language using Epsilon has been designed to capture the essence of carnivals through meta--modeling.\\
+
+Our journey begins with designing the ECore \cite{4} meta--model for our carnival using Emfatic \cite{3}, carefully selecting classes, relationships, and multiplicities to capture the essence of our celebration. After ensuring the model's validity and registering it, we turn to Eugenia to generate the boilerplate code for the Graphical Modeling Framework (GMF) \cite{6}. With a keen focus on clarity, we establish a direct correlation between model constructs and graphical symbols, ensuring semiotic clarity. With our newly minted GMF--based editor, we dive into creating our model - the McMaster carnival! Moving forward, we employ the Epsilon Validation Language to add robust constraints, ensuring its integrity and correctness. Finally, leveraging the power of Epsilon Generative Languages, we generate vibrant HTML pages.\\
+
+Our goal is not only to develop a comprehensive meta-model for carnivals but also to provide insights into the practical applications of meta--modeling in software engineering contexts. By engaging in this project, you will gain hands-on experience with meta--modeling techniques and deepen your understanding of eclipse based development environments.
+
+%---------------------------------------------------------------%
+\section{Meta-Modeling}
+
+To model the dynamic aspects of the carnival, Emfatic has been used to create the ECore model. The design encompasses fundamental elements that define the carnival experience, ranging from diverse activities to enthusiastic participants.
+
+\subsection{Class Diagram}
+
+\begin{itemize}
+	\item NamedElement: An abstract class serving as the foundation for naming various elements within the carnival.
+	\item Activity: An abstract class capturing the diverse range of activities present at the carnival.
+	\item Event: A type of activity open to all carnival attendees.
+	\item Booth: A type of activity with limited resources, offering unique experiences.
+	\item Participant: An abstract class encompassing the different individuals engaged in the carnival.
+	\item Visitor: Class representing attendees who join the carnival as visitors, embracing the fun-filled spirit.
+	\item Sponsor: Class representing folks who actively contribute as sponsors, enhancing the carnival experience.
+	\item CarnivalDay: Class defining a specific day within the carnival, comprising a variety of engaging activities.
+	\item Carnival: Base class encapsulating the entire carnival celebration, composed of carnival days and diverse participants.
+\end{itemize}
+
+\begin{figure}[ht]
+\begin{center}
+\fbox{\adjustbox{width=0.9\textwidth}{\includegraphics{carnival_class_diagram.jpg}}}
+\caption{{\footnotesize Illustrates the ECore meta-model for the carnival.}}
+\label{Fig1}
+\end{center}
+\end{figure}
+
+\subsection{Assumptions}
+
+\begin{itemize}
+	\item The sponsors will assume responsibility for event and booth management, thereby eliminating the need for additional helpers or staff.
+	\item Booths remain open continuously throughout the day or until their stocks are depleted.
+	\item Each event takes place at a distinct time during the day, and no two events can happen simultaneously on the same day.
+\end{itemize}
+
+\subsection{Alternatives}
+In the alternate design of the carnival meta model within the context of ECore modeling, the introduction of the ``Helper" EClass would enhance the existing structure by providing a dedicated representation for staff or assistants involved in event and booth management tasks. This new EClass would establish a clear distinction between sponsors and the individuals responsible for executing various operational aspects of the carnival.\\
+
+The ``Helper" EClass would contain attributes defining the roles, skills, and availability of each staff member. Additionally, it would have references to other relevant classes within the meta model, such as events or booths, to indicate the specific areas where helpers are deployed. These references would enable efficient navigation and management of helpers within the carnival ecosystem.\\
+
+By introducing the ``Helper" EClass, the meta model gains added flexibility and granularity in representing the organizational structure and operational dynamics of the carnival. Sponsors can now have a dedicated team of helpers under their purview, allowing for more effective coordination and delegation of tasks. However, this addition may necessitate adjustments to the concrete syntax and navigation paths within the model to accommodate the new class and its relationships effectively. Nonetheless, the inclusion of helpers enhances the overall functionality and realism of the carnival meta model.
+%---------------------------------------------------------------%
+\section{Concrete Syntax and Editor}
+\subsection{Semiotic Clarity}
+In our carnival meta model design, achieving semiotic clarity was important to ensure that the graphical representations effectively conveyed the underlying model constructs. We first established a one-to-one mapping between model elements and their graphical symbols, ensuring each entity, such as sponsors, events, and helpers, was distinctly and clearly represented. 
+\begin{figure}[h]
+\begin{center}
+\fbox{\adjustbox{width=0.9\textwidth}{\includegraphics{Semiotic_Clarity.png}}} 
+\caption{{\footnotesize Semiotic Clarity for an illustration of the mapping.}}
+\label{Fig2}
+\end{center}
+\end{figure}
+
+
+\subsection{The GMF Editor}
+We employed Eugenia, an Eclipse-based tool built on the Graphical Modeling Framework (GMF), to create the Concrete Syntax and Editor The Eugenia generated editor was run as a plugin on Eclipse, using which we created a sample carnival model illustrated in Figure 3 below. The resulting graphical editor provides stakeholders with an intuitive and easily interpretable visual representation of the meta model's structure and relationships.
+
+\begin{figure}[h]
+\begin{center}
+\fbox{\adjustbox{width=1\textwidth}{\includegraphics{GMF Editor.png}}} 
+\caption{{\footnotesize GMF Editor / Model Instance.}}
+\label{Fig3}
+\end{center}
+\end{figure}
+
+\subsection{Advantages}
+
+Using Graphical Modeling Framework (GMF) for the carnival meta-model offers several advantages. One major advantage is its ability to provide a customizable and visually appealing graphical editor tailored specifically to the domain of the carnival meta-model. This enables stakeholders to intuitively create, edit, and visualize the model's elements and relationships, enhancing understanding and collaboration. Additionally, GMF automates much of the underlying infrastructure required for creating graphical editors, saving time and effort in development.
+
+\subsection{Disadvantages}
+
+The alternative design incorporating a set of helpers/staff, while adding functionality, poses challenges in terms of clutter and symbol flooding. Introducing additional elements like helpers/staff may lead to a denser diagram with an increased number of graphical symbols, potentially making it more difficult to discern and interpret the model's structure. This issue can diminish the clarity and usability of the graphical representation, counteracting the benefits of using GMF for visual modeling. Thus, careful consideration and balancing of functionality and clarity are essential when incorporating such complex features into the graphical representation of the carnival meta-model using GMF.
+%---------------------------------------------------------------%
+
+\section{Validation}
+
+Epsilon Validation Language (EVL) \cite{5} has played a crucial role in ensuring the integrity and correctness of our carnival meta-model. Leveraging EVL, we added validation constraints to the meta-model, ensuring that it adheres to the specified criteria. Different critiques and constraints have been strategically applied to various classes within the meta-model to produce human-readable error messages, aiding in the identification and resolution of potential issues. Figure 4 below, provides an example of EVL validation in action, demonstrating how it helps detect and report violations of defined constraints.
+
+\begin{figure}[h]
+\begin{center}
+\fbox{\adjustbox{width=1\textwidth}{\includegraphics{EVL Validation.png}}} 
+\caption{{\footnotesize Validation using EVL .}}
+\label{Fig4}
+	\end{center}
+\end{figure}
+
+\subsection{Validation Constraints}
+
+\begin{enumerate}
+	\item Carnival root class Constraints:
+	\begin{itemize}
+		\item HasAtleastOneDay:
+			\begin{itemize}
+				\item Checks if the carnival has at least one day.
+				\item Message: carnival needs at least one day.
+			\end{itemize}
+		\item HasAtleastOnePerson:
+			\begin{itemize}
+				\item Checks if the carnival has at least one person.
+				\item Message: carnival needs at least one person.
+			\end{itemize}
+	\end{itemize}
+	\item Carnival Day Constraints:
+	\begin{itemize}
+		\item HasId:
+			\begin{itemize}
+				\item Critique ensuring each carnival day has a day digit.
+				\item Message: carnival Day needs a day digit.
+			\end{itemize}
+		\item HasAtleastOneActivity:
+			\begin{itemize}
+				\item Checks if the carnival day has at least one activity.
+				\item Message: carnival Day needs at least one activity.
+			\end{itemize}
+	\end{itemize}\newpage
+	\item Activity Constraints:
+	\begin{itemize}
+		\item HasVolunteer:
+		\begin{itemize}
+			\item Checks if the activity has a sponsor.
+			\item Message: Activity needs a sponsor.
+		\end{itemize}
+		\item AllEventsHaveDurations:
+		\begin{itemize}
+			\item Checks if all events have durations.
+			\item Message: Event must have a duration.
+		\end{itemize}
+	\end{itemize}
+	\item Booth Constraints:
+		\begin{itemize}
+			\item HasAvailableSpace:
+			\begin{itemize}
+				\item Checks if the booth provides available space.
+				\item Message: Booth must provide space available.
+			\end{itemize}
+		\end{itemize}
+	\item Person Constraints:
+		\begin{itemize}
+			\item HasAge:
+			\begin{itemize}
+				\item Checks if the person has an age.
+				\item Message: Person must have an age.
+			\end{itemize}
+			\item HasEmail:
+			\begin{itemize}
+				\item Critique ensuring each person has an email.
+				\item Message: Person should have an email.
+			\end{itemize}
+			\item AllPersonsHaveUniqueEmails:
+			\begin{itemize}
+				\item Checks if all persons have unique email addresses.
+				\item Message: All persons must have unique email addresses.
+			\end{itemize}
+		\end{itemize}
+	\item Sponsor Constraints:
+	\begin{itemize}
+		\item HasPartnerId:
+		\begin{itemize}
+			\item Checks if the sponsor has a partner ID.
+			\item Message: Sponsor must have a partner ID.
+		\end{itemize}
+		\item AllSponsorIdsUnique:
+		\begin{itemize}
+			\item Checks if all sponsor IDs are unique.
+			\item Message: Sponsor IDs must be unique.
+		\end{itemize}
+	\end{itemize}
+	\item Named Element Constraints:
+	\begin{itemize}
+		\item HasName:
+		\begin{itemize}
+			\item Checks if the element has a name.
+			\item Message: Element needs a name.
+		\end{itemize}
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Integration}
+Leveraging the EVL documentation and insights from  course slide decks, we implemented custom EVL constraints to validate aspects of the model that couldn't be expressed in the metamodel itself. Through careful integration with the editor's codebase, we enabled validation checks, allowing users to receive feedback on their model edits. By highlighting errors and warnings directly within the editor interface, we empowered users to identify and address validation issues efficiently. This seamless integration enhances the usability and reliability of our editor, providing a more robust modeling experience.\\
+
+For more details on the EVL validation process and specific constraints code, please refer to the validation section of our \href{https://github.com/samkithkjain/cas_703/blob/main/workspace/carnival/validation/carnival.evl}{\textcolor{blue}{GitHub Repository - carnival.evl}}.
+%---------------------------------------------------------------%
+
+\section{Model to Text Transformation}
+
+Model to text transformation is a crucial aspect of the carnival project, facilitating the generation of human-readable documents from the underlying model. In this project, we utilized Epsilon Generation Language (EGL)\cite{1} and EGL Co--Ordination Language (EGX)\cite{2} to transform the carnival meta-model into HTML documents for displaying the sponsors, visitors, and schedule of activities during the carnival.
+
+\subsection{Summary of Transformation Files}
+\begin{enumerate}[leftmargin=*]
+\item {\bf Visitors List HTML Template:} The Visitors List HTML template generates a document displaying information about sponsors and visitors attending the carnival. It presents a tabular format with columns for Serial Number, UID, Name, Email, and Activity. Using EGL syntax, the template iterates through carnival days and activities to populate the table with relevant data.
+
+\item {\bf Carnival Schedule HTML Template:} The carnival Schedule HTML template generates a document presenting the schedule of activities for each day of the carnival. It organizes the information in a table format with columns for Day and Activity. Similar to the Visitors List template, EGL is used to iterate through carnival days and activities, filling the table with the schedule details.
+
+\item {\bf Transformation Rules:} Two transformation rules are defined to apply the templates to the carnival meta-model:
+\begin{itemize}[leftmargin=*]
+	\item {\it carnivalModelToSchedule}: Applies the carnival Schedule template to generate the carnivalSchedule.html document, Figure 5 shows the output for the same.
+\begin{figure}[h]
+	\begin{center}
+		\fbox{\adjustbox{width=1\textwidth}{\includegraphics{schedule_html.png}}} 
+		\caption{{\footnotesize Schedule of carnival. }}
+		\label{Fig5}
+	\end{center}
+\end{figure}	
+
+\item {\it carnivalModelToList}: Applies the Visitors List template to generate the carnivalList.html document, Figure 6 shows the output for the same.
+
+\begin{figure}[h]
+	\begin{center}
+		\fbox{\adjustbox{width=1\textwidth}{\includegraphics{list_html.png}}} 
+		\caption{{\footnotesize Visitor and Sponsor List.}}
+		\label{Fig6}
+	\end{center}
+\end{figure}	
+\end{itemize}
+\end{enumerate}
+These transformation rules define the templates to be used and specify the target HTML files where the generated content will be stored. Additionally, the EVL and EGX code used for validation constraints and model-to-text transformation rules can be found in the project's  \href{https://github.com/samkithkjain/cas_703/tree/main/workspace/carnival/transformation}{\textcolor{blue}{ GitHub Repository - EVL and EGX}} files.
+
+\subsection{Challenges}
+
+We wanted to transform the model into an innovative webpage, however, one rule in EGX allows us to write to one target, we could not find a way to append the transformation to one target HTML. We decided to produce multiple HTML files. These files could later be referenced in a aggregate HTML file along with other web files for styling, markup and more.\\
+
+Moreover, we attempted to come up with graphs in HTML for visualizing the sponsors and visitor distribution across different days and acivities but it was not straightforward to do so. Alternatively, we could have transformation rules to dump the data to a CSV file and produce visuals as necessary.
+
+%---------------------------------------------------------------%
+
+\section{Conclusion}
+
+Our project delves into the creation of a carnival meta-model using Epsilon and its various aspects. Meta-modeling is extensively covered, showcasing the ECore meta-model for the carnival, along with assumptions and alternatives considered. Next, we look into the concrete syntax \& editor details the Graphical Modeling Framework (GMF) and its advantages, followed by a discussion on validation using EVL and integration with the editor. Model to text transformation is explored through EGL and EGX, demonstrating the generation of HTML documents. Overall, we have captured the comprehensive journey of designing and implementing the carnival meta-model, providing valuable insights into each phase of the project.
+
+%---------------------------------------------------------------%
+
+\section{Software and Dependencies}
+\begin{enumerate}
+	 
+
+\item Eclipse Modeling Tools Version - 2023-12 (4.30.0): \href{https://www.eclipse.org/downloads/packages/release/2023-12/r/eclipse-modeling-tools}{\textcolor{blue}{Download}}. 
+
+\item Graphical Modeling Framework (GMF) - Tooling (3.2.1): \href{https://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases-3.2.1/}{\textcolor{blue}{Download}}.
+
+\item Epsilon (2.1): \href{https://download.eclipse.org/epsilon/updates/2.1/}{\textcolor{blue}{Download}}.
+
+\item Emfatic (1.0.0): \href{https://download.eclipse.org/emfatic/update/}{\textcolor{blue}{Download}}.
+
+\end{enumerate}
+
+%---------------------------------------------------------------%
+
+
+\begin{thebibliography}{99}
+	
+\bibitem{1} \href{https://eclipse.dev/modeling/emf/docs/}{\textcolor{blue}{EGL: Epsilon Generation Language}}.
+\bibitem{2} \href{https://eclipse.dev/epsilon/doc/egx/}{\textcolor{blue}{EGX: Epsilon Generation Language Documentation}}.
+\bibitem{3} \href{https://eclipse.dev/modeling/emf/docs/}{\textcolor{blue}{EMF: Eclipse Modeling Framework Documentation}}.
+\bibitem{4} \href{https://eclipsesource.com/blogs/tutorials/emf-tutorial/}{\textcolor{blue}{ECore: Eclipse Modeling Framework Core Tutorial}}.
+\bibitem{5} \href{https://eclipse.dev/epsilon/doc/evl/}{\textcolor{blue}{EVL: Epsilon Validation Language Documentation}}.
+\bibitem{6}  \href{https://wiki.eclipse.org/Graphical_Modeling_Framework/Tutorial/Part_1}{\textcolor{blue}{GMF: Graphical Modeling Framework Tutorial}}.
+\bibitem{7}  \href{https://download.eclipse.org/ocl/doc/5.0.0/ocl.pdf}{\textcolor{blue}{OCL: Object Constraint Language Documentation}}.
+
+\end{thebibliography}
+
+
+%---------------------------------------------------------------%
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
