@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>readme.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<div style="text-align: center;">
+    <h1> CAS 703 - Software Design Project </h1>
+    <h2> Winter 2024 McMaster University </h2>
+    <h2> McMaster University </h2>
+</div>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#metamodelling">Meta-modelling</a>
+<ul>
+<li><a href="#class-diagram">Class Diagram</a></li>
+<li><a href="#assumptions">Assumptions</a></li>
+<li><a href="#alternatives">Alternatives</a></li>
+</ul>
+</li>
+<li><a href="#concrete-syntax--editor">Concrete Syntax &amp; Editor</a>
+<ul>
+<li><a href="#semiotic-clarity">Semiotic Clarity</a></li>
+<li><a href="#the-gmf-editor">The GMF Editor</a></li>
+<li><a href="#advantages">Advantages</a></li>
+<li><a href="#disadvantages">Disadvantages</a></li>
+</ul>
+</li>
+<li><a href="#validation">Validation</a></li>
+<li><a href="#model-to-text-transformation">Model to Text Transformation</a></li>
+<li><a href="#software-and-dependencies">Software and Dependencies</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#contributors">Contributors</a></li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>Welcome to the world of the Carnivals, a vibrant celebration that captivates hearts and sparks joy. Carnivals are festive gatherings that draw people from far and wide, offering a range of entertainment and excitement. In the spirit of embracing this joyful atmosphere, a domain-specific language using Epsilon has been designed to capture the essence of Carnivals through meta-modelling.</p>
+<p>We start off with the design of the ECore meta-model for the carnival using Emfatic. The classes, relationships and multiplicities are carefully chosen. The meta-model is checked for its validity and is registered. Eugenia is then employed to generate the Graphical Modeling Framework (GMF) boiler-plate code. A one-to-one mapping of constructs to graphical symbols is defined ensuring for semiotic clarity. The newly created GMF based editor instantiated to create a model, the McMaster Carnival! Next, epsilon validation language is used to define stronger constraints on the model. Finally, we use epsilon generative languages for model to text transformation to generate HTML pages.</p>
+<p>Our goal is not only to develop a comprehensive metamodel for carnivals but also to provide insights into the practical applications of metamodeling in software engineering contexts. By engaging in this project, you will gain hands-on experience with metamodeling techniques and deepen your understanding of eclipse-based development environments.</p>
+<h2 id="meta-modelling">Meta-modelling</h2>
+<p>To model the dynamic aspects of the Carnival, emfatic has been used to create the ECore model. The design encompasses fundamental elements that define the carnival experience, ranging from diverse activities to enthusiastic participants.</p>
+<h3 id="class-diagram">Class Diagram</h3>
+<p><strong>Figure 1</strong> illustrates the ECore meta-model for the Carnival</p>
+<figure>
+  <img src="./workspace/images/carnival_class_diagram.jpg" alt="Carnival Image" style="max-width: 65%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <figcaption style="text-align:center;">Figure 1: Class Diagram</figcaption>
+</figure>
+<ol>
+<li><strong>NamedElement:</strong> An abstract class serving as the foundation for naming various elements within the carnival.</li>
+<li><strong>Activity:</strong> An abstract class capturing the diverse range of activities present at the carnival.</li>
+<li><strong>Event:</strong> A type of activity open to all carnival attendees.</li>
+<li><strong>Booth:</strong> A type of activity with limited resources, offering unique experiences.</li>
+<li><strong>Participant:</strong> An abstract class encompassing the different individuals engaged in the carnival.</li>
+<li><strong>Visitor:</strong> Class representing attendees who join the carnival as visitors, embracing the fun-filled spirit.</li>
+<li><strong>Sponsor:</strong> Class representing folks who actively contribute as sponsors, enhancing the carnival experience.</li>
+<li><strong>CarnivalDay:</strong> Class defining a specific day within the carnival, comprising a variety of engaging activities.</li>
+<li><strong>Carnival:</strong> Base class encapsulating the entire carnival celebration, composed of carnival days and diverse participants.</li>
+</ol>
+<p>This metamodelling structure forms the framework for a comprehensive representation of the Carnival, offering flexibility and customization based on the unique characteristics of your specific carnival celebration. Additional details, associations, and constraints can be incorporated to tailor the model to your project's requirements.</p>
+<h3 id="assumptions">Assumptions</h3>
+<ul>
+<li>The sponsors will assume responsibility for event and booth management, thereby eliminating the need for additional helpers or staff.</li>
+<li>Booths remain open continuously throughout the day or until their stocks are depleted.</li>
+<li>Each event takes place at a distinct time during the day, and no two events can happen simultaneously on the same day.</li>
+</ul>
+<h3 id="alternatives">Alternatives</h3>
+<p>In the alternate design of the Carnival meta model within the context of ECore modeling, the introduction of the &quot;Helper&quot; EClass would enhance the existing structure by providing a dedicated representation for staff or assistants involved in event and booth management tasks. This new EClass would establish a clear distinction between sponsors and the individuals responsible for executing various operational aspects of the Carnival.</p>
+<p>The &quot;Helper&quot; EClass would contain attributes defining the roles, skills, and availability of each staff member. Additionally, it would have references to other relevant classes within the meta model, such as events or booths, to indicate the specific areas where helpers are deployed. These references would enable efficient navigation and management of helpers within the Carnival ecosystem.</p>
+<p>By introducing the &quot;Helper&quot; EClass, the meta model gains added flexibility and granularity in representing the organizational structure and operational dynamics of the Carnival. Sponsors can now have a dedicated team of helpers under their purview, allowing for more effective coordination and delegation of tasks. However, this addition may necessitate adjustments to the concrete syntax and navigation paths within the model to accommodate the new class and its relationships effectively. Nonetheless, the inclusion of helpers enhances the overall functionality and realism of the Carnival meta model.</p>
+<h2 id="concrete-syntax--editor">Concrete Syntax &amp; Editor</h2>
+<h3 id="semiotic-clarity">Semiotic Clarity</h3>
+<p>In our Carnival meta model design, achieving semiotic clarity was important to ensure that the graphical representations effectively conveyed the underlying model constructs. We first established a one-to-one mapping between model elements and their graphical symbols, ensuring each entity, such as sponsors, events, and helpers, was distinctly and clearly represented. (Refer to <strong>Figure 2</strong>: Semiotic Clarity for an illustration of this mapping.)</p>
+<figure>
+  <img src="./workspace/images/Semiotic_Clarity.png" alt="Carnival Image" style="max-width: 65%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <figcaption style="text-align:center;">Figure 2: Semiotic Clarity</figcaption>
+</figure>
+<h3 id="the-gmf-editor">The GMF Editor</h3>
+<p>We employed Eugenia, an Eclipse-based tool built on the Graphical Modeling Framework (GMF), to create the Concrete Syntax and Editor The Eugenia generated editor was run as a plugin on Eclipse, using which we created a sample carnival model illustrated in <strong>Figure 3</strong> below. The resulting graphical editor provides stakeholders with an intuitive and easily interpretable visual representation of the meta model's structure and relationships.</p>
+<figure>
+  <img src="./workspace/images/GMF Editor.png" alt="Carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <figcaption style="text-align:center;">Figure 3: GMF Editor / Model Instance</figcaption>
+</figure>
+<h3 id="advantages">Advantages</h3>
+<p>Using GMF (Graphical Modeling Framework) for the Carnival meta-model offers several advantages. One major advantage is its ability to provide a customizable and visually appealing graphical editor tailored specifically to the domain of the Carnival meta-model. This enables stakeholders to intuitively create, edit, and visualize the model's elements and relationships, enhancing understanding and collaboration. Additionally, GMF automates much of the underlying infrastructure required for creating graphical editors, saving time and effort in development.</p>
+<h3 id="disadvantages">Disadvantages</h3>
+<p>The alternative design incorporating a set of helpers/staff, while adding functionality, poses challenges in terms of clutter and symbol flooding. Introducing additional elements like helpers/staff may lead to a denser diagram with an increased number of graphical symbols, potentially making it more difficult to discern and interpret the model's structure. This issue can diminish the clarity and usability of the graphical representation, counteracting the benefits of using GMF for visual modeling. Thus, careful consideration and balancing of functionality and clarity are essential when incorporating such complex features into the graphical representation of the Carnival meta-model using GMF.</p>
+<h2 id="validation">Validation</h2>
+<p>EVL (Epsilon Validation Language) has played a crucial role in ensuring the integrity and correctness of our Carnival meta-model. Leveraging EVL, we added validation constraints to the meta-model, ensuring that it adheres to the specified criteria. Different critiques and constraints have been strategically applied to various classes within the meta-model to produce human-readable error messages, aiding in the identification and resolution of potential issues. <strong>Figure 4</strong> below, provides an example of EVL validation in action, demonstrating how it helps detect and report violations of defined constraints.</p>
+<figure>
+  <img src="./workspace/images/EVL Validation.png" alt="Carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <figcaption style="text-align:center;">Figure 4: Validation using EVL</figcaption>
+</figure>
+<h3 id="validation-constraints">Validation Constraints</h3>
+<ol>
+<li>
+<p><strong>Carnival root class Constraints:</strong></p>
+<ul>
+<li><strong>HasAtleastOneDay:</strong>
+<ul>
+<li>Checks if the carnival has at least one day.</li>
+<li>Message: Carnival needs at least one day.</li>
+</ul>
+</li>
+<li><strong>HasAtleastOnePerson:</strong>
+<ul>
+<li>Checks if the carnival has at least one person.</li>
+<li>Message: Carnival needs at least one person</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Carnival Day Constraints:</strong></p>
+<ul>
+<li><strong>HasId:</strong>
+<ul>
+<li>Critique ensuring each carnival day has a day digit.</li>
+<li>Message: Carnival Day needs a day digit</li>
+</ul>
+</li>
+<li><strong>HasAtleastOneActivity:</strong>
+<ul>
+<li>Checks if the carnival day has at least one activity.</li>
+<li>Message: Carnival Day needs at least one activity</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Activity Constraints:</strong></p>
+<ul>
+<li><strong>HasVolunteer:</strong>
+<ul>
+<li>Checks if the activity has a sponsor.</li>
+<li>Message: Activity needs a sponsor</li>
+</ul>
+</li>
+<li><strong>AllEventsHaveDurations:</strong>
+<ul>
+<li>Checks if all events have durations.</li>
+<li>Message: Event must have a duration</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Booth Constraints:</strong></p>
+<ul>
+<li><strong>HasAvailableSpace:</strong>
+<ul>
+<li>Checks if the booth provides available space.</li>
+<li>Message: Booth must provide space available</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Person Constraints:</strong></p>
+<ul>
+<li><strong>HasAge:</strong>
+<ul>
+<li>Checks if the person has an age.</li>
+<li>Message: Person must have an age</li>
+</ul>
+</li>
+<li><strong>HasEmail:</strong>
+<ul>
+<li>Critique ensuring each person has an email.</li>
+<li>Message: Person should have an email</li>
+</ul>
+</li>
+<li><strong>AllPersonsHaveUniqueEmails:</strong>
+<ul>
+<li>Checks if all persons have unique email addresses.</li>
+<li>Message: All persons must have unique email addresses</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Sponsor Constraints:</strong></p>
+<ul>
+<li><strong>HasPartnerId:</strong>
+<ul>
+<li>Checks if the sponsor has a partner ID.</li>
+<li>Message: Sponsor must have a partner ID</li>
+</ul>
+</li>
+<li><strong>AllSponsorIdsUnique:</strong>
+<ul>
+<li>Checks if all sponsor IDs are unique.</li>
+<li>Message: Sponsor IDs must be unique</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Named Element Constraints:</strong></p>
+<ul>
+<li><strong>HasName:</strong>
+<ul>
+<li>Checks if the element has a name.</li>
+<li>Message: Element needs a name</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="integration">Integration</h3>
+<p>Leveraging the EVL documentation and insights from course slide decks, we implemented custom EVL constraints to validate aspects of the model that couldn't be expressed in the metamodel itself. Through careful integration with the editor's codebase, we enabled validation checks, allowing users to receive feedback on their model edits. By highlighting errors and warnings directly within the editor interface, we empowered users to identify and address validation issues efficiently. This seamless integration enhances the usability and reliability of our editor, providing a more robust modeling experience.</p>
+<p>For more details on the EVL validation process and specific constraints code, please refer to the validation section of our <a href="https://github.com/samkithkjain/cas_703/tree/main/workspace/carnival/validation">GitHub repository - carnival.evl</a>.</p>
+<h2 id="model-to-text-transformation">Model to Text Transformation</h2>
+<p>Model to Text Transformation is a crucial aspect of the Carnival project, facilitating the generation of human-readable documents from the underlying model. In this project, we utilized EGL (Epsilon Generation Language) and EGX to transform the Carnival meta-model into HTML documents for displaying the sponsors, visitors, and schedule of activities during the carnival.</p>
+<h3 id="summary-of-transformation-files">Summary of Transformation Files:</h3>
+<ol>
+<li>
+<p>Visitors List HTML Template:
+The Visitors List HTML template generates a document displaying information about sponsors and visitors attending the carnival. It presents a tabular format with columns for Serial Number, UID, Name, Email, and Activity. Using EGL syntax, the template iterates through carnival days and activities to populate the table with relevant data.</p>
+</li>
+<li>
+<p>Carnival Schedule HTML Template:
+The Carnival Schedule HTML template generates a document presenting the schedule of activities for each day of the carnival. It organizes the information in a table format with columns for Day and Activity. Similar to the Visitors List template, EGL is used to iterate through carnival days and activities, filling the table with the schedule details.</p>
+</li>
+<li>
+<p>Transformation Rules:
+Two transformation rules are defined to apply the templates to the Carnival meta-model:</p>
+</li>
+</ol>
+<ul>
+<li><strong>CarnivalModelToSchedule:</strong> Applies the Carnival Schedule template to generate the CarnivalSchedule.html document, <strong>Figure 5</strong> shows the output for the same.</li>
+</ul>
+<figure>
+  <img src="./workspace/images/schedule_html.png" alt="Carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <figcaption style="text-align:center;">Figure 5: Schedule of Carnival</figcaption>
+</figure>
+<ul>
+<li><strong>CarnivalModelToList:</strong> Applies the Visitors List template to generate the CarnivalList.html document, <strong>Figure 6</strong> shows the output for the same.</li>
+</ul>
+<figure>
+  <img src="./workspace/images/list_html.png" alt="Carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <figcaption style="text-align:center;">Figure 6: Visitor and Sponsor List</figcaption>
+</figure>
+<p>These transformation rules define the templates to be used and specify the target HTML files where the generated content will be stored. Additionally, the EVL and EGX code used for validation constraints and model-to-text transformation rules can be found in the project's GitHub repository at <a href="https://github.com/samkithkjain/cas_703/tree/main/workspace/carnival/transformation">EVL/EGX files</a>.</p>
+<h3 id="challenges-faced-during-model-to-text-transformation">Challenges faced during Model to Text Transformation</h3>
+<ul>
+<li>We wanted to transform the model into an innovative webpage, however, one rule in EGX allows us to write to one target, we could not find a way to append the transformation to one target HTML. We decided to produce multiple HTML files. These files could later be referenced in a aggregate HTML file along with other web files for styling, markup and more.</li>
+<li>We attempted to come up with graphs in HTML for visualizing the sponsors and visitor distribution across different days and acivities but it was not straightforward to do so. Alternatively, we could have transformation rules to dump the data to a CSV file and produce visuals as necessary.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>Our project delves into the creation of a Carnival meta-model using Epsilon and its various aspects. Meta-modelling is extensively covered, showcasing the ECore meta-model for the carnival, along with assumptions and alternatives considered. Next, we look into the concrete syntax &amp; editor details the graphical modeling framework (GMF) and its advantages, followed by a discussion on validation using EVL and integration with the editor. Model to text transformation is explored through EGL and EGX, demonstrating the generation of HTML documents. Overall, we have captured the comprehensive journey of designing and implementing the Carnival meta-model, providing valuable insights into each phase of the project.</p>
+<h2 id="software-and-dependencies">Software and Dependencies</h2>
+<ul>
+<li><strong>Eclipse Modeling Tools Version - 2023-12 (4.30.0):</strong> <a href="https://www.eclipse.org/downloads/packages/release/2023-12/r/eclipse-modeling-tools">Download</a></li>
+<li><strong>Graphical Modeling Framework (GMF) - Tooling 3.2.1:</strong> <a href="https://download.eclipse.org/modeling/gmp/gmf-tooling/updates/releases-3.2.1/">Download</a></li>
+<li><strong>Epsilon 2.1:</strong> <a href="https://download.eclipse.org/epsilon/updates/2.1/">Download</a></li>
+<li><strong>Emfatic 1.0.0:</strong> <a href="https://download.eclipse.org/emfatic/update/">Download</a></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><strong>EMF:</strong> <a href="https://eclipse.dev/modeling/emf/docs/">Eclipse Modeling Framework Documentation</a></li>
+<li><strong>ECore:</strong> <a href="https://eclipsesource.com/blogs/tutorials/emf-tutorial/">Eclipse Modeling Framework Core Tutorial</a></li>
+<li><strong>GMF:</strong> <a href="https://wiki.eclipse.org/Graphical_Modeling_Framework/Tutorial/Part_1">Graphical Modeling Framework Tutorial</a></li>
+<li><strong>EVL:</strong> <a href="https://eclipse.dev/epsilon/doc/evl/">Epsilon Validation Language Documentation</a></li>
+<li><strong>EGX:</strong> <a href="https://eclipse.dev/epsilon/doc/egx/">Epsilon Generation Language Documentation</a></li>
+<li><strong>OCL:</strong> <a href="https://download.eclipse.org/ocl/doc/5.0.0/ocl.pdf">Object Constraint Language Documentation</a></li>
+<li><strong>EGL:</strong> <a href="https://eclipse.dev/epsilon/doc/egl/">Epsilon Generation Language</a></li>
+</ul>
+<h2 id="contributors">Contributors</h2>
+<ul>
+<li>Amin Toloekashefpakdel (toloekaa@mcmaster.ca)</li>
+<li>Nivetha Raj Pappuraj (pappuran@mcmaster.ca)</li>
+<li>Samkith K Jain (kishors@mcmaster.ca)</li>
+<li>Sana Ishtiaq (ishtis3@mcmaster.ca)</li>
+</ul>
+
+</body>
+</html>
