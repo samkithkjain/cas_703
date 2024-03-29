@@ -34,7 +34,7 @@ To model the dynamic aspects of the carnival, Emfatic has been used to create th
 ### Class Diagram
 **Figure 1** illustrates the ECore meta-model for the carnival
 <figure>
-  <img src="./workspace/images/carnival_class_diagram.jpg" alt="carnival Image" style="max-width: 65%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <img src="./documentation/carnival_class_diagram.jpg" alt="carnival Image" style="max-width: 65%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
   <figcaption style="text-align:center;">Figure 1: Class Diagram</figcaption>
 </figure>
 
@@ -68,7 +68,7 @@ By introducing the "Helper" EClass, the meta model gains added flexibility and g
 In our carnival meta model design, achieving semiotic clarity was important to ensure that the graphical representations effectively conveyed the underlying model constructs. We first established a one-to-one mapping between model elements and their graphical symbols, ensuring each entity, such as sponsors, events, and helpers, was distinctly and clearly represented. (Refer to **Figure 2**: Semiotic Clarity for an illustration of this mapping.)
 
 <figure>
-  <img src="./workspace/images/Semiotic_Clarity.png" alt="carnival Image" style="max-width: 65%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <img src="./documentation/Semiotic_Clarity.png" alt="carnival Image" style="max-width: 65%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
   <figcaption style="text-align:center;">Figure 2: Semiotic Clarity</figcaption>
 </figure>
 
@@ -76,7 +76,7 @@ In our carnival meta model design, achieving semiotic clarity was important to e
 We employed Eugenia, an Eclipse-based tool built on the Graphical Modeling Framework (GMF), to create the Concrete Syntax and Editor The Eugenia generated editor was run as a plugin on Eclipse, using which we created a sample carnival model illustrated in **Figure 3** below. The resulting graphical editor provides stakeholders with an intuitive and easily interpretable visual representation of the meta model's structure and relationships.
 
 <figure>
-  <img src="./workspace/images/GMF Editor.png" alt="carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <img src="./documentation/GMF Editor.png" alt="carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
   <figcaption style="text-align:center;">Figure 3: GMF Editor / Model Instance</figcaption>
 </figure>
 
@@ -90,7 +90,7 @@ The alternative design incorporating a set of helpers/staff, while adding functi
 Epsilon Validation Language (EVL) has played a crucial role in ensuring the integrity and correctness of our carnival meta-model. Leveraging EVL, we added validation constraints to the meta-model, ensuring that it adheres to the specified criteria. Different critiques and constraints have been strategically applied to various classes within the meta-model to produce human-readable error messages, aiding in the identification and resolution of potential issues. **Figure 4** below, provides an example of EVL validation in action, demonstrating how it helps detect and report violations of defined constraints. 
 
 <figure>
-  <img src="./workspace/images/EVL Validation.png" alt="carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <img src="./documentation/EVL Validation.png" alt="carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
   <figcaption style="text-align:center;">Figure 4: Validation using EVL</figcaption>
 </figure>
 
@@ -167,13 +167,13 @@ The carnival Schedule HTML template generates a document presenting the schedule
 Two transformation rules are defined to apply the templates to the carnival meta-model:
 - **carnivalModelToSchedule:** Applies the carnival Schedule template to generate the carnivalSchedule.html document, **Figure 5** shows the output for the same.
 <figure>
-  <img src="./workspace/images/schedule_html.png" alt="carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <img src="./documentation/schedule_html.png" alt="carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
   <figcaption style="text-align:center;">Figure 5: Schedule of carnival</figcaption>
 </figure>
 
 - **carnivalModelToList:** Applies the Visitors List template to generate the carnivalList.html document, **Figure 6** shows the output for the same.
 <figure>
-  <img src="./workspace/images/list_html.png" alt="carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
+  <img src="./documentation/list_html.png" alt="carnival Image" style="max-width: 90%; height: auto; display: block; margin: 0 auto; border: 1px solid black;">
   <figcaption style="text-align:center;">Figure 6: Visitor and Sponsor List</figcaption>
 </figure>
 
